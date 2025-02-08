@@ -29,6 +29,7 @@ PODS:
   - CJBaseEffectKit/CJRefreshWithJSON (0.0.2):
     - lottie-ios (~> 2.5.3)
     - Masonry
+    - MJRefresh
   - CJBaseEffectKit/CJScaleHeadView (0.0.2)
   - CJBaseHelper (0.1.4):
     - CJBaseHelper/AuthorizationCJHelper (= 0.1.4)
@@ -49,24 +50,25 @@ PODS:
   - CJBaseHelper/NSOperationQueueCJHelper (0.1.4)
   - CJBaseHelper/UIViewControllerCJHelper (0.1.4)
   - CJBaseHelper/WebCJHelper (0.1.4)
-  - CJBaseOverlayKit (0.2.0):
-    - CJBaseOverlayKit/CJActionSheet (= 0.2.0)
-    - CJBaseOverlayKit/CJAlert (= 0.2.0)
-    - CJBaseOverlayKit/CJBaseOverlayTheme (= 0.2.0)
-    - CJBaseOverlayKit/CJProgressHUD (= 0.2.0)
-    - CJBaseOverlayKit/CJToast (= 0.2.0)
-  - CJBaseOverlayKit/CJActionSheet (0.2.0):
+  - CJBaseOverlayKit (0.2.1):
+    - CJBaseOverlayKit/CJActionSheet (= 0.2.1)
+    - CJBaseOverlayKit/CJAlert (= 0.2.1)
+    - CJBaseOverlayKit/CJBaseOverlayTheme (= 0.2.1)
+    - CJBaseOverlayKit/CJProgressHUD (= 0.2.1)
+    - CJBaseOverlayKit/CJToast (= 0.2.1)
+  - CJBaseOverlayKit/CJActionSheet (0.2.1):
     - CJBaseOverlayKit/CJBaseOverlayTheme
     - Masonry
-  - CJBaseOverlayKit/CJAlert (0.2.0):
+  - CJBaseOverlayKit/CJAlert (0.2.1):
     - CJBaseOverlayKit/CJBaseOverlayTheme
     - Masonry
-  - CJBaseOverlayKit/CJBaseOverlayTheme (0.2.0)
-  - CJBaseOverlayKit/CJProgressHUD (0.2.0):
+  - CJBaseOverlayKit/CJBaseOverlayTheme (0.2.1)
+  - CJBaseOverlayKit/CJProgressHUD (0.2.1):
     - CJBaseOverlayKit/CJBaseOverlayTheme
     - lottie-ios (~> 2.5.3)
     - Masonry
-  - CJBaseOverlayKit/CJToast (0.2.0):
+    - MBProgressHUD
+  - CJBaseOverlayKit/CJToast (0.2.1):
     - CJBaseOverlayKit/CJBaseOverlayTheme
     - MBProgressHUD
   - CJBaseUIKit (0.6.0):
@@ -329,18 +331,18 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CJBaseEffectKit: 5befb0111e9d73af7973be02943ac805452d5eee
+  AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
+  CJBaseEffectKit: 88eb6952d02f0e4298d707c5f07828835ce1facf
   CJBaseHelper: dd715e18591da9df5d06364098300591220f0535
-  CJBaseOverlayKit: 614d88cb16de0d34e6286a3fe4d5431444867fe8
-  CJBaseUIKit: 8a34464da479a1d198ef9582c5966c84f032827e
-  CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CJComplexUIKit: d6ca4fdf1c397155fe2b6cbb33ba71091c49c7d0
+  CJBaseOverlayKit: 38df690307b4558ececf64b848b5f8c06b741eb9
+  CJBaseUIKit: 2a02588017d5fab41ad5ceb3083e1ce7c73ee154
+  CJBaseUtil: f1616c533ce97b1f37c93c30fd3503f3f2d1476c
+  CJComplexUIKit: 1a9f2f2d12f81d42b7409ffa2094322082e34267
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
   CJFoundation: 53b4df7152c6d6fd776f55f387c67f431b8574bd
   CJMedia: 29b1bd8c127fb80c4993a76420a3bcc31a4657e5
   CJNetwork: a75f849e5c6ec8fc85ca7aa5027f73d6c48a4af1
-  CJTS_Base: 538dc19330d861126cfabe3e80204acf974f59f5
+  CJTS_Base: ed114a8f5ad27e75cc8f7f64496edc22b011f9e9
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IjinbuNetwork: 307e7e12d35b547f04b885cc2aa098625e4b9768
   JGActionSheet: 2cfca820b57a11ec4b4a5655d45ee599fbeddc05
@@ -359,4 +361,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: fecd20d061d142724ae9821a6da2edfdebf52102
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.16.2

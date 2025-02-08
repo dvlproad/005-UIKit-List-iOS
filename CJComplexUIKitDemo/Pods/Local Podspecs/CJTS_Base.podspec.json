@@ -19,24 +19,16 @@
   "frameworks": "UIKit",
   "requires_arc": true,
   "dependencies": {
-    "CJBaseUtil/CJDataUtil": [
-
-    ],
-    "CJBaseOverlayKit/CJToast": [
-
-    ],
-    "CJComplexUIKit/CJCollectionView": [
-
-    ]
+    "CJBaseUtil/CJDataUtil": [],
+    "CJBaseOverlayKit/CJToast": [],
+    "CJComplexUIKit/CJCollectionView": []
   },
   "subspecs": [
     {
       "name": "Home_TextView",
       "source_files": "CJTS_Base/BaseTextViewController/**/*.{h,m}",
       "dependencies": {
-        "CJBaseUtil/CJDataUtil": [
-
-        ]
+        "CJBaseUtil/CJDataUtil": []
       }
     },
     {
