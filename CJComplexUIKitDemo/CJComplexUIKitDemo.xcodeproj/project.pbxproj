@@ -59,15 +59,6 @@
 		7856F73E21F4E953004AF751 /* header@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7856F73A21F4E953004AF751 /* header@2x.jpg */; };
 		7856F73F21F4E953004AF751 /* PullScaleTopImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7856F73B21F4E953004AF751 /* PullScaleTopImageViewController.xib */; };
 		7856F74021F4E953004AF751 /* PullScaleTopImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F73C21F4E953004AF751 /* PullScaleTopImageViewController.m */; };
-		7856F89321F5680E004AF751 /* ProgressWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F84E21F5680D004AF751 /* ProgressWebViewController.m */; };
-		7856F89421F5680E004AF751 /* CJBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F85221F5680D004AF751 /* CJBaseWebViewController.m */; };
-		7856F8A121F5680F004AF751 /* MySearchEqualCellSizeCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F87421F5680E004AF751 /* MySearchEqualCellSizeCollectionView.m */; };
-		7856F8A221F5680F004AF751 /* CJSearchTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F87521F5680E004AF751 /* CJSearchTableView.m */; };
-		7856F8A321F5680F004AF751 /* CJUploadCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F87A21F5680E004AF751 /* CJUploadCollectionViewCell.m */; };
-		7856F8A421F5680F004AF751 /* cjCollectionViewCellAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7856F87E21F5680E004AF751 /* cjCollectionViewCellAdd@2x.png */; };
-		7856F8A521F5680F004AF751 /* cjCollectionViewCellDelete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7856F87F21F5680E004AF751 /* cjCollectionViewCellDelete@2x.png */; };
-		7856F8A621F5680F004AF751 /* CJUploadImageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F88021F5680E004AF751 /* CJUploadImageCollectionView.m */; };
-		7856F8A721F5680F004AF751 /* CJUploadImageCollectionView+Tap.m in Sources */ = {isa = PBXBuildFile; fileRef = 7856F88221F5680E004AF751 /* CJUploadImageCollectionView+Tap.m */; };
 		78590D00215C79DD00F45AD5 /* NetworkBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78590C5C215C79DC00F45AD5 /* NetworkBaseWebViewController.m */; };
 		78590D08215C79DD00F45AD5 /* add_red_Big.png in Resources */ = {isa = PBXBuildFile; fileRef = 78590C6A215C79DC00F45AD5 /* add_red_Big.png */; };
 		78590D09215C79DD00F45AD5 /* add_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 78590C6B215C79DC00F45AD5 /* add_red.png */; };
@@ -180,6 +171,12 @@
 		80D49F8B20BE7EE0003F642C /* CJDataUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49F8A20BE7EE0003F642C /* CJDataUtilTest.m */; };
 		80D49F8F20BE8574003F642C /* TestCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49F8E20BE8574003F642C /* TestCityModel.m */; };
 		80E7E68920AC37CA000F762D /* IjinbuNetworkClient+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E7E68720AC37CA000F762D /* IjinbuNetworkClient+Login.m */; };
+		9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */; };
+		9730F3B82D58F2FE008AF628 /* TableViewMenuDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3B72D58F2FE008AF628 /* TableViewMenuDataSource.m */; };
+		9730F3B92D58F2FE008AF628 /* GuideMenuDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3B52D58F2FE008AF628 /* GuideMenuDataSource.m */; };
+		9730F3BA2D58F2FE008AF628 /* LinkedTableMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3B32D58F2FE008AF628 /* LinkedTableMenuViewController.m */; };
+		9730F3BF2D58FAEA008AF628 /* CollectionMenuDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3BC2D58FAEA008AF628 /* CollectionMenuDataSource.m */; };
+		9730F3C02D58FAEA008AF628 /* LinkedCollectionMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3BE2D58FAEA008AF628 /* LinkedCollectionMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,24 +288,6 @@
 		7856F73A21F4E953004AF751 /* header@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "header@2x.jpg"; sourceTree = "<group>"; };
 		7856F73B21F4E953004AF751 /* PullScaleTopImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PullScaleTopImageViewController.xib; sourceTree = "<group>"; };
 		7856F73C21F4E953004AF751 /* PullScaleTopImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullScaleTopImageViewController.m; sourceTree = "<group>"; };
-		7856F84E21F5680D004AF751 /* ProgressWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressWebViewController.m; sourceTree = "<group>"; };
-		7856F84F21F5680D004AF751 /* ProgressWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressWebViewController.h; sourceTree = "<group>"; };
-		7856F85121F5680D004AF751 /* CJEmptyViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJEmptyViewProtocol.h; sourceTree = "<group>"; };
-		7856F85221F5680D004AF751 /* CJBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseWebViewController.m; sourceTree = "<group>"; };
-		7856F85321F5680D004AF751 /* CJBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseWebViewController.h; sourceTree = "<group>"; };
-		7856F85421F5680D004AF751 /* CJComplexUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJComplexUIKit.h; sourceTree = "<group>"; };
-		7856F87421F5680E004AF751 /* MySearchEqualCellSizeCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySearchEqualCellSizeCollectionView.m; sourceTree = "<group>"; };
-		7856F87521F5680E004AF751 /* CJSearchTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSearchTableView.m; sourceTree = "<group>"; };
-		7856F87621F5680E004AF751 /* MySearchEqualCellSizeCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySearchEqualCellSizeCollectionView.h; sourceTree = "<group>"; };
-		7856F87721F5680E004AF751 /* CJSearchTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSearchTableView.h; sourceTree = "<group>"; };
-		7856F87A21F5680E004AF751 /* CJUploadCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadCollectionViewCell.m; sourceTree = "<group>"; };
-		7856F87B21F5680E004AF751 /* CJUploadCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadCollectionViewCell.h; sourceTree = "<group>"; };
-		7856F87C21F5680E004AF751 /* CJUploadImageCollectionView+Tap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CJUploadImageCollectionView+Tap.h"; sourceTree = "<group>"; };
-		7856F87E21F5680E004AF751 /* cjCollectionViewCellAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjCollectionViewCellAdd@2x.png"; sourceTree = "<group>"; };
-		7856F87F21F5680E004AF751 /* cjCollectionViewCellDelete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cjCollectionViewCellDelete@2x.png"; sourceTree = "<group>"; };
-		7856F88021F5680E004AF751 /* CJUploadImageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUploadImageCollectionView.m; sourceTree = "<group>"; };
-		7856F88121F5680E004AF751 /* CJUploadImageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUploadImageCollectionView.h; sourceTree = "<group>"; };
-		7856F88221F5680E004AF751 /* CJUploadImageCollectionView+Tap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJUploadImageCollectionView+Tap.m"; sourceTree = "<group>"; };
 		78590C5C215C79DC00F45AD5 /* NetworkBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkBaseWebViewController.m; sourceTree = "<group>"; };
 		78590C5D215C79DC00F45AD5 /* NetworkBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkBaseWebViewController.h; sourceTree = "<group>"; };
 		78590C6A215C79DC00F45AD5 /* add_red_Big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_red_Big.png; sourceTree = "<group>"; };
@@ -475,6 +454,18 @@
 		80D49F8E20BE8574003F642C /* TestCityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCityModel.m; sourceTree = "<group>"; };
 		80E7E68720AC37CA000F762D /* IjinbuNetworkClient+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IjinbuNetworkClient+Login.m"; sourceTree = "<group>"; };
 		80E7E68820AC37CA000F762D /* IjinbuNetworkClient+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IjinbuNetworkClient+Login.h"; sourceTree = "<group>"; };
+		9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedMenuHomeViewController.h; sourceTree = "<group>"; };
+		9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedMenuHomeViewController.m; sourceTree = "<group>"; };
+		9730F3B22D58F2FE008AF628 /* LinkedTableMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedTableMenuViewController.h; sourceTree = "<group>"; };
+		9730F3B32D58F2FE008AF628 /* LinkedTableMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedTableMenuViewController.m; sourceTree = "<group>"; };
+		9730F3B42D58F2FE008AF628 /* GuideMenuDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideMenuDataSource.h; sourceTree = "<group>"; };
+		9730F3B52D58F2FE008AF628 /* GuideMenuDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideMenuDataSource.m; sourceTree = "<group>"; };
+		9730F3B62D58F2FE008AF628 /* TableViewMenuDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewMenuDataSource.h; sourceTree = "<group>"; };
+		9730F3B72D58F2FE008AF628 /* TableViewMenuDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewMenuDataSource.m; sourceTree = "<group>"; };
+		9730F3BB2D58FAEA008AF628 /* CollectionMenuDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionMenuDataSource.h; sourceTree = "<group>"; };
+		9730F3BC2D58FAEA008AF628 /* CollectionMenuDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionMenuDataSource.m; sourceTree = "<group>"; };
+		9730F3BD2D58FAEA008AF628 /* LinkedCollectionMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedCollectionMenuViewController.h; sourceTree = "<group>"; };
+		9730F3BE2D58FAEA008AF628 /* LinkedCollectionMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedCollectionMenuViewController.m; sourceTree = "<group>"; };
 		D92FC512BBC21CC0D27F656A /* Pods-CJComplexUIKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJComplexUIKitDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJComplexUIKitDemoTests/Pods-CJComplexUIKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -684,7 +675,6 @@
 				8014A27E1FA2C2E500DDDB5A /* AppDelegate+WindowRootViewController.h */,
 				8014A27F1FA2C2E500DDDB5A /* AppDelegate+WindowRootViewController.m */,
 				15F426A8242B7C6F00ED2E4C /* CommonUI */,
-				7856F84B21F5680D004AF751 /* CJComplexUIKit */,
 				80FF8F0A1FC5649E00E437CF /* Modules */,
 				783281011F4198BC008267E0 /* CJSmallCustomView */,
 				789C444B21EECFA100181144 /* Resources */,
@@ -902,96 +892,6 @@
 				7856F73B21F4E953004AF751 /* PullScaleTopImageViewController.xib */,
 			);
 			path = ScaleHeadViewDemo;
-			sourceTree = "<group>";
-		};
-		7856F84B21F5680D004AF751 /* CJComplexUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				7856F85421F5680D004AF751 /* CJComplexUIKit.h */,
-				7856F87221F5680E004AF751 /* CJDataScrollView */,
-				7856F84C21F5680D004AF751 /* UIViewController */,
-			);
-			name = CJComplexUIKit;
-			path = ../../CJComplexUIKit;
-			sourceTree = "<group>";
-		};
-		7856F84C21F5680D004AF751 /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7856F84D21F5680D004AF751 /* ProgressWebViewController */,
-				7856F85021F5680D004AF751 /* CJBaseWebViewController */,
-			);
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		7856F84D21F5680D004AF751 /* ProgressWebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7856F84E21F5680D004AF751 /* ProgressWebViewController.m */,
-				7856F84F21F5680D004AF751 /* ProgressWebViewController.h */,
-			);
-			path = ProgressWebViewController;
-			sourceTree = "<group>";
-		};
-		7856F85021F5680D004AF751 /* CJBaseWebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				7856F85321F5680D004AF751 /* CJBaseWebViewController.h */,
-				7856F85221F5680D004AF751 /* CJBaseWebViewController.m */,
-				7856F85121F5680D004AF751 /* CJEmptyViewProtocol.h */,
-			);
-			path = CJBaseWebViewController;
-			sourceTree = "<group>";
-		};
-		7856F87221F5680E004AF751 /* CJDataScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				7856F87321F5680E004AF751 /* SearchScrollView */,
-				7856F87821F5680E004AF751 /* ImagePickerCollectionlView */,
-			);
-			path = CJDataScrollView;
-			sourceTree = "<group>";
-		};
-		7856F87321F5680E004AF751 /* SearchScrollView */ = {
-			isa = PBXGroup;
-			children = (
-				7856F87721F5680E004AF751 /* CJSearchTableView.h */,
-				7856F87521F5680E004AF751 /* CJSearchTableView.m */,
-				7856F87621F5680E004AF751 /* MySearchEqualCellSizeCollectionView.h */,
-				7856F87421F5680E004AF751 /* MySearchEqualCellSizeCollectionView.m */,
-			);
-			path = SearchScrollView;
-			sourceTree = "<group>";
-		};
-		7856F87821F5680E004AF751 /* ImagePickerCollectionlView */ = {
-			isa = PBXGroup;
-			children = (
-				7856F87921F5680E004AF751 /* CJUploadCollectionViewCell */,
-				7856F88121F5680E004AF751 /* CJUploadImageCollectionView.h */,
-				7856F88021F5680E004AF751 /* CJUploadImageCollectionView.m */,
-				7856F87C21F5680E004AF751 /* CJUploadImageCollectionView+Tap.h */,
-				7856F88221F5680E004AF751 /* CJUploadImageCollectionView+Tap.m */,
-				7856F87D21F5680E004AF751 /* Resources */,
-			);
-			path = ImagePickerCollectionlView;
-			sourceTree = "<group>";
-		};
-		7856F87921F5680E004AF751 /* CJUploadCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				7856F87B21F5680E004AF751 /* CJUploadCollectionViewCell.h */,
-				7856F87A21F5680E004AF751 /* CJUploadCollectionViewCell.m */,
-			);
-			path = CJUploadCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		7856F87D21F5680E004AF751 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				7856F87E21F5680E004AF751 /* cjCollectionViewCellAdd@2x.png */,
-				7856F87F21F5680E004AF751 /* cjCollectionViewCellDelete@2x.png */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		78590C59215C79DC00F45AD5 /* WebViewDemo */ = {
@@ -1269,12 +1169,40 @@
 		80FF8F0A1FC5649E00E437CF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9730F3B02D58F0DB008AF628 /* LinkedMenuDemo */,
 				789A4F6B21FAF3FA001528B9 /* TableViewDemo */,
 				789A4EE621FAF3A8001528B9 /* CollectionViewDemo */,
 				7856F62121F4E706004AF751 /* ScrollViewDemo */,
 				78590C59215C79DC00F45AD5 /* WebViewDemo */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		9730F3B02D58F0DB008AF628 /* LinkedMenuDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */,
+				9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */,
+				9730F3B22D58F2FE008AF628 /* LinkedTableMenuViewController.h */,
+				9730F3B32D58F2FE008AF628 /* LinkedTableMenuViewController.m */,
+				9730F3C12D58FB73008AF628 /* DataSource */,
+				9730F3BD2D58FAEA008AF628 /* LinkedCollectionMenuViewController.h */,
+				9730F3BE2D58FAEA008AF628 /* LinkedCollectionMenuViewController.m */,
+			);
+			path = LinkedMenuDemo;
+			sourceTree = "<group>";
+		};
+		9730F3C12D58FB73008AF628 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				9730F3B42D58F2FE008AF628 /* GuideMenuDataSource.h */,
+				9730F3B52D58F2FE008AF628 /* GuideMenuDataSource.m */,
+				9730F3B62D58F2FE008AF628 /* TableViewMenuDataSource.h */,
+				9730F3B72D58F2FE008AF628 /* TableViewMenuDataSource.m */,
+				9730F3BB2D58FAEA008AF628 /* CollectionMenuDataSource.h */,
+				9730F3BC2D58FAEA008AF628 /* CollectionMenuDataSource.m */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		E75FB8B4AF71C8FE7F95B93C /* Pods */ = {
@@ -1444,7 +1372,6 @@
 				789C445221EECFA100181144 /* MainAsset.xcassets in Resources */,
 				789A4F3B21FAF3A8001528B9 /* MemoryAD05.jpg in Resources */,
 				789A4F6621FAF3A8001528B9 /* cvSupplementaryHead.xib in Resources */,
-				7856F8A421F5680F004AF751 /* cjCollectionViewCellAdd@2x.png in Resources */,
 				789A4F3F21FAF3A8001528B9 /* MemoryADExample02.jpg in Resources */,
 				15F426F9242B7C6F00ED2E4C /* loading_test.json in Resources */,
 				78590D0D215C79DD00F45AD5 /* UploadDirectlyImagePickerViewController.xib in Resources */,
@@ -1478,7 +1405,6 @@
 				789A4F4621FAF3A8001528B9 /* MemoryADExample04.jpg in Resources */,
 				789A4F4321FAF3A8001528B9 /* MemoryAD29.jpg in Resources */,
 				789A4FA021FAF3FB001528B9 /* SHeaderHome2.xib in Resources */,
-				7856F8A521F5680F004AF751 /* cjCollectionViewCellDelete@2x.png in Resources */,
 				789C445F21EEFE3100181144 /* JSOC.html in Resources */,
 				789A4F4721FAF3A8001528B9 /* MemoryADKnowledge03.jpg in Resources */,
 				789A4F3A21FAF3A8001528B9 /* MemoryADKnowledge06.jpg in Resources */,
@@ -1568,6 +1494,8 @@
 				"${PODS_ROOT}/../../CJBaseUIKit/UIViewController/Resources/cjBackBarButtonItem@3x.png",
 				"${PODS_ROOT}/../../CJBaseUIKit/UIViewController/Resources/cjBackBarButtonItemGray@2x.png",
 				"${PODS_ROOT}/../../CJBaseUIKit/UIViewController/Resources/cjBackBarButtonItemGray@3x.png",
+				"${PODS_ROOT}/../../CJComplexUIKit/CJDataScrollView/ImagePickerCollectionlView/Resources/cjCollectionViewCellAdd@2x.png",
+				"${PODS_ROOT}/../../CJComplexUIKit/CJDataScrollView/ImagePickerCollectionlView/Resources/cjCollectionViewCellDelete@2x.png",
 				"${PODS_ROOT}/CJMedia/CJMedia/CJPhotoBrowser/CJImagePicker/Resources/cjAlbumCheckedNormal@2x.png",
 				"${PODS_ROOT}/CJMedia/CJMedia/CJPhotoBrowser/CJImagePicker/Resources/cjAlbumCheckedSelect@2x.png",
 				"${PODS_ROOT}/CJMedia/CJMedia/CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/error.png",
@@ -1580,6 +1508,11 @@
 				"${PODS_ROOT}/CJMedia/CJMedia/CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/success@2x.png",
 				"${PODS_ROOT}/CJMedia/CJMedia/CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle/success@3x.png",
 				"${PODS_ROOT}/CJMedia/CJMedia/CJPhotoBrowser/CJPhotoBrowser/CJPhotoBrowser.bundle",
+				"${PODS_ROOT}/CQDemoKit/CQDemoKit/BaseVC/TabBar/Resources/icons8-calendar.png",
+				"${PODS_ROOT}/CQDemoKit/CQDemoKit/BaseVC/TabBar/Resources/icons8-folder.png",
+				"${PODS_ROOT}/CQDemoKit/CQDemoKit/BaseVC/TabBar/Resources/icons8-home.png",
+				"${PODS_ROOT}/CQDemoKit/CQDemoKit/BaseVC/TabBar/Resources/icons8-menu.png",
+				"${PODS_ROOT}/CQDemoKit/CQDemoKit/BaseVC/TabBar/Resources/icons8-settings.png",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/PinYin4Objc/PinYin4Objc/Resources/unicode_to_hanyu_pinyin.txt",
 				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
@@ -1607,6 +1540,8 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cjBackBarButtonItem@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cjBackBarButtonItemGray@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cjBackBarButtonItemGray@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cjCollectionViewCellAdd@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cjCollectionViewCellDelete@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cjAlbumCheckedNormal@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cjAlbumCheckedSelect@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/error.png",
@@ -1619,6 +1554,11 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/success@2x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/success@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CJPhotoBrowser.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icons8-calendar.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icons8-folder.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icons8-home.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icons8-menu.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icons8-settings.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/unicode_to_hanyu_pinyin.txt",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
@@ -1652,7 +1592,6 @@
 				15F42705242B7C6F00ED2E4C /* TSAlertUtil.m in Sources */,
 				15F4270B242B7C6F00ED2E4C /* DataEmptyViewFactory.m in Sources */,
 				789A4F9421FAF3FB001528B9 /* TvDemo_Complex.m in Sources */,
-				7856F8A221F5680F004AF751 /* CJSearchTableView.m in Sources */,
 				78590D0E215C79DD00F45AD5 /* SearchTableViewController.m in Sources */,
 				789A4F3721FAF3A8001528B9 /* MyADModel.m in Sources */,
 				789A4F6021FAF3A8001528B9 /* CvDemo_Complex+Event.m in Sources */,
@@ -1664,7 +1603,6 @@
 				789C443821EECE9100181144 /* AppInfoManager.m in Sources */,
 				78293F1321FC2D0900F70F43 /* SvDemo_Refresh.m in Sources */,
 				15F426FE242B7C6F00ED2E4C /* UIView+CJDemoPopupAction.m in Sources */,
-				7856F89421F5680E004AF751 /* CJBaseWebViewController.m in Sources */,
 				789A4F6521FAF3A8001528B9 /* CustomCollectionViewCell.m in Sources */,
 				789A4F6221FAF3A8001528B9 /* Detail.m in Sources */,
 				78590D0F215C79DD00F45AD5 /* UploadDirectlyImagePickerViewController.m in Sources */,
@@ -1677,6 +1615,9 @@
 				785F86C8226C458C005CEBF3 /* EmptyScrollViewController2.m in Sources */,
 				789A4F9821FAF3FB001528B9 /* TableViewController.m in Sources */,
 				789A4F3521FAF3A8001528B9 /* MemoryADCollectionViewCell.m in Sources */,
+				9730F3B82D58F2FE008AF628 /* TableViewMenuDataSource.m in Sources */,
+				9730F3B92D58F2FE008AF628 /* GuideMenuDataSource.m in Sources */,
+				9730F3BA2D58F2FE008AF628 /* LinkedTableMenuViewController.m in Sources */,
 				789A4F5121FAF3A8001528B9 /* CollectionHomeViewController.m in Sources */,
 				15F42704242B7C6F00ED2E4C /* UIAlertUtil.m in Sources */,
 				789A4F9B21FAF3FB001528B9 /* SHeaderHome2.m in Sources */,
@@ -1695,7 +1636,6 @@
 				789A4F5521FAF3A8001528B9 /* DetailCell.m in Sources */,
 				15F4270A242B7C6F00ED2E4C /* CJDemoDateLabel.m in Sources */,
 				7856F73521F4E79E004AF751 /* DemoInfo.m in Sources */,
-				7856F8A721F5680F004AF751 /* CJUploadImageCollectionView+Tap.m in Sources */,
 				15F42709242B7C6F00ED2E4C /* CJDemoDateTextField.m in Sources */,
 				789A4F6821FAF3A8001528B9 /* cvSupplementaryHead.m in Sources */,
 				789A4F5C21FAF3A8001528B9 /* MyEqualCellSizeCollectionViewController.m in Sources */,
@@ -1703,7 +1643,6 @@
 				7856F73421F4E79E004AF751 /* TestDataUtil.m in Sources */,
 				789A4F5821FAF3A8001528B9 /* OpenCollectionViewController.m in Sources */,
 				789C446521EF019F00181144 /* LocalViewController.m in Sources */,
-				7856F8A321F5680F004AF751 /* CJUploadCollectionViewCell.m in Sources */,
 				789C448F21F170CF00181144 /* CJAppVersionUtil.m in Sources */,
 				789A4F5221FAF3A8001528B9 /* CustomLayoutCollectionViewController.m in Sources */,
 				789C442A21EEC90000181144 /* WebHomeViewController.m in Sources */,
@@ -1712,16 +1651,16 @@
 				15F42702242B7C6F00ED2E4C /* TSButtonFactory.m in Sources */,
 				78590D00215C79DD00F45AD5 /* NetworkBaseWebViewController.m in Sources */,
 				785F86C2226C450E005CEBF3 /* EmptyScrollViewController1.m in Sources */,
-				7856F8A621F5680F004AF751 /* CJUploadImageCollectionView.m in Sources */,
 				15F4270F242B7C6F00ED2E4C /* DemoLabelFactory.m in Sources */,
-				7856F89321F5680E004AF751 /* ProgressWebViewController.m in Sources */,
 				7856F6E521F4E706004AF751 /* ScrollViewHomeViewController.m in Sources */,
 				789A4F6721FAF3A8001528B9 /* cvSupplementaryFoot.m in Sources */,
 				15F42706242B7C6F00ED2E4C /* CJBaseAlertView+TSPopupAction.m in Sources */,
 				789A4F3621FAF3A8001528B9 /* MyCycleADViewController.m in Sources */,
-				7856F8A121F5680F004AF751 /* MySearchEqualCellSizeCollectionView.m in Sources */,
 				789A4F9E21FAF3FB001528B9 /* CustomTableViewCell.m in Sources */,
+				9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */,
 				8014A2801FA2C2E500DDDB5A /* AppDelegate+WindowRootViewController.m in Sources */,
+				9730F3BF2D58FAEA008AF628 /* CollectionMenuDataSource.m in Sources */,
+				9730F3C02D58FAEA008AF628 /* LinkedCollectionMenuViewController.m in Sources */,
 				789A4FB321FB0A1B001528B9 /* H5ImgSettingDataViewController.m in Sources */,
 				789C448D21F170CF00181144 /* YunUncaughtExceptionHandler.m in Sources */,
 				781872DA242BBA180098B3A9 /* LEWorkHomeViewController.m in Sources */,

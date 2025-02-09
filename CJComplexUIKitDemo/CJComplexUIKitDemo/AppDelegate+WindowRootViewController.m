@@ -12,6 +12,7 @@
 #import "TableHomeViewController.h"
 #import "CollectionHomeViewController.h"
 #import "WebHomeViewController.h"
+#import "LinkedMenuHomeViewController.h"
 
 @implementation AppDelegate (WindowRootViewController)
 
@@ -51,7 +52,7 @@
     UINavigationController *scrollViewHomeNavigationController = [[UINavigationController alloc] initWithRootViewController:scrollViewHomeViewController];
     [tabBarController addChildViewController:scrollViewHomeNavigationController];
     
-    ScrollViewHomeViewController *moreHomeViewController = [[ScrollViewHomeViewController alloc] init];
+    UIViewController *moreHomeViewController = [[LinkedMenuHomeViewController alloc] init];
     moreHomeViewController.view.backgroundColor = [UIColor whiteColor];
     moreHomeViewController.navigationItem.title = NSLocalizedString(@"更多", nil);
     moreHomeViewController.tabBarItem.title = NSLocalizedString(@"更多", nil);

@@ -45,41 +45,41 @@
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"UICollectionView相关";
         {
-            CJModuleModel *complexDemoModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *complexDemoModule = [[CQDMModuleModel alloc] init];
             complexDemoModule.title = @"ComplexDemo";
             complexDemoModule.classEntry = [CvDemo_Complex class];
             complexDemoModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:complexDemoModule];
         }
         {
-            CJModuleModel *MyEqualCellSizeCollectionViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *MyEqualCellSizeCollectionViewModule = [[CQDMModuleModel alloc] init];
             MyEqualCellSizeCollectionViewModule.title = @"MyEqualCellSizeCollectionView(等cell大小)";
             MyEqualCellSizeCollectionViewModule.classEntry = [MyEqualCellSizeCollectionViewController class];
             MyEqualCellSizeCollectionViewModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:MyEqualCellSizeCollectionViewModule];
         }
         {
-            CJModuleModel *MyEqualCellSizeViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *MyEqualCellSizeViewModule = [[CQDMModuleModel alloc] init];
             MyEqualCellSizeViewModule.title = @"MyEqualCellSizeView(嵌套的等cell大小)";
             MyEqualCellSizeViewModule.classEntry = [MyEqualCellSizeViewController class];
             MyEqualCellSizeViewModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:MyEqualCellSizeViewModule];
         }
         {
-            CJModuleModel *cycleScrollViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *cycleScrollViewModule = [[CQDMModuleModel alloc] init];
             cycleScrollViewModule.title = @"MyCycleADView(无限循环的视图)";
             cycleScrollViewModule.classEntry = [MyCycleADViewController class];
             cycleScrollViewModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:cycleScrollViewModule];
         }
         {
-            CJModuleModel *openCollectionViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *openCollectionViewModule = [[CQDMModuleModel alloc] init];
             openCollectionViewModule.title = @"OpenCollectionView(可展开)";
             openCollectionViewModule.classEntry = [OpenCollectionViewController class];
             [sectionDataModel.values addObject:openCollectionViewModule];
         }
         {
-            CJModuleModel *customLayoutModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *customLayoutModule = [[CQDMModuleModel alloc] init];
             customLayoutModule.title = @"CustomLayout(自定义布局)";
             customLayoutModule.classEntry = [CustomLayoutCollectionViewController class];
             customLayoutModule.isCreateByXib = YES;
@@ -93,14 +93,14 @@
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"DataScrollView(带数据源的滚动视图)";
         {
-            CJModuleModel *imagePickerCollectionViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *imagePickerCollectionViewModule = [[CQDMModuleModel alloc] init];
             imagePickerCollectionViewModule.title = @"图片选择的集合视图(没上传操作)";
             imagePickerCollectionViewModule.classEntry = [UploadNoneImagePickerViewController class];
             imagePickerCollectionViewModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:imagePickerCollectionViewModule];
         }
         {
-            CJModuleModel *imagePickerCollectionViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *imagePickerCollectionViewModule = [[CQDMModuleModel alloc] init];
             imagePickerCollectionViewModule.title = @"图片选择的集合视图(有上传操作)";
             imagePickerCollectionViewModule.classEntry = [UploadDirectlyImagePickerViewController class];
             imagePickerCollectionViewModule.isCreateByXib = YES;
@@ -115,7 +115,7 @@
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"其他";
         {
-            CJModuleModel *imagePickerCollectionViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *imagePickerCollectionViewModule = [[CQDMModuleModel alloc] init];
             imagePickerCollectionViewModule.title = @"工作首页";
             imagePickerCollectionViewModule.classEntry = [LEWorkHomeViewController class];
             [sectionDataModel.values addObject:imagePickerCollectionViewModule];

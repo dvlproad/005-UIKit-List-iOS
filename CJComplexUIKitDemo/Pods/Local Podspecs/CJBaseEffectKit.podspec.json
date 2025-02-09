@@ -22,8 +22,12 @@
       "name": "CJRefreshWithJSON",
       "source_files": "CJBaseEffectKit/CJRefreshWithJSON/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [],
-        "MJRefresh": [],
+        "Masonry": [
+
+        ],
+        "MJRefresh": [
+
+        ],
         "lottie-ios": [
           "~> 2.5.3"
         ]
@@ -38,7 +42,9 @@
       "source_files": "CJBaseEffectKit/CJMJRefreshComponent/**/*.{h,m}",
       "resources": "CJBaseEffectKit/CJMJRefreshComponent/**/*.{png,xib}",
       "dependencies": {
-        "MJRefresh": []
+        "MJRefresh": [
+
+        ]
       }
     },
     {
@@ -46,8 +52,12 @@
       "source_files": "CJBaseEffectKit/CJDataEmptyView/**/*.{h,m}",
       "resources": "CJBaseEffectKit/CJDataEmptyView/**/*.{png}",
       "dependencies": {
-        "Masonry": [],
-        "CJFoundation/NSString": []
+        "Masonry": [
+
+        ],
+        "CJFoundation/NSString": [
+
+        ]
       }
     },
     {

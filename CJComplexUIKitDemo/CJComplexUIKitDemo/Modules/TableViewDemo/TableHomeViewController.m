@@ -39,34 +39,34 @@
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"UITableView相关";
         {
-            CJModuleModel *TableViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *TableViewModule = [[CQDMModuleModel alloc] init];
             TableViewModule.title = @"TableView(最原始的使用)";
             TableViewModule.classEntry = [TableViewController class];
             TableViewModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:TableViewModule];
         }
         {
-            CJModuleModel *reuseDataSourceTableModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *reuseDataSourceTableModule = [[CQDMModuleModel alloc] init];
             reuseDataSourceTableModule.title = @"ReuseDataSourceTable";
             reuseDataSourceTableModule.classEntry = [ReuseDataSourceTableViewController class];
             [sectionDataModel.values addObject:reuseDataSourceTableModule];
         }
         {
-            CJModuleModel *complexDemoModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *complexDemoModule = [[CQDMModuleModel alloc] init];
             complexDemoModule.title = @"ComplexDemo";
             complexDemoModule.classEntry = [TvDemo_Complex class];
             complexDemoModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:complexDemoModule];
         }
         {
-            CJModuleModel *openTableModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *openTableModule = [[CQDMModuleModel alloc] init];
             openTableModule.title = @"OpenTable(不使用控件)";
             openTableModule.classEntry = [OpenTableViewController1 class];
             openTableModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:openTableModule];
         }
         {
-            CJModuleModel *openTableModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *openTableModule = [[CQDMModuleModel alloc] init];
             openTableModule.title = @"OpenTable(使用控件)";
             openTableModule.classEntry = [OpenTableViewController2 class];
             openTableModule.isCreateByXib = YES;
@@ -80,7 +80,7 @@
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"DataScrollView(带数据源的滚动视图)";
         {
-            CJModuleModel *searchTableViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *searchTableViewModule = [[CQDMModuleModel alloc] init];
             searchTableViewModule.title = @"带搜索功能的列表";
             searchTableViewModule.classEntry = [SearchTableViewController class];
             searchTableViewModule.isCreateByXib = YES;

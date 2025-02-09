@@ -39,7 +39,7 @@
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"UIScrollView相关";
         {
-            CJModuleModel *refreshScrollViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *refreshScrollViewModule = [[CQDMModuleModel alloc] init];
             refreshScrollViewModule.title = @"ScrollView的刷新(MJRefresh)";
             refreshScrollViewModule.classEntry = [SvDemo_Refresh class];
             refreshScrollViewModule.isCreateByXib = YES;
@@ -54,19 +54,19 @@
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"EmptyView相关";
         {
-            CJModuleModel *baseScrollViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *baseScrollViewModule = [[CQDMModuleModel alloc] init];
             baseScrollViewModule.title = @"DataEmptyView";
             baseScrollViewModule.classEntry = [ScrollContaintViewController class];
             [sectionDataModel.values addObject:baseScrollViewModule];
         }
         {
-            CJModuleModel *baseScrollViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *baseScrollViewModule = [[CQDMModuleModel alloc] init];
             baseScrollViewModule.title = @"CJDataEmptyView(DZNEmptyDataSet)";
             baseScrollViewModule.classEntry = [EmptyScrollViewController1 class];
             [sectionDataModel.values addObject:baseScrollViewModule];
         }
         {
-            CJModuleModel *baseScrollViewModule = [[CJModuleModel alloc] init];
+            CQDMModuleModel *baseScrollViewModule = [[CQDMModuleModel alloc] init];
             baseScrollViewModule.title = @"CJDataEmptyView(UIScrollView+CJAddFillView)";
             baseScrollViewModule.classEntry = [EmptyScrollViewController2 class];
             [sectionDataModel.values addObject:baseScrollViewModule];
@@ -80,7 +80,7 @@
         sectionDataModel.theme = @"其他";
         {
             //PullScaleTopImageViewController
-            CJModuleModel *pullScaleTopImageModuleModel = [[CJModuleModel alloc] init];
+            CQDMModuleModel *pullScaleTopImageModuleModel = [[CQDMModuleModel alloc] init];
             pullScaleTopImageModuleModel.title = @"顶部图片下拉放大，上拉缩小";
             pullScaleTopImageModuleModel.classEntry = [PullScaleTopImageViewController class];
             [sectionDataModel.values addObject:pullScaleTopImageModuleModel];
