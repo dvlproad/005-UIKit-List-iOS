@@ -12,7 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CQTSRipeBaseCollectionViewDataSource : NSObject<UICollectionViewDataSource>
+@interface CQTSRipeBaseCollectionViewDataSource : NSObject<UICollectionViewDataSource> {
+    
+}
+@property (nonatomic, strong) NSArray<CQDMSectionDataModel *> *sectionDataModels;    /**< 每个section的数据 */
 
 #pragma mark - Init
 /*

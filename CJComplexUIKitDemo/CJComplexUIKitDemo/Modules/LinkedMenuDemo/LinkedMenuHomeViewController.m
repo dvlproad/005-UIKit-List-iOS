@@ -8,8 +8,6 @@
 
 #import "LinkedMenuHomeViewController.h"
 
-#import "LinkedTableMenuViewController.h"
-#import "LinkedCollectionMenuViewController.h"
 #import <CJListDemo_Swift/CJListDemo_Swift-Swift.h>
 
 
@@ -24,6 +22,7 @@
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = NSLocalizedString(@"联动的菜单首页", nil); //知识点:使得tabBar中的title可以和显示在顶部的title保持各自
+    __weak typeof(self)weakSelf = self;
     
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
     //UIScrollView
@@ -33,22 +32,23 @@
         {
             CQDMModuleModel *refreshScrollViewModule = [[CQDMModuleModel alloc] init];
             refreshScrollViewModule.title = @"联动的菜单(左右)";
-            refreshScrollViewModule.content = @"右侧是 TableView";
-            refreshScrollViewModule.classEntry = [LinkedTableMenuViewController class];
+            refreshScrollViewModule.content = @"右侧是 CollectionView（4列)";
+            refreshScrollViewModule.actionBlock = ^{
+                UIViewController *vc = [[TSLinkedCollectionMenuViewController alloc] initWithRightColumnCount:4 rightCellWidthHeightRatio:1.0];
+                vc.hidesBottomBarWhenPushed = YES;
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            };
             [sectionDataModel.values addObject:refreshScrollViewModule];
         }
         {
             CQDMModuleModel *refreshScrollViewModule = [[CQDMModuleModel alloc] init];
             refreshScrollViewModule.title = @"联动的菜单(左右)";
-            refreshScrollViewModule.content = @"右侧是 CollectionView(OC)";
-            refreshScrollViewModule.classEntry = [LinkedCollectionMenuViewController class];
-            [sectionDataModel.values addObject:refreshScrollViewModule];
-        }
-        {
-            CQDMModuleModel *refreshScrollViewModule = [[CQDMModuleModel alloc] init];
-            refreshScrollViewModule.title = @"联动的菜单(左右)";
-            refreshScrollViewModule.content = @"右侧是 CollectionView（Swift)";
-            refreshScrollViewModule.classEntry = [TSLinkedCollectionMenuViewController class];
+            refreshScrollViewModule.content = @"右侧是 CollectionView（1列)";
+            refreshScrollViewModule.actionBlock = ^{
+                UIViewController *vc = [[TSLinkedCollectionMenuViewController alloc] initWithRightColumnCount:1 rightCellWidthHeightRatio:300/44.0];
+                vc.hidesBottomBarWhenPushed = YES;
+                [weakSelf.navigationController pushViewController:vc animated:YES];
+            };
             [sectionDataModel.values addObject:refreshScrollViewModule];
         }
         

@@ -17,6 +17,10 @@ import UIKit
     private var leftWidth: CGFloat
     private var rightColumnCount: Int
     
+    // cell 的高度
+    private var leftCellHeight: CGFloat
+    private var rightCellWidthHeightRatio: CGFloat
+    
     private weak var leftDataSource: UITableViewDataSource?
     private weak var rightDataSource: UICollectionViewDataSource?
     
@@ -24,16 +28,36 @@ import UIKit
     private var rightCollectionViewSetupBlock: ((UICollectionView) -> Void)?
     private var onTapRightIndexPath: ((IndexPath) -> Void)?
     
+    /*
+     *  初始化"联动菜单"的 dataSource
+     *
+     *  @param leftWidth                    左侧菜单所占宽度
+     *  @param rightColumnCount             右侧菜单列数
+     *  @param leftCellHeight               左侧列表单元的高度
+     *  @param rightCellWidthHeightRatio    右侧列表单元的宽高比
+     *  @param leftSetupBlock               左侧菜单的setupBlock
+     *  @param leftDataSource               左侧菜单的dataSource
+     *  @param rightSetupBlock              右侧菜单的setupBlock
+     *  @param rightDataSource              右侧菜单的dataSource
+     *  @param onTapRightIndexPath          点击右侧的数据
+     *
+     *  @return CollectionView 的 dataSource
+     */
     @objc public init(leftWidth: CGFloat,
-         rightColumnCount: Int,
-         leftSetupBlock: ((UITableView) -> Void)?,
-         leftDataSource: UITableViewDataSource?,
-         rightSetupBlock: @escaping (UICollectionView) -> Void,
-         rightDataSource: UICollectionViewDataSource?,
-         onTapRightIndexPath: @escaping (IndexPath) -> Void) {
-        
+                      rightColumnCount: Int,
+                      leftCellHeight: CGFloat,
+                      rightCellWidthHeightRatio: CGFloat,
+                      leftSetupBlock: ((UITableView) -> Void)?,
+                      leftDataSource: UITableViewDataSource?,
+                      rightSetupBlock: @escaping (UICollectionView) -> Void,
+                      rightDataSource: UICollectionViewDataSource?,
+                      onTapRightIndexPath: @escaping (IndexPath) -> Void)
+    {
         self.leftWidth = leftWidth
         self.rightColumnCount = rightColumnCount
+        self.leftCellHeight = leftCellHeight
+        self.rightCellWidthHeightRatio = rightCellWidthHeightRatio
+        
         self.leftDataSource = leftDataSource
         self.rightDataSource = rightDataSource
         self.leftTableViewSetupBlock = leftSetupBlock
@@ -48,9 +72,24 @@ import UIKit
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc public func updateSelectedIndexPaths(_ selectedIndexPaths: [IndexPath]?) {
+    @objc public func reloadData() {
+        leftTableView.reloadData()
+        rightCollectionView.reloadData()
+    }
+    
+    /**
+     * @abstract 更新选中哪些位置(一般在 layoutSubviews 或 viewDidLayoutSubviews 中调用以设置初始选中的cell）
+     *
+     * @param selectedIndexPaths   选中的indexPath数组
+     * @param animated                    是否需要滚动滚动
+     * @param scrollPosition              scrollPosition
+     */
+    @objc public func updateSelectedIndexPaths(_ selectedIndexPaths: [IndexPath]?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) {
         selectedIndexPaths?.forEach { indexPath in
-            rightCollectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
+            if animated == false { // animated 为 true 的时候, rightCollectionView 滚动会自动对左侧适配。但为 false 的时候需要自己适配
+                leftTableView.selectRow(at: IndexPath(row: indexPath.section, section: 0), animated: animated, scrollPosition: .none)
+            }
+            rightCollectionView.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
         }
     }
     
@@ -102,7 +141,7 @@ import UIKit
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44.0
+        return self.leftCellHeight
     }
     
     // MARK: - UICollectionViewDelegate
@@ -137,7 +176,9 @@ import UIKit
         let validWidth = width - sectionInset.left - sectionInset.right - columnSpacing * CGFloat(perRowMaxColumnCount - 1)
         let collectionViewCellWidth = floor(validWidth / CGFloat(perRowMaxColumnCount))
         
-        return CGSize(width: collectionViewCellWidth, height: collectionViewCellWidth)
+        let collectionViewCellHeight = collectionViewCellWidth / self.rightCellWidthHeightRatio
+        
+        return CGSize(width: collectionViewCellWidth, height: collectionViewCellHeight)
     }
     
     // MARK: - UIScrollViewDelegate

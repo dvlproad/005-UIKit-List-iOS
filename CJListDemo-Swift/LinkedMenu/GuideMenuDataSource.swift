@@ -8,9 +8,10 @@
 import UIKit
 import CQDemoKit
 
-class GuideMenuDataSource: NSObject, UITableViewDataSource {
-    private var dataModels: [CQTSLocImageDataModel] // 菜单数据
+@objc public class GuideMenuDataSource: NSObject, UITableViewDataSource {
+    public var dataModels: [CQTSLocImageDataModel] = [] // 菜单数据
     
+    /*
     // 初始化 TableView 的 dataSource
     init(rowCount: Int) {
         let dataModels: [CQTSLocImageDataModel] = CQTSLocImagesUtil.__getTestLocalImageDataModels(withCount: rowCount, randomOrder: false) as! [CQTSLocImageDataModel]
@@ -26,6 +27,7 @@ class GuideMenuDataSource: NSObject, UITableViewDataSource {
     init(dataModels: [CQTSLocImageDataModel]) {
         self.dataModels = dataModels
     }
+    */
     
     // 注册 TableView 所需的所有 cell
     func registerAllCells(for tableView: UITableView) {
@@ -34,15 +36,15 @@ class GuideMenuDataSource: NSObject, UITableViewDataSource {
     
     // MARK: - UITableViewDataSource
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataModels.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let moduleModel = dataModels[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GuideMenuTableViewCell
@@ -52,7 +54,7 @@ class GuideMenuDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return nil
     }
 }

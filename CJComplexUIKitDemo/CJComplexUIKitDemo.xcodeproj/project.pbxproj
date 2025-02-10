@@ -171,11 +171,6 @@
 		80D49F8F20BE8574003F642C /* TestCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49F8E20BE8574003F642C /* TestCityModel.m */; };
 		80E7E68920AC37CA000F762D /* IjinbuNetworkClient+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E7E68720AC37CA000F762D /* IjinbuNetworkClient+Login.m */; };
 		9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */; };
-		9730F3B82D58F2FE008AF628 /* TableViewMenuDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3B72D58F2FE008AF628 /* TableViewMenuDataSource.m */; };
-		9730F3B92D58F2FE008AF628 /* GuideMenuDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3B52D58F2FE008AF628 /* GuideMenuDataSource.m */; };
-		9730F3BA2D58F2FE008AF628 /* LinkedTableMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3B32D58F2FE008AF628 /* LinkedTableMenuViewController.m */; };
-		9730F3C02D58FAEA008AF628 /* LinkedCollectionMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3BE2D58FAEA008AF628 /* LinkedCollectionMenuViewController.m */; };
-		97DC9E422D59EAA600003C11 /* GuideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 97DC9E412D59EAA600003C11 /* GuideMenuTableViewCell.m */; };
 		C2849CA383CBF0E734AE6DE8 /* Pods_CJComplexUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30757D6810FE9E3D37A620D8 /* Pods_CJComplexUIKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -456,16 +451,6 @@
 		80E7E68820AC37CA000F762D /* IjinbuNetworkClient+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IjinbuNetworkClient+Login.h"; sourceTree = "<group>"; };
 		9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedMenuHomeViewController.h; sourceTree = "<group>"; };
 		9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedMenuHomeViewController.m; sourceTree = "<group>"; };
-		9730F3B22D58F2FE008AF628 /* LinkedTableMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedTableMenuViewController.h; sourceTree = "<group>"; };
-		9730F3B32D58F2FE008AF628 /* LinkedTableMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedTableMenuViewController.m; sourceTree = "<group>"; };
-		9730F3B42D58F2FE008AF628 /* GuideMenuDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideMenuDataSource.h; sourceTree = "<group>"; };
-		9730F3B52D58F2FE008AF628 /* GuideMenuDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideMenuDataSource.m; sourceTree = "<group>"; };
-		9730F3B62D58F2FE008AF628 /* TableViewMenuDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewMenuDataSource.h; sourceTree = "<group>"; };
-		9730F3B72D58F2FE008AF628 /* TableViewMenuDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewMenuDataSource.m; sourceTree = "<group>"; };
-		9730F3BD2D58FAEA008AF628 /* LinkedCollectionMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedCollectionMenuViewController.h; sourceTree = "<group>"; };
-		9730F3BE2D58FAEA008AF628 /* LinkedCollectionMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedCollectionMenuViewController.m; sourceTree = "<group>"; };
-		97DC9E402D59EAA600003C11 /* GuideMenuTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuideMenuTableViewCell.h; sourceTree = "<group>"; };
-		97DC9E412D59EAA600003C11 /* GuideMenuTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuideMenuTableViewCell.m; sourceTree = "<group>"; };
 		D92FC512BBC21CC0D27F656A /* Pods-CJComplexUIKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJComplexUIKitDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJComplexUIKitDemoTests/Pods-CJComplexUIKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1183,26 +1168,8 @@
 			children = (
 				9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */,
 				9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */,
-				9730F3B22D58F2FE008AF628 /* LinkedTableMenuViewController.h */,
-				9730F3B32D58F2FE008AF628 /* LinkedTableMenuViewController.m */,
-				9730F3BD2D58FAEA008AF628 /* LinkedCollectionMenuViewController.h */,
-				9730F3BE2D58FAEA008AF628 /* LinkedCollectionMenuViewController.m */,
-				9730F3C12D58FB73008AF628 /* DataSource */,
 			);
 			path = LinkedMenuDemo;
-			sourceTree = "<group>";
-		};
-		9730F3C12D58FB73008AF628 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				9730F3B42D58F2FE008AF628 /* GuideMenuDataSource.h */,
-				9730F3B52D58F2FE008AF628 /* GuideMenuDataSource.m */,
-				97DC9E402D59EAA600003C11 /* GuideMenuTableViewCell.h */,
-				97DC9E412D59EAA600003C11 /* GuideMenuTableViewCell.m */,
-				9730F3B62D58F2FE008AF628 /* TableViewMenuDataSource.h */,
-				9730F3B72D58F2FE008AF628 /* TableViewMenuDataSource.m */,
-			);
-			path = DataSource;
 			sourceTree = "<group>";
 		};
 		E75FB8B4AF71C8FE7F95B93C /* Pods */ = {
@@ -1571,7 +1538,6 @@
 				789A4F6021FAF3A8001528B9 /* CvDemo_Complex+Event.m in Sources */,
 				780E46081E5DF87B00980127 /* AppDelegate.m in Sources */,
 				7832810D1F41AA96008267E0 /* ProcessLineView.m in Sources */,
-				97DC9E422D59EAA600003C11 /* GuideMenuTableViewCell.m in Sources */,
 				78DA40A9226B83480026E19D /* ScrollContaintViewController.m in Sources */,
 				789A4F9A21FAF3FB001528B9 /* TableHomeViewController.m in Sources */,
 				789C446221EEFF1B00181144 /* LocalBaseWebViewController.m in Sources */,
@@ -1590,9 +1556,6 @@
 				785F86C8226C458C005CEBF3 /* EmptyScrollViewController2.m in Sources */,
 				789A4F9821FAF3FB001528B9 /* TableViewController.m in Sources */,
 				789A4F3521FAF3A8001528B9 /* MemoryADCollectionViewCell.m in Sources */,
-				9730F3B82D58F2FE008AF628 /* TableViewMenuDataSource.m in Sources */,
-				9730F3B92D58F2FE008AF628 /* GuideMenuDataSource.m in Sources */,
-				9730F3BA2D58F2FE008AF628 /* LinkedTableMenuViewController.m in Sources */,
 				789A4F5121FAF3A8001528B9 /* CollectionHomeViewController.m in Sources */,
 				15F42704242B7C6F00ED2E4C /* UIAlertUtil.m in Sources */,
 				789A4F9B21FAF3FB001528B9 /* SHeaderHome2.m in Sources */,
@@ -1634,7 +1597,6 @@
 				789A4F9E21FAF3FB001528B9 /* CustomTableViewCell.m in Sources */,
 				9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */,
 				8014A2801FA2C2E500DDDB5A /* AppDelegate+WindowRootViewController.m in Sources */,
-				9730F3C02D58FAEA008AF628 /* LinkedCollectionMenuViewController.m in Sources */,
 				789A4FB321FB0A1B001528B9 /* H5ImgSettingDataViewController.m in Sources */,
 				789C448D21F170CF00181144 /* YunUncaughtExceptionHandler.m in Sources */,
 				781872DA242BBA180098B3A9 /* LEWorkHomeViewController.m in Sources */,

@@ -5,6 +5,7 @@
 //  Created by ciyouzen on 2020/3/26.
 //  Copyright © 2020 dvlproad. All rights reserved.
 //
+//  请参考 CJLinkedCollectionMenuView.swift 的实现（实际上此类可废弃，用 CJLinkedCollectionMenuView.swift 即可)
 
 #import "CJLinkedTableMenuView.h"
 

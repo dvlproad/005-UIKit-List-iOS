@@ -19,7 +19,8 @@
 }
 
 - (void)setupViews {
-    self.layer.masksToBounds = YES;
+    self.contentView.layer.masksToBounds = YES;
+    self.contentView.layer.cornerRadius = 5.0;
     self.selected = NO;
     
     UIView *parentView = self.contentView;
@@ -27,10 +28,7 @@
     UIImageView *imageView = [[UIImageView alloc] init];
     [parentView addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(parentView).mas_offset(30);
-        make.centerX.mas_equalTo(parentView);
-        make.top.mas_equalTo(parentView).mas_offset(10);
-        make.height.mas_equalTo(imageView.mas_width);
+        make.edges.equalTo(parentView);
     }];
     self.imageView = imageView;
     
@@ -41,10 +39,7 @@
     textLabel.textColor = [UIColor blackColor];
     [parentView addSubview:textLabel];
     [textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(parentView).mas_offset(10);
-        make.right.mas_equalTo(parentView).mas_offset(-10);
-        make.top.mas_equalTo(imageView.mas_bottom).mas_offset(10);
-        make.height.mas_equalTo(20);
+        make.edges.equalTo(parentView);
     }];
     self.textLabel = textLabel;
 }

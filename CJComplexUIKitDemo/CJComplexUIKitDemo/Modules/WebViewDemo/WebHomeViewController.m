@@ -7,6 +7,7 @@
 //
 
 #import "WebHomeViewController.h"
+#import <CQDemoKit/CJUIKitAlertUtil.h>
 
 #import "AboutViewController.h"
 #import "LocalViewController.h"

@@ -38,7 +38,6 @@
 #import "CJCollectionDecoration.h"
 #import "CJCollectionViewFlowLayout.h"
 #import "CJCollectionViewLayoutAttributes.h"
-#import "CJLinkedCollectionMenuView.h"
 #import "CJLinkedTableMenuView.h"
 #import "CJSingleTableViewCellDataSource.h"
 #import "CJSingleTableViewCellDataSource2.h"
