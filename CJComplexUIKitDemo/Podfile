@@ -26,7 +26,8 @@ end
 
 
 target 'CJComplexUIKitDemo' do
-  pod 'CQDemoKit',          '~> 0.7.2',      :subspecs => ['BaseVC']
+  pod 'CQDemoKit',          '~> 0.7.3',      :subspecs => ['BaseVC', 'Demo_DataSourceAndDelegate']
+  #pod 'CQDemoKit',          :path => '../../001-UIKit-CQDemo-iOS',      :subspecs => ['BaseVC', 'Demo_DataSourceAndDelegate']
   
   pod 'CJBaseUIKit',              :path => '../’
   pod 'CJBaseOverlayKit',         :path => '../’

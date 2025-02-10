@@ -30,12 +30,17 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor.cyanColor colorWithAlphaComponent:0.8];
+    __weak typeof(self)weakSelf = self;
     
-    self.leftDataSource = [[GuideMenuDataSource alloc] init];
+    self.leftDataSource = [[GuideMenuDataSource alloc] initWithRowCount:8];
     self.rightDataSource = [[TableViewMenuDataSource alloc] init];
     
     
-    self.menuView = [[CJLinkedTableMenuView alloc] initWithLeftWidth: 100 leftSetupBlock:nil leftDataSource:self.leftDataSource rightSetupBlock:nil rightDataSource:self.rightDataSource];
+    self.menuView = [[CJLinkedTableMenuView alloc] initWithLeftWidth: 100 leftSetupBlock:^(UITableView * _Nonnull leftTableView) {
+        [weakSelf.leftDataSource registerAllCellsForTableView:leftTableView];
+    } leftDataSource:self.leftDataSource rightSetupBlock:^(UITableView * _Nonnull rightTableView) {
+        
+    } rightDataSource:self.rightDataSource];
     self.menuView.backgroundColor = UIColor.redColor;
     [self.view addSubview:self.menuView];
     [self.menuView mas_makeConstraints:^(MASConstraintMaker *make) {

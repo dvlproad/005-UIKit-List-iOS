@@ -20,9 +20,7 @@
 
 - (void)setupViews {
     self.layer.masksToBounds = YES;
-    
-    self.layer.borderWidth = 2;
-    self.layer.borderColor = [UIColor colorWithRed:242/255.0 green:242/255.0 blue:242/255.0 alpha:1.0].CGColor; // #f2f2f2
+    self.selected = NO;
     
     UIView *parentView = self.contentView;
     
@@ -49,9 +47,22 @@
         make.height.mas_equalTo(20);
     }];
     self.textLabel = textLabel;
-    
-    
-    
 }
+
+- (void)setSelected:(BOOL)selected {
+    [super setSelected:selected];
+    
+    UIView *parentView = self.contentView;
+    parentView.layer.masksToBounds = YES;
+    UIColor *borderColor = [UIColor colorWithRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:1.0];
+    if (selected) {
+        parentView.layer.borderColor = [borderColor colorWithAlphaComponent:1.0].CGColor;
+        parentView.layer.borderWidth = 2;
+    } else {
+        parentView.layer.borderColor = [UIColor colorWithRed:144/255.0 green:144/255.0 blue:144/255.0 alpha:1.0].CGColor; // #999999
+        parentView.layer.borderWidth = 2;
+    }
+}
+
 
 @end

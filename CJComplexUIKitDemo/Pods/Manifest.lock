@@ -251,37 +251,43 @@ PODS:
   - CJNetwork/CJNetworkBase (0.5.0)
   - CJNetwork/CJRequestUtil (0.5.0):
     - CJNetwork/CJNetworkBase
-  - CQDemoKit/BaseUIKit (0.7.2):
+  - CQDemoKit/BaseUIKit (0.7.3):
     - Masonry
-  - CQDemoKit/BaseUtil (0.7.2)
-  - CQDemoKit/BaseVC (0.7.2):
-    - CQDemoKit/BaseVC/Base (= 0.7.2)
-    - CQDemoKit/BaseVC/Collection (= 0.7.2)
-    - CQDemoKit/BaseVC/ScrollView (= 0.7.2)
-    - CQDemoKit/BaseVC/TabBar (= 0.7.2)
-    - CQDemoKit/BaseVC/TableView (= 0.7.2)
-    - CQDemoKit/BaseVC/TextView (= 0.7.2)
+  - CQDemoKit/BaseUtil (0.7.3)
+  - CQDemoKit/BaseVC (0.7.3):
+    - CQDemoKit/BaseVC/Base (= 0.7.3)
+    - CQDemoKit/BaseVC/Collection (= 0.7.3)
+    - CQDemoKit/BaseVC/ScrollView (= 0.7.3)
+    - CQDemoKit/BaseVC/TabBar (= 0.7.3)
+    - CQDemoKit/BaseVC/TableView (= 0.7.3)
+    - CQDemoKit/BaseVC/TextView (= 0.7.3)
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/Base (0.7.2):
+  - CQDemoKit/BaseVC/Base (0.7.3):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.7.2):
+  - CQDemoKit/BaseVC/Collection (0.7.3):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/ScrollView (0.7.2):
+  - CQDemoKit/BaseVC/ScrollView (0.7.3):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TabBar (0.7.2):
+  - CQDemoKit/BaseVC/TabBar (0.7.3):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.7.2):
+  - CQDemoKit/BaseVC/TableView (0.7.3):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TextView (0.7.2):
+  - CQDemoKit/BaseVC/TextView (0.7.3):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/Helper (0.7.2)
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.3):
+    - CQDemoKit/BaseVC
+    - CQDemoKit/Demo_Resource
+  - CQDemoKit/Demo_Resource (0.7.3):
+    - CQDemoKit/BaseUIKit
+    - CQDemoKit/Helper
+  - CQDemoKit/Helper (0.7.3)
   - DZNEmptyDataSet (1.8.1)
   - IjinbuNetwork (0.1.0):
     - CJNetwork/AFNetworkingBaseComponent
@@ -321,7 +327,8 @@ DEPENDENCIES:
   - CJMedia/CJUploadImagePickerUtil (~> 0.0.7)
   - CJNetwork
   - CJNetwork/AFNetworkingBaseComponent
-  - CQDemoKit/BaseVC (~> 0.7.2)
+  - CQDemoKit/BaseVC (~> 0.7.3)
+  - CQDemoKit/Demo_DataSourceAndDelegate (~> 0.7.3)
   - DZNEmptyDataSet
   - IjinbuNetwork (~> 0.1.0)
   - JGActionSheet
@@ -372,17 +379,17 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
-  CJBaseEffectKit: 6a9e0180f8bcff9a10b72080b0aa224b1ccb05d9
+  CJBaseEffectKit: 88eb6952d02f0e4298d707c5f07828835ce1facf
   CJBaseHelper: dd715e18591da9df5d06364098300591220f0535
-  CJBaseOverlayKit: c692f9eaaecc926949b1d57757ab47cccc19b78f
-  CJBaseUIKit: 8a34464da479a1d198ef9582c5966c84f032827e
-  CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CJComplexUIKit: 4cf72c2177386d9cc7dd5155e84182c69e99bc16
+  CJBaseOverlayKit: 38df690307b4558ececf64b848b5f8c06b741eb9
+  CJBaseUIKit: 2a02588017d5fab41ad5ceb3083e1ce7c73ee154
+  CJBaseUtil: f1616c533ce97b1f37c93c30fd3503f3f2d1476c
+  CJComplexUIKit: ca816daf18de1383fdab230875f04bf1fee96f2e
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
   CJFoundation: 53b4df7152c6d6fd776f55f387c67f431b8574bd
   CJMedia: 29b1bd8c127fb80c4993a76420a3bcc31a4657e5
   CJNetwork: a75f849e5c6ec8fc85ca7aa5027f73d6c48a4af1
-  CQDemoKit: f68954900d83951fa76bd6f36fb5a0504421661b
+  CQDemoKit: f0f3a534160a202035abbdf85484cf99fb939477
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IjinbuNetwork: 307e7e12d35b547f04b885cc2aa098625e4b9768
   JGActionSheet: 2cfca820b57a11ec4b4a5655d45ee599fbeddc05
@@ -399,6 +406,6 @@ SPEC CHECKSUMS:
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 07610803609eb0133df14776b84d06cda8247b73
+PODFILE CHECKSUM: 693defad614d7492d2225c6cf7e80bd81e7c5149
 
 COCOAPODS: 1.16.2

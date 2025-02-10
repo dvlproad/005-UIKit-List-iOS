@@ -35,6 +35,8 @@
     UIView *backgroundViews = [[UIView alloc]initWithFrame:cell.frame];
     backgroundViews.backgroundColor = [[UIColor systemPinkColor] colorWithAlphaComponent:0.8];
     [cell setSelectedBackgroundView:backgroundViews];
+    
+    cell.imageView.backgroundColor = [UIColor redColor];
     cell.textLabel.text = [NSString stringWithFormat:@"第%ld组-第%ld行", indexPath.section, indexPath.row];
     
     return cell;

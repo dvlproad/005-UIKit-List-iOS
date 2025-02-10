@@ -17,10 +17,15 @@
 @property (nonatomic, assign) BOOL click;
 
 @property (nonatomic, assign) CGFloat leftWidth;
+@property (nonatomic, assign) CGFloat rightColumnCount;
+
 @property (nonatomic, weak) id<UITableViewDataSource> leftDataSource;
 @property (nonatomic, weak) id<UICollectionViewDataSource> rightDataSource;
 //@property (nonatomic, weak) UICollectionViewLayout *rightCollectionViewLayout;
+@property (nonatomic, copy) void (^leftTableViewSetupBlock)(UITableView *leftTableView);
 @property (nonatomic, copy) void (^rightCollectionViewSetupBlock)(UICollectionView *rightCollectionView);
+
+@property (nonatomic, copy) void (^onTapRightIndexPath)(NSIndexPath *indexPath);
 
 
 @end
@@ -28,18 +33,37 @@
 
 @implementation CJLinkedCollectionMenuView
 
+/*
+ *  初始化 CollectionView 的 dataSource
+ *
+ *  @param leftWidth            左侧菜单所占宽度
+ *  @param rightColumnCount     右侧菜单列数
+ *  @param leftSetupBlock       左侧菜单的setupBlock
+ *  @param leftDataSource       左侧菜单的dataSource
+ *  @param rightSetupBlock      右侧菜单的setupBlock
+ *  @param rightDataSource      右侧菜单的dataSource
+ *  @param onTapRightIndexPath  点击右侧的数据
+ *
+ *  @return CollectionView 的 dataSource
+ */
 - (instancetype)initWithLeftWidth:(CGFloat)leftWidth
+                 rightColumnCount:(NSInteger)rightColumnCount
                    leftSetupBlock:(nullable void (^)(UITableView *leftTableView))leftSetupBlock
                    leftDataSource:(id<UITableViewDataSource>)leftDataSource
                   rightSetupBlock:(nonnull void (^)(UICollectionView *rightCollectionView))rightSetupBlock
                   rightDataSource:(id<UICollectionViewDataSource>)rightDataSource
+              onTapRightIndexPath:(void (^)(NSIndexPath *indexPath))onTapRightIndexPath
 {
     self = [super init];
     if (self) {
         self.leftWidth = leftWidth;
+        self.rightColumnCount = rightColumnCount;
+
         self.leftDataSource = leftDataSource;
+        self.leftTableViewSetupBlock = leftSetupBlock;
         self.rightDataSource = rightDataSource;
         self.rightCollectionViewSetupBlock = rightSetupBlock;
+        self.onTapRightIndexPath = onTapRightIndexPath;
         [self setupViews];
         
         self.leftTableView.dataSource = self.leftDataSource;
@@ -49,11 +73,17 @@
     return self;
 }
 
+- (void)updateSelectedIndexPaths:(nullable NSArray<NSIndexPath *> *)selectedIndexPaths {
+    for (NSIndexPath *indexPath in selectedIndexPaths) {
+        [self.rightCollectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:UICollectionViewScrollPositionNone];
+    }
+}
 
 - (void)setupViews {
     _click = NO;
     
     UITableView *leftTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.leftTableViewSetupBlock(leftTableView);
     leftTableView.delegate = self;
     //leftTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     //leftTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -90,14 +120,38 @@
     
 }
 
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 选中 左侧 的 tableView
+    if (tableView == self.leftTableView) {
+        NSIndexPath *moveToIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
+        _click = YES;
+        // 将右侧 collection 移动到指定位置
+        [self.rightCollectionView scrollToItemAtIndexPath:moveToIndexPath
+                                         atScrollPosition:UICollectionViewScrollPositionTop
+                                                 animated:YES];
+        
+        // 取消选中效果
+        [self.rightCollectionView deselectItemAtIndexPath:moveToIndexPath animated:YES];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    return 44;
+}
+
+
+
 #pragma mark - UICollectionViewDelegate
 ////“点到”item时候执行的时间(allowsMultipleSelection为默认的NO的时候，只有选中，而为YES的时候有选中和取消选中两种操作)
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"=======点击选择");
+    //[collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    self.onTapRightIndexPath(indexPath);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSLog(@"=======取消选择");
 }
 
 
@@ -131,7 +185,7 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     CGFloat collectionViewCellWidth = 0;
     CGFloat collectionViewCellHeight = 0;
     
-    NSInteger perRowMaxColumnCount = 4;
+    NSInteger perRowMaxColumnCount = self.rightColumnCount;
     
     UIEdgeInsets sectionInset = [self collectionView:collectionView
                                               layout:collectionViewLayout
@@ -182,20 +236,6 @@ minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
     _click = NO;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // 选中 左侧 的 tableView
-    if (tableView == self.leftTableView) {
-        NSIndexPath *moveToIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
-        _click = YES;
-        // 将右侧 collection 移动到指定位置
-        [self.rightCollectionView scrollToItemAtIndexPath:moveToIndexPath
-                                                 atScrollPosition:UICollectionViewScrollPositionTop
-                                                         animated:YES];
-        
-        // 取消选中效果
-        [self.rightCollectionView deselectItemAtIndexPath:moveToIndexPath animated:YES];
-    }
-}
 
 /*
 // Only override drawRect: if you perform custom drawing.

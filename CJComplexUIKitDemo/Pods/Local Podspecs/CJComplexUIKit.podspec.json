@@ -26,15 +26,9 @@
           "name": "CJBaseWebViewController",
           "source_files": "CJComplexUIKit/UIViewController/CJBaseWebViewController/**/*.{h,m}",
           "dependencies": {
-            "Masonry": [
-
-            ],
-            "SVProgressHUD": [
-
-            ],
-            "CJBaseHelper/WebCJHelper": [
-
-            ]
+            "Masonry": [],
+            "SVProgressHUD": [],
+            "CJBaseHelper/WebCJHelper": []
           }
         }
       ]
@@ -68,24 +62,16 @@
       "name": "CJHomeCollectionView",
       "source_files": "CJComplexUIKit/CJHomeCollectionView/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ],
-        "SDCycleScrollView": [
-
-        ],
-        "CJBaseUtil/CJDataUtil": [
-
-        ]
+        "Masonry": [],
+        "SDCycleScrollView": [],
+        "CJBaseUtil/CJDataUtil": []
       }
     },
     {
       "name": "CJLinkedMenu",
       "source_files": "CJComplexUIKit/CJLinkedMenu/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ]
+        "Masonry": []
       }
     },
     {
@@ -95,12 +81,8 @@
           "name": "SearchScrollView",
           "source_files": "CJComplexUIKit/CJDataScrollView/SearchScrollView/**/*.{h,m}",
           "dependencies": {
-            "CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView": [
-
-            ],
-            "CJBaseUtil/CJDataUtil": [
-
-            ]
+            "CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView": [],
+            "CJBaseUtil/CJDataUtil": []
           }
         },
         {
@@ -109,18 +91,10 @@
           "resources": "CJComplexUIKit/CJDataScrollView/ImagePickerCollectionlView/**/*.{png,xib,bundle}",
           "frameworks": "MediaPlayer",
           "dependencies": {
-            "JGActionSheet": [
-
-            ],
-            "CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView": [
-
-            ],
-            "CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell": [
-
-            ],
-            "CJMedia/CJUploadImagePickerUtil": [
-
-            ]
+            "JGActionSheet": [],
+            "CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView": [],
+            "CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell": [],
+            "CJMedia/CJUploadImagePickerUtil": []
           }
         }
       ]
