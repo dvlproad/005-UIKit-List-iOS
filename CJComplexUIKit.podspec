@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-
+  s.dependency "CJListKit-Swift"
   
   # UIViewController
   s.subspec 'UIViewController' do |ss|
@@ -103,6 +103,7 @@ Pod::Spec.new do |s|
     ss.dependency 'Masonry'
     ss.dependency 'SDCycleScrollView'
     ss.dependency 'CJBaseUtil/CJDataUtil'
+    ss.dependency 'CJBaseUIKit/UIView'  # 使用 [cell cjShakeKeeping];
   end
 
   # 可联动的菜单视图

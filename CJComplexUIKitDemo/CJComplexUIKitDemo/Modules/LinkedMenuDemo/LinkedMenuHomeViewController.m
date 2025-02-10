@@ -10,6 +10,7 @@
 
 #import "LinkedTableMenuViewController.h"
 #import "LinkedCollectionMenuViewController.h"
+#import <CJListDemo_Swift/CJListDemo_Swift-Swift.h>
 
 
 @interface LinkedMenuHomeViewController ()
@@ -39,8 +40,15 @@
         {
             CQDMModuleModel *refreshScrollViewModule = [[CQDMModuleModel alloc] init];
             refreshScrollViewModule.title = @"联动的菜单(左右)";
-            refreshScrollViewModule.content = @"右侧是 CollectionView";
+            refreshScrollViewModule.content = @"右侧是 CollectionView(OC)";
             refreshScrollViewModule.classEntry = [LinkedCollectionMenuViewController class];
+            [sectionDataModel.values addObject:refreshScrollViewModule];
+        }
+        {
+            CQDMModuleModel *refreshScrollViewModule = [[CQDMModuleModel alloc] init];
+            refreshScrollViewModule.title = @"联动的菜单(左右)";
+            refreshScrollViewModule.content = @"右侧是 CollectionView（Swift)";
+            refreshScrollViewModule.classEntry = [TSLinkedCollectionMenuViewController class];
             [sectionDataModel.values addObject:refreshScrollViewModule];
         }
         

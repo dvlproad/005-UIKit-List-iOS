@@ -1,0 +1,6 @@
+framework module IjinbuNetwork {
+  umbrella header "IjinbuNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

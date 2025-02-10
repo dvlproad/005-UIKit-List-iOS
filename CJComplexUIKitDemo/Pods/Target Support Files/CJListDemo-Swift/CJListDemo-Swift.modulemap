@@ -1,0 +1,6 @@
+framework module CJListDemo_Swift {
+  umbrella header "CJListDemo-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

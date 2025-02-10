@@ -1,8 +1,8 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://gitee.com/dvlproad/dvlproadSpecs'
 
-platform :ios, '8.0'
-#use_frameworks!
+platform :ios, '11.0'
+use_frameworks!
 inhibit_all_warnings! #inhibit_warnings参数能够有效的抑制CocoaPods引入的第三方代码库产生的warning。
 
 post_install do |installer|
@@ -36,7 +36,9 @@ target 'CJComplexUIKitDemo' do
   pod 'CJFoundation',             :path => '../’
   pod 'CJBaseEffectKit',          :path => '../’
   
-  pod 'CJComplexUIKit',      :path => '../’
+  pod 'CJListDemo-Swift',         :path => '../’
+  pod 'CJComplexUIKit',           :path => '../’
+  pod 'CJListKit-Swift',          :path => '../’
 #  pod 'CJComplexUIKit/CJScrollView',      :path => '../’
 #  pod 'CJComplexUIKit/CJCollectionView',  :path => '../’
 #  pod 'CJComplexUIKit/CJHomeCollectionView',  :path => '../’
