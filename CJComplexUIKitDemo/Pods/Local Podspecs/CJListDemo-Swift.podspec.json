@@ -31,6 +31,10 @@
 
         ]
       }
+    },
+    {
+      "name": "DouyinUrlAnalyze",
+      "source_files": "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}"
     }
   ],
   "swift_version": "5.0"

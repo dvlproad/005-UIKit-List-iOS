@@ -8,6 +8,7 @@
 
 #import "WebHomeViewController.h"
 #import <CQDemoKit/CJUIKitAlertUtil.h>
+#import <CJListDemo_Swift/CJListDemo_Swift-Swift.h>
 
 #import "AboutViewController.h"
 #import "LocalViewController.h"
@@ -33,6 +34,48 @@
     self.navigationItem.title = NSLocalizedString(@"Web首页", nil);
     
     NSMutableArray *sectionDataModels = [[NSMutableArray alloc] init];
+    
+    
+    
+    // 抖音视频地址解析
+    {
+        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        sectionDataModel.theme = @"利用 WebView 进行抖音视频地址解析";
+        {
+            CQDMModuleModel *videoUrlModule = [[CQDMModuleModel alloc] init];
+            videoUrlModule.title = @"利用 WebView 进行抖音视频地址解析";
+            videoUrlModule.actionBlock = ^{
+                DouyinWebScraper *scraper = [[DouyinWebScraper alloc] initWithVideoURL:@"https://www.douyin.com/video/7414051930047106342"];
+                [scraper fetchVideoDataWithCompletion:^(NSDictionary<NSString *,id> * _Nullable data) {
+                    if (data == nil) {
+                        NSLog(@"抖音视频数据获取失败");
+                        return;
+                    }
+                    NSLog(@"抖音视频数据:%@", data);
+                }];
+            };
+            [sectionDataModel.values addObject:videoUrlModule];
+        }
+        {
+            CQDMModuleModel *videoUrlModule = [[CQDMModuleModel alloc] init];
+            videoUrlModule.title = @"利用 WebView 进行抖音视频地址解析";
+            videoUrlModule.actionBlock = ^{
+                NSString *videoID = @"7414051930047106342";
+                NSString *cookie = @"your_cookie_here";
+                DouyinAPIClient *apiClient = [[DouyinAPIClient alloc] init];
+                
+                [apiClient fetchVideoDataWithVideoID:videoID cookie:cookie completion:^(NSString * _Nullable data) {
+                    if (data == nil) {
+                        NSLog(@"抖音视频数据获取失败");
+                        return;
+                    }
+                    NSLog(@"抖音视频数据:%@", data);
+                }];
+            };
+            [sectionDataModel.values addObject:videoUrlModule];
+        }
+        [sectionDataModels addObject:sectionDataModel];
+    }
     
     // WebView Empty
     {

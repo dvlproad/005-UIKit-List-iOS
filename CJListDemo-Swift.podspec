@@ -45,6 +45,10 @@ Pod::Spec.new do |s|
     ss.dependency "CQDemoKit/Demo_DataSourceAndDelegate"
     ss.dependency "CJListKit-Swift/LinkedMenu"
   end
+
+  s.subspec 'DouyinUrlAnalyze' do |ss|
+    ss.source_files = "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}"
+  end
   
 
 end
