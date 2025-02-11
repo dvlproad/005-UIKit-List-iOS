@@ -20,21 +20,19 @@
     {
       "name": "LinkedMenu",
       "source_files": "CJListDemo-Swift/LinkedMenu/**/*.{swift}",
+      "resources": "CJListDemo-Swift/LinkedMenu/**/*.{json}",
       "dependencies": {
-        "SnapKit": [
-
-        ],
-        "CQDemoKit/Demo_DataSourceAndDelegate": [
-
-        ],
-        "CJListKit-Swift/LinkedMenu": [
-
-        ]
+        "SnapKit": [],
+        "CQDemoKit/Demo_DataSourceAndDelegate": [],
+        "CJListKit-Swift/LinkedMenu": []
       }
     },
     {
       "name": "DouyinUrlAnalyze",
-      "source_files": "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}"
+      "source_files": "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}",
+      "dependencies": {
+        "CJBaseUIKit/UIColor": []
+      }
     }
   ],
   "swift_version": "5.0"

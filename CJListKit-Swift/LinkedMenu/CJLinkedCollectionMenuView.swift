@@ -7,6 +7,18 @@
 
 import UIKit
 
+@objc public class CJLinkedMenuLayoutModel: NSObject {
+    var rightCellWidthHeightRatio: CGFloat = 1.0    // 右侧列表单元的宽高比
+    var minimumLineSpacing: CGFloat = 17.0
+    var minimumInteritemSpacing: CGFloat = 17.0
+    
+    @objc public init(rightCellWidthHeightRatio: CGFloat, minimumLineSpacing: CGFloat, minimumInteritemSpacing: CGFloat) {
+        self.rightCellWidthHeightRatio = rightCellWidthHeightRatio
+        self.minimumLineSpacing = minimumLineSpacing
+        self.minimumInteritemSpacing = minimumInteritemSpacing
+    }
+}
+
 @objc public class CJLinkedCollectionMenuView: UIView, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     private(set) var leftTableView: UITableView!
@@ -19,7 +31,7 @@ import UIKit
     
     // cell 的高度
     private var leftCellHeight: CGFloat
-    private var rightCellWidthHeightRatio: CGFloat
+    private var layoutModel: CJLinkedMenuLayoutModel
     
     private weak var leftDataSource: UITableViewDataSource?
     private weak var rightDataSource: UICollectionViewDataSource?
@@ -34,7 +46,7 @@ import UIKit
      *  @param leftWidth                    左侧菜单所占宽度
      *  @param rightColumnCount             右侧菜单列数
      *  @param leftCellHeight               左侧列表单元的高度
-     *  @param rightCellWidthHeightRatio    右侧列表单元的宽高比
+     *  @param layoutModel                  布局(右侧列表单元的宽高比)
      *  @param leftSetupBlock               左侧菜单的setupBlock
      *  @param leftDataSource               左侧菜单的dataSource
      *  @param rightSetupBlock              右侧菜单的setupBlock
@@ -46,7 +58,7 @@ import UIKit
     @objc public init(leftWidth: CGFloat,
                       rightColumnCount: Int,
                       leftCellHeight: CGFloat,
-                      rightCellWidthHeightRatio: CGFloat,
+                      layoutModel: CJLinkedMenuLayoutModel,
                       leftSetupBlock: ((UITableView) -> Void)?,
                       leftDataSource: UITableViewDataSource?,
                       rightSetupBlock: @escaping (UICollectionView) -> Void,
@@ -56,7 +68,7 @@ import UIKit
         self.leftWidth = leftWidth
         self.rightColumnCount = rightColumnCount
         self.leftCellHeight = leftCellHeight
-        self.rightCellWidthHeightRatio = rightCellWidthHeightRatio
+        self.layoutModel = layoutModel
         
         self.leftDataSource = leftDataSource
         self.rightDataSource = rightDataSource
@@ -159,11 +171,11 @@ import UIKit
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10.0
+        return self.layoutModel.minimumLineSpacing
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 10.0
+        return self.layoutModel.minimumInteritemSpacing
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -176,7 +188,7 @@ import UIKit
         let validWidth = width - sectionInset.left - sectionInset.right - columnSpacing * CGFloat(perRowMaxColumnCount - 1)
         let collectionViewCellWidth = floor(validWidth / CGFloat(perRowMaxColumnCount))
         
-        let collectionViewCellHeight = collectionViewCellWidth / self.rightCellWidthHeightRatio
+        let collectionViewCellHeight = collectionViewCellWidth / self.layoutModel.rightCellWidthHeightRatio
         
         return CGSize(width: collectionViewCellWidth, height: collectionViewCellHeight)
     }

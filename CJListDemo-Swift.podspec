@@ -41,6 +41,7 @@ Pod::Spec.new do |s|
   # 可联动的菜单
   s.subspec 'LinkedMenu' do |ss|
     ss.source_files = "CJListDemo-Swift/LinkedMenu/**/*.{swift}"
+    ss.resources = "CJListDemo-Swift/LinkedMenu/**/*.{json}"
     ss.dependency "SnapKit"
     ss.dependency "CQDemoKit/Demo_DataSourceAndDelegate"
     ss.dependency "CJListKit-Swift/LinkedMenu"
@@ -48,6 +49,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'DouyinUrlAnalyze' do |ss|
     ss.source_files = "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}"
+    ss.dependency "CJBaseUIKit/UIColor"
   end
   
 

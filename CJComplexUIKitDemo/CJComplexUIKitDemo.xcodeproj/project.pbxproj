@@ -171,6 +171,8 @@
 		80D49F8F20BE8574003F642C /* TestCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49F8E20BE8574003F642C /* TestCityModel.m */; };
 		80E7E68920AC37CA000F762D /* IjinbuNetworkClient+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E7E68720AC37CA000F762D /* IjinbuNetworkClient+Login.m */; };
 		9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */; };
+		9755B4462D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 9755B4442D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json */; };
+		9755B4472D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 9755B4432D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json */; };
 		C2849CA383CBF0E734AE6DE8 /* Pods_CJComplexUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30757D6810FE9E3D37A620D8 /* Pods_CJComplexUIKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -451,6 +453,8 @@
 		80E7E68820AC37CA000F762D /* IjinbuNetworkClient+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IjinbuNetworkClient+Login.h"; sourceTree = "<group>"; };
 		9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedMenuHomeViewController.h; sourceTree = "<group>"; };
 		9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedMenuHomeViewController.m; sourceTree = "<group>"; };
+		9755B4432D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CQControlWidgetColorSymbolSectionExample.json; sourceTree = "<group>"; };
+		9755B4442D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CQControlWidgetTextSectionExample.json; sourceTree = "<group>"; };
 		D92FC512BBC21CC0D27F656A /* Pods-CJComplexUIKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJComplexUIKitDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJComplexUIKitDemoTests/Pods-CJComplexUIKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1117,6 +1121,7 @@
 		789C444B21EECFA100181144 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9755B4452D5B576E00D7D844 /* data */,
 				789C444C21EECFA100181144 /* AppCommon.xcassets */,
 				789C444D21EECFA100181144 /* MainAsset.xcassets */,
 				789C444E21EECFA100181144 /* AppAssets.xcassets */,
@@ -1170,6 +1175,15 @@
 				9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */,
 			);
 			path = LinkedMenuDemo;
+			sourceTree = "<group>";
+		};
+		9755B4452D5B576E00D7D844 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				9755B4432D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json */,
+				9755B4442D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		E75FB8B4AF71C8FE7F95B93C /* Pods */ = {
@@ -1321,6 +1335,8 @@
 				78590D08215C79DD00F45AD5 /* add_red_Big.png in Resources */,
 				7856F71F21F4E707004AF751 /* jiazhaishibai_bg@3x.png in Resources */,
 				7856F71D21F4E707004AF751 /* currency_icon_network@2x.png in Resources */,
+				9755B4462D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json in Resources */,
+				9755B4472D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json in Resources */,
 				15F42708242B7C6F00ED2E4C /* cjTextField_clear@2x.png in Resources */,
 				15F426FA242B7C6F00ED2E4C /* loading_03.json in Resources */,
 				789A4F4121FAF3A8001528B9 /* MemoryADKnowledge01.jpg in Resources */,

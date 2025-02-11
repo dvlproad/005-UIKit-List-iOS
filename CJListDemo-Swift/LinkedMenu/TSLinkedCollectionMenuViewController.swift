@@ -13,10 +13,10 @@ import CQDemoKit
 @objc public class TSLinkedCollectionMenuViewController: UIViewController {
     // cell 的高度
     private var rightColumnCount: Int
-    private var rightCellWidthHeightRatio: CGFloat
-    @objc public init(rightColumnCount: Int, rightCellWidthHeightRatio: CGFloat) {
+    private var layoutModel: CJLinkedMenuLayoutModel
+    @objc public init(rightColumnCount: Int, layoutModel: CJLinkedMenuLayoutModel) {
         self.rightColumnCount = rightColumnCount
-        self.rightCellWidthHeightRatio = rightCellWidthHeightRatio
+        self.layoutModel = layoutModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,7 +37,7 @@ import CQDemoKit
         self.rightDataSource = CQTSRipeBaseCollectionViewDataSource(sectionDataModels: [])
         self.leftDataSource = GuideMenuDataSource()
         
-        self.menuView = CJLinkedCollectionMenuView(leftWidth: 100, rightColumnCount: self.rightColumnCount, leftCellHeight: 44.0, rightCellWidthHeightRatio: self.rightCellWidthHeightRatio, leftSetupBlock: { leftTableView in
+        self.menuView = CJLinkedCollectionMenuView(leftWidth: 100, rightColumnCount: self.rightColumnCount, leftCellHeight: 44.0, layoutModel: self.layoutModel, leftSetupBlock: { leftTableView in
             self.leftDataSource.registerAllCells(for: leftTableView)
         }, leftDataSource: self.leftDataSource, rightSetupBlock: { rightCollectionView in
             self.rightDataSource.registerAllCells(for: rightCollectionView)

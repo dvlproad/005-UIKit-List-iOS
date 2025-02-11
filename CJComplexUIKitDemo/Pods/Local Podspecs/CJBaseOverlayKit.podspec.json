@@ -28,54 +28,36 @@
       "source_files": "CJBaseOverlayKit/CJToast/**/*.{h,m}",
       "resources": "CJBaseOverlayKit/CJToast/**/*.{png,xib}",
       "dependencies": {
-        "MBProgressHUD": [
-
-        ],
-        "CJBaseOverlayKit/CJBaseOverlayTheme": [
-
-        ]
+        "MBProgressHUD": [],
+        "CJBaseOverlayKit/CJBaseOverlayTheme": []
       }
     },
     {
       "name": "CJAlert",
       "source_files": "CJBaseOverlayKit/CJAlert/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ],
-        "CJBaseOverlayKit/CJBaseOverlayTheme": [
-
-        ]
+        "Masonry": [],
+        "CJBaseOverlayKit/CJBaseOverlayTheme": []
       }
     },
     {
       "name": "CJActionSheet",
       "source_files": "CJBaseOverlayKit/CJActionSheet/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ],
-        "CJBaseOverlayKit/CJBaseOverlayTheme": [
-
-        ]
+        "Masonry": [],
+        "CJBaseOverlayKit/CJBaseOverlayTheme": []
       }
     },
     {
       "name": "CJProgressHUD",
       "source_files": "CJBaseOverlayKit/CJProgressHUD/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ],
+        "Masonry": [],
         "lottie-ios": [
           "~> 2.5.3"
         ],
-        "CJBaseOverlayKit/CJBaseOverlayTheme": [
-
-        ],
-        "MBProgressHUD": [
-
-        ]
+        "CJBaseOverlayKit/CJBaseOverlayTheme": [],
+        "MBProgressHUD": []
       }
     }
   ]
