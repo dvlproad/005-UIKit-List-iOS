@@ -85,10 +85,6 @@
     [collectionView registerClass:[CJUIKitCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
 }
 
-- (void)setSectionDataModels:(NSArray<CQDMSectionDataModel *> *)sectionDataModels {
-    _sectionDataModels = sectionDataModels;
-}
-
 /*
  *  获取指定位置的dataModel
  *

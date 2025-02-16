@@ -22,16 +22,43 @@
       "source_files": "CJListDemo-Swift/LinkedMenu/**/*.{swift}",
       "resources": "CJListDemo-Swift/LinkedMenu/**/*.{json}",
       "dependencies": {
-        "SnapKit": [],
-        "CQDemoKit/Demo_DataSourceAndDelegate": [],
-        "CJListKit-Swift/LinkedMenu": []
+        "SnapKit": [
+
+        ],
+        "CQDemoKit/Demo_DataSourceAndDelegate": [
+
+        ],
+        "CJListKit-Swift/LinkedMenu": [
+
+        ]
       }
     },
     {
       "name": "DouyinUrlAnalyze",
       "source_files": "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}",
       "dependencies": {
-        "CJBaseUIKit/UIColor": []
+        "CJBaseUIKit/UIColor": [
+
+        ]
+      }
+    },
+    {
+      "name": "ItemPreviewHomePage",
+      "source_files": "CJListDemo-Swift/ItemPreviewHomePage/**/*.{swift}",
+      "resources": "CJListDemo-Swift/ItemPreviewHomePage/**/*.{json}",
+      "dependencies": {
+        "SnapKit": [
+
+        ],
+        "SDWebImage": [
+
+        ],
+        "SDWebImageWebPCoder": [
+
+        ],
+        "CQDemoKit/Demo_DataSourceAndDelegate": [
+
+        ]
       }
     }
   ],

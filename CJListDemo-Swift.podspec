@@ -52,5 +52,15 @@ Pod::Spec.new do |s|
     ss.dependency "CJBaseUIKit/UIColor"
   end
   
+  s.subspec 'ItemPreviewHomePage' do |ss|
+    ss.source_files = "CJListDemo-Swift/ItemPreviewHomePage/**/*.{swift}"
+    ss.resources = "CJListDemo-Swift/ItemPreviewHomePage/**/*.{json}"
+    ss.dependency "SnapKit"
+    ss.dependency "SDWebImage"
+    ss.dependency 'SDWebImageWebPCoder'
+    ss.dependency "CQDemoKit/Demo_DataSourceAndDelegate"
+#    ss.dependency "CJListKit-Swift/LinkedMenu"
+  end
+  
 
 end

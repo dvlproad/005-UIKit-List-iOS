@@ -38,6 +38,11 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
+  # 自定义的 FlowLayout (如不同cell宽度时候左对齐)
+  s.subspec 'FlowLayout' do |ss|
+    ss.source_files = "CJListKit-Swift/FlowLayout/**/*.{swift}"
+  end
+
   # 可联动的菜单
   s.subspec 'LinkedMenu' do |ss|
     ss.source_files = "CJListKit-Swift/LinkedMenu/**/*.{swift}"

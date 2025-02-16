@@ -8,6 +8,9 @@
 
 #import "CollectionHomeViewController.h"
 
+#import <CQDemoKit/CJUIKitToastUtil.h>
+#import <CJListDemo_Swift/CJListDemo_Swift-Swift.h>
+
 //UICollectionView
 #import "CvDemo_Complex.h"
 
@@ -119,6 +122,34 @@
             imagePickerCollectionViewModule.title = @"工作首页";
             imagePickerCollectionViewModule.classEntry = [LEWorkHomeViewController class];
             [sectionDataModel.values addObject:imagePickerCollectionViewModule];
+        }
+        {
+            CQDMModuleModel *previewListModule = [[CQDMModuleModel alloc] init];
+            previewListModule.title = @"Item的预览列表(已解决布局)";
+            previewListModule.content = @"常用于外部不提供详情数据，而是用一整张预览图来展示\n重点:已解决某行数据不足时候排列会从一二位跑到头尾位置";
+            previewListModule.contentLines = 2;
+            previewListModule.viewGetterHandle = ^UIView * _Nonnull{
+                UIView *tsView = [[TSPreviewView alloc] initWithIsUseLeftAlignedFlowLayout:YES onTapEntity:^(TSPreviewModel * _Nonnull previewModel) {
+                    NSString *message = [NSString stringWithFormat:@"点击了预览项: %@", previewModel.name];
+                    [CJUIKitToastUtil showMessage:message];
+                }];
+                return tsView;
+            };
+            [sectionDataModel.values addObject:previewListModule];
+        }
+        {
+            CQDMModuleModel *previewListModule = [[CQDMModuleModel alloc] init];
+            previewListModule.title = @"Item的预览列表(使用系统有布局问题)";
+            previewListModule.content = @"常用于外部不提供详情数据，而是用一整张预览图来展示\n重点:未解决某行数据不足时候排列会从一二位跑到头尾位置";
+            previewListModule.contentLines = 2;
+            previewListModule.viewGetterHandle = ^UIView * _Nonnull{
+                UIView *tsView = [[TSPreviewView alloc] initWithIsUseLeftAlignedFlowLayout:NO onTapEntity:^(TSPreviewModel * _Nonnull previewModel) {
+                    NSString *message = [NSString stringWithFormat:@"点击了预览项: %@", previewModel.name];
+                    [CJUIKitToastUtil showMessage:message];
+                }];
+                return tsView;
+            };
+            [sectionDataModel.values addObject:previewListModule];
         }
         
         [sectionDataModels addObject:sectionDataModel];

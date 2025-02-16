@@ -18,6 +18,10 @@
   "requires_arc": true,
   "subspecs": [
     {
+      "name": "FlowLayout",
+      "source_files": "CJListKit-Swift/FlowLayout/**/*.{swift}"
+    },
+    {
       "name": "LinkedMenu",
       "source_files": "CJListKit-Swift/LinkedMenu/**/*.{swift}"
     }

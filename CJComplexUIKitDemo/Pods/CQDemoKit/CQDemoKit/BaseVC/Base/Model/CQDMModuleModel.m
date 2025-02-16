@@ -52,8 +52,6 @@
         [tsview.trailingAnchor constraintEqualToAnchor:viewController.view.safeAreaLayoutGuide.trailingAnchor constant:-10]
     ]];
     
-    viewController.hidesBottomBarWhenPushed = YES;
-    
     return viewController;
 }
 

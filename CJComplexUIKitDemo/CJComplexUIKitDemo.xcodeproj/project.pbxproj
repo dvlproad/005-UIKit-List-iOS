@@ -171,6 +171,7 @@
 		80D49F8F20BE8574003F642C /* TestCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49F8E20BE8574003F642C /* TestCityModel.m */; };
 		80E7E68920AC37CA000F762D /* IjinbuNetworkClient+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E7E68720AC37CA000F762D /* IjinbuNetworkClient+Login.m */; };
 		9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */; };
+		974C88742D623E3100E92464 /* previewDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = 974C88732D623E3100E92464 /* previewDatas.json */; };
 		9755B4462D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 9755B4442D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json */; };
 		9755B4472D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 9755B4432D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json */; };
 		C2849CA383CBF0E734AE6DE8 /* Pods_CJComplexUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30757D6810FE9E3D37A620D8 /* Pods_CJComplexUIKitDemo.framework */; };
@@ -453,6 +454,7 @@
 		80E7E68820AC37CA000F762D /* IjinbuNetworkClient+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IjinbuNetworkClient+Login.h"; sourceTree = "<group>"; };
 		9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedMenuHomeViewController.h; sourceTree = "<group>"; };
 		9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedMenuHomeViewController.m; sourceTree = "<group>"; };
+		974C88732D623E3100E92464 /* previewDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = previewDatas.json; sourceTree = "<group>"; };
 		9755B4432D5B576E00D7D844 /* CQControlWidgetColorSymbolSectionExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CQControlWidgetColorSymbolSectionExample.json; sourceTree = "<group>"; };
 		9755B4442D5B576E00D7D844 /* CQControlWidgetTextSectionExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CQControlWidgetTextSectionExample.json; sourceTree = "<group>"; };
 		D92FC512BBC21CC0D27F656A /* Pods-CJComplexUIKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJComplexUIKitDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJComplexUIKitDemoTests/Pods-CJComplexUIKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -904,6 +906,7 @@
 			children = (
 				789A4F0821FAF3A8001528B9 /* CollectionHomeViewController.h */,
 				789A4F0921FAF3A8001528B9 /* CollectionHomeViewController.m */,
+				974C88732D623E3100E92464 /* previewDatas.json */,
 				781872BB242BBA170098B3A9 /* Work */,
 				78293F1721FC640300F70F43 /* ImageChooseCollectionView */,
 				789A4F2121FAF3A8001528B9 /* Base */,
@@ -1351,6 +1354,7 @@
 				78590D0B215C79DD00F45AD5 /* SearchTableViewController.xib in Resources */,
 				789A4F3C21FAF3A8001528B9 /* MemoryADKnowledge04.jpg in Resources */,
 				789A4F4821FAF3A8001528B9 /* MemoryADResult01.gif in Resources */,
+				974C88742D623E3100E92464 /* previewDatas.json in Resources */,
 				789A4F4A21FAF3A8001528B9 /* MemoryAD32.jpg in Resources */,
 				789C445221EECFA100181144 /* MainAsset.xcassets in Resources */,
 				789A4F3B21FAF3A8001528B9 /* MemoryAD05.jpg in Resources */,
@@ -1484,8 +1488,10 @@
 				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImageWebPCoder/SDWebImageWebPCoder.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1517,8 +1523,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImageWebPCoder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

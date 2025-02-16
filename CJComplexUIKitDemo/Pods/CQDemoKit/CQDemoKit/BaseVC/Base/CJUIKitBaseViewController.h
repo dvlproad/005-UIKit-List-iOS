@@ -26,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
                               clickSubmitTitleBlock:(void(^)(void))clickSubmitTitleBlock
                                 clickEditTitleBlock:(void(^)(void))clickEditTitleBlock;
 
-
-
 @end
 
 NS_ASSUME_NONNULL_END
