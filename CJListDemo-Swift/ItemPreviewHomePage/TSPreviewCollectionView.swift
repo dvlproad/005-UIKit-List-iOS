@@ -8,6 +8,7 @@
 
 import UIKit
 import CJListKit_Swift
+import CQDemoKit
 
 @objc public class TSPreviewCollectionView: UICollectionView {
     var dataModels: [TSPreviewModel] = []
@@ -17,7 +18,7 @@ import CJListKit_Swift
     // 初始化方法
     @objc public init(frame: CGRect,
                       isUseLeftAlignedFlowLayout: Bool,
-         onTapEntity: @escaping (TSPreviewModel) -> Void)
+                      onTapEntity: @escaping (TSPreviewModel) -> Void)
     {
         self.onTapEntity = onTapEntity
         
@@ -66,16 +67,25 @@ extension TSPreviewCollectionView: UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let dataModel = dataModels[indexPath.row]
-        if dataModel.type == .component {
+        if dataModel.type == .single {
             let cell = dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TSPreviewNormalCollectionViewCell.self), for: indexPath) as! TSPreviewNormalCollectionViewCell
             //cell.backgroundColor = .red
-            cell.setEntity(dataModel)
+            cell.setPreviewModel(dataModel)
             return cell
         }
         
         let cell = dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TSPreviewGroupCollectionViewCell.self), for: indexPath) as! TSPreviewGroupCollectionViewCell
         //cell.backgroundColor = .red
-        cell.setModel(dataModel)
+        cell.setPreviewModel(dataModel)
+        cell.configure(
+            tapSelfHandler: { [weak self] in
+                CJUIKitToastUtil.showMessage("点击了 groupCollectionView 上非 cell 的区域")
+                self?.onTapEntity(dataModel)
+            }, tapGroupItemHandler: { [weak self] groupItemModel in
+                CJUIKitToastUtil.showMessage("点击了 groupCollectionView 上 cell 的区域")
+                self?.onTapEntity(dataModel)
+            }
+        )
         
         return cell
     }
@@ -101,17 +111,15 @@ extension TSPreviewCollectionView: UICollectionViewDelegateFlowLayout {
         let collectionWidth = collectionView.frame.size.width //UIScreen.main.bounds.width
         let itemsWithSpacingWidth = collectionWidth - sectionInset.left - sectionInset.right
         
-        let setModel = dataModels[indexPath.row]
-        let setEntitys = setModel.entitys
-        
-        
+        let previewModel = dataModels[indexPath.row]
+
         var columnCount: Int
         var topWidthHeightRatio: CGFloat // 除文字和间距外的顶部视图的宽高比
         var imageDistanceAndImageHeight: CGFloat
-        if setModel.type == .set {
+        if previewModel.type == .group {
             columnCount = 1
             let groupcolumnCount = 4
-            let groupRowCount = (setModel.entitys.count-1) / 4 + 1
+            let groupRowCount = (previewModel.entitys.count-1) / 4 + 1
             let groupSectionInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
             
             let groupcolumnSpacing = 16.0
@@ -129,7 +137,7 @@ extension TSPreviewCollectionView: UICollectionViewDelegateFlowLayout {
             imageDistanceAndImageHeight = 7.5+12
             
         } else { //if setEntitys.count == 1
-            let widgetStyle = setModel.style
+            let widgetStyle = previewModel.style
             switch widgetStyle {
             case .circle:
                 columnCount = 4

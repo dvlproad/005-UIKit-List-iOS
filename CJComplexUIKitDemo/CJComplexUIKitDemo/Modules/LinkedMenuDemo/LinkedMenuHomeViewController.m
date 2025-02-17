@@ -68,7 +68,7 @@
             refreshScrollViewModule.content = @"右侧是 CollectionView（4列)";
             refreshScrollViewModule.viewGetterHandle = ^UIView * _Nonnull{
                 CJLinkedMenuLayoutModel *layoutModel = [[CJLinkedMenuLayoutModel alloc] initWithRightCellWidthHeightRatio:1.0 minimumLineSpacing:17.0 minimumInteritemSpacing:17.0];
-                TSLinkedCollectionMenuView *view = [[TSLinkedCollectionMenuView alloc] initWithRightColumnCount:4 layoutModel:layoutModel isUseForText:NO isForCloseState:NO onTapRightIndexPath:^(NSIndexPath * _Nonnull, CJBaseImageModel * _Nonnull) {
+                TSLinkedCollectionMenuView *view = [[TSLinkedCollectionMenuView alloc] initWithRightColumnCount:4 layoutModel:layoutModel isUseForText:NO isForCloseState:NO onTapRightIndexPath:^(NSIndexPath * _Nonnull indexPath, CJBaseImageModel * _Nonnull imageModel) {
                     
                 }];
                 

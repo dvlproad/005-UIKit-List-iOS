@@ -11,7 +11,8 @@ import CJListKit_Swift
 @objc class TSPreviewGroupCollectionViewCell: UICollectionViewCell {
     var titleLabel: UILabel!
     var collectionView: ControlWidgetPreviewGroupCollectionView!
-    var onTapEntity: ((_ groupItemModel: String) -> Void)?
+    var onTapSelf: (() -> Void)?
+    var onTapGroupItem: ((_ groupItemModel: String) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,8 +38,10 @@ import CJListKit_Swift
         self.titleLabel = titleLabel
         
         
-        let collectionView = ControlWidgetPreviewGroupCollectionView.init(frame: .zero, onTapEntity: { groupItemModel in
-            self.onTapEntity?(groupItemModel)
+        let collectionView = ControlWidgetPreviewGroupCollectionView.init(frame: .zero, onTapSelf: {
+            self.onTapSelf?()
+        }, onTapGroupItem: { groupItemModel in
+            self.onTapGroupItem?(groupItemModel)
         })
         collectionView.backgroundColor = UIColor.cjColor(withHexString: "#C7C7C7", alpha: 1.0)
         collectionView.layer.cornerRadius = 22.5
@@ -51,10 +54,15 @@ import CJListKit_Swift
         self.collectionView = collectionView
     }
     
-    func setModel(_ setModel: TSPreviewModel) {
-        self.titleLabel.text = setModel.name
+    func configure(tapSelfHandler: @escaping () -> Void, tapGroupItemHandler: @escaping (_ groupItemModel: String) -> Void) {
+        self.onTapSelf = tapSelfHandler
+        self.onTapGroupItem = tapGroupItemHandler
+    }
+    
+    func setPreviewModel(_ previewModel: TSPreviewModel) {
+        self.titleLabel.text = previewModel.name
         
-        self.collectionView.groupItemModels = setModel.entitys
+        self.collectionView.groupItemModels = previewModel.entitys
         self.collectionView.reloadData()
     }
 }
@@ -62,14 +70,21 @@ import CJListKit_Swift
 
 @objc public class ControlWidgetPreviewGroupCollectionView: UICollectionView {
     var groupItemModels: [String] = []
-//    var onTapIndexPath: ((IndexPath) -> Void)
-    var onTapEntity: ((_ groupItemModel: String) -> Void)
+    var onTapSelf: (() -> Void)
+    var onTapGroupItem: ((_ groupItemModel: String) -> Void)
     
-    // 初始化方法
-    @objc public init(frame: CGRect,
-         onTapEntity: @escaping (_ groupItemModel: String) -> Void)
+    /// 初始化方法
+    /// - Parameters:
+    ///   - frame: frame
+    ///   - onTapSelf: 点击collectionView上非cell的区域
+    ///   - onTapGroupItem: 点击collectionView上的cell的区域
+    @objc public init(
+        frame: CGRect,
+        onTapSelf: @escaping () -> Void,
+        onTapGroupItem: @escaping (_ groupItemModel: String) -> Void)
     {
-        self.onTapEntity = onTapEntity
+        self.onTapSelf = onTapSelf
+        self.onTapGroupItem = onTapGroupItem
         
         let layout = CJLeftAlignedFlowLayout()
         layout.scrollDirection = .vertical
@@ -90,6 +105,28 @@ import CJListKit_Swift
         // 设置数据源和代理
         dataSource = self
         delegate = self
+        
+        // 添加点击手势识别器来监听 collectionView 外的点击事件
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapOutsideCollectionView(_:)))
+        tapGesture.cancelsTouchesInView = false // 确保手势识别器不会阻止其他视图的事件传递
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    // 点击collectionView上的cell的区域触发didSelectItemAt，点击非cell的区域触发另一个方法
+    // 手势识别器方法：处理 collectionView 之外的点击事件
+    @objc func handleTapOutsideCollectionView(_ gesture: UITapGestureRecognizer) {
+        // 检查点击是否发生在 collectionView 内部
+        let touchPoint = gesture.location(in: self)
+        // 如果点击的位置不在有效的 cell 内部，则触发另一个方法
+        if let indexPath = self.indexPathForItem(at: touchPoint) {
+            // 如果点击的区域在 cell 内部，则 do nothing
+            return
+        } else {
+            // 如果点击的位置不在任何 cell 内部，则触发特定的处理方法
+            //debugPrint("点击了 collectionView 上非 cell 的区域")
+            // 在这里处理点击非 cell 区域时的操作
+            self.onTapSelf()
+        }
     }
 }
 
@@ -97,7 +134,7 @@ import CJListKit_Swift
 extension ControlWidgetPreviewGroupCollectionView: UICollectionViewDelegate {
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let groupItemModel = groupItemModels[indexPath.row]
-        onTapEntity(groupItemModel)
+        onTapGroupItem(groupItemModel)
     }
 }
 

@@ -22,13 +22,13 @@ import Foundation
      },
  */
 
-public enum ControlWidgetPreviewType: Int, Codable {
-    case component = 0  // 0组件
-    case set = 1        // 1套图
+public enum TSPreviewType: Int, Codable {
+    case single = 0     // 0单个数据
+    case group = 1      // 1套图
 }
 
 
-public enum ControlWidgetStyle: String, Sendable, CaseIterable, Codable {
+public enum TSPreviewStyle: String, Sendable, CaseIterable, Codable {
     case circle     // 圆形
     case rectangle  // 长方形
     case square     // 正方形
@@ -41,7 +41,7 @@ public enum ControlWidgetStyle: String, Sendable, CaseIterable, Codable {
         let rawValue = try container.decode(String.self)
         
         // 如果枚举值存在，则正常初始化
-        if let validValue = ControlWidgetStyle(rawValue: rawValue) {
+        if let validValue = TSPreviewStyle(rawValue: rawValue) {
             self = validValue
         } else {
             // 如果是无效的值（例如 "normal"），则默认使用 .toogle
@@ -57,8 +57,8 @@ public class TSPreviewModel: NSObject, Codable {
     public var name: String
     var configFile: String?
     var entitys: [String]
-    var type: ControlWidgetPreviewType   //数据分类 0组件; 1套图
-    var style: ControlWidgetStyle   // 类型
+    var type: TSPreviewType   //数据分类 0组件; 1套图
+    var style: TSPreviewStyle   // 类型
     
     // MARK: Codable
     enum CodingKeys: String, CodingKey {
@@ -80,8 +80,8 @@ public class TSPreviewModel: NSObject, Codable {
         configFile = try container.decodeIfPresent(String.self, forKey: .configFile)
         entitys = try container.decodeIfPresent([String].self, forKey: .entitys) ?? []
         let typeIValue = try container.decodeIfPresent(Int.self, forKey: .type) ?? 0
-        type = ControlWidgetPreviewType(rawValue: typeIValue) ?? ControlWidgetPreviewType.component
-        style = try container.decodeIfPresent(ControlWidgetStyle.self, forKey: .style) ?? .circle
+        type = TSPreviewType(rawValue: typeIValue) ?? TSPreviewType.single
+        style = try container.decodeIfPresent(TSPreviewStyle.self, forKey: .style) ?? .circle
     }
 }
 

@@ -50,7 +50,7 @@ class TSPreviewNormalCollectionViewCell: UICollectionViewCell {
         self.preImageView = preImageView
     }
     
-    func setEntity(_ previewModel: TSPreviewModel) {
+    func setPreviewModel(_ previewModel: TSPreviewModel) {
         if previewModel.style == .circle {
             self.preImageView.layer.cornerRadius = CGRectGetWidth(self.frame)/2.0
         } else {
