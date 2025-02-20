@@ -1,5 +1,5 @@
 //
-//  TSTSSwiftUIView.swift
+//  TSSwiftUIGridViewSwiftUIView.swift
 //  TSDemoDemo
 //
 //  Created by ciyouzen on 2020/2/14.
@@ -11,7 +11,7 @@ import UIKit
 import CJListKit_Swift
 
 @available(iOS 14.0, *)
-@objc public class TSTSUIView: UIView {
+@objc public class TSSwiftUIGridViewUIView: UIView {
     let itemsPerRow: Int // 每行显示的项数
     let cellItemSpacing: CGFloat
     let cellWidth: CGFloat
@@ -41,7 +41,7 @@ import CJListKit_Swift
     // 从 swiftuiView 生成 uiView ，并显示到视图中
     private var hostingController: UIViewController?
     private func setupViews() {
-        let swiftuiView = TSTSSwiftUIView(itemsPerRow: itemsPerRow, cellItemSpacing: cellItemSpacing, cellWidth: cellWidth, rowHeight: rowHeight, maxRowCount: maxRowCount)
+        let swiftuiView = TSSwiftUIGridViewSwiftUIView(itemsPerRow: itemsPerRow, cellItemSpacing: cellItemSpacing, cellWidth: cellWidth, rowHeight: rowHeight, maxRowCount: maxRowCount)
         let hostingController = UIHostingController(rootView: swiftuiView)
         self.hostingController = hostingController
         
@@ -63,7 +63,7 @@ import CJListKit_Swift
 }
 
 @available(iOS 14.0, *)
-@objc public class TSTSUIViewController: UIViewController {
+@objc public class TSSwiftUIGridViewUIViewController: UIViewController {
     let itemsPerRow: Int // 每行显示的项数
     let cellItemSpacing: CGFloat
     let cellWidth: CGFloat
@@ -94,7 +94,7 @@ import CJListKit_Swift
         view.backgroundColor = UIColor(red: 105/255.0, green: 193/255.0, blue: 243/255.0, alpha: 1)
 
         // 创建 SwiftUI 视图，并用 UIHostingController 来包装 SwiftUI 视图
-        let swiftUIView = TSTSSwiftUIView(itemsPerRow: itemsPerRow, cellItemSpacing: cellItemSpacing, cellWidth: cellWidth, rowHeight: rowHeight, maxRowCount: maxRowCount)
+        let swiftUIView = TSSwiftUIGridViewSwiftUIView(itemsPerRow: itemsPerRow, cellItemSpacing: cellItemSpacing, cellWidth: cellWidth, rowHeight: rowHeight, maxRowCount: maxRowCount)
         let hostingController = UIHostingController(rootView: swiftUIView)
 
         // 添加到当前视图控制器的视图中，并设置 Auto Layout 约束
@@ -116,7 +116,7 @@ import CJListKit_Swift
 
 
 @available(iOS 14.0, *)
-struct TSTSSwiftUIView: View {
+struct TSSwiftUIGridViewSwiftUIView: View {
     let itemsPerRow: Int // 每行显示的项数
     let cellItemSpacing: CGFloat
     let cellWidth: CGFloat
@@ -125,43 +125,37 @@ struct TSTSSwiftUIView: View {
     
     @State var dataModels: [TSGridItemModel] = []
     var body: some View {
-        let edgeInset = UIEdgeInsets(top: 39.0, left: 12.0, bottom: 39.0, right: 12.0)
-        
-        VStack(alignment: .center, spacing: 0) {
-            CJEdgeInsetGridView(
-                backgroundView: {
-                    Color.red
-                    //Color(hex: "#F5F5F5")
-                },
-                contentEdgeInset: edgeInset,
-                contentBackgroundColor: Color.green, // Color(hex: "#EBEBEB")
-                contentCornerRadius: 22.5,
-                disabledScroll: true,
-                cellEdgeInset: UIEdgeInsets(top: 12.0, left: 12.0, bottom: 12.0, right: 12.0),
-                itemsPerRow: itemsPerRow,
-                cellItemSpacing: cellItemSpacing,
-                rowHeight: rowHeight,
-                cellSizeForIndex: { index in
-                    return cellWidth
-                },
-                cellViewGetter: { dataModel, isSelected in
-                    return Color.random()
-                        .foregroundColor(.white)
-                        .background(Color.gray)
-                        .overlay(
-                            Text(dataModel.text) // 展示索引，帮助调试
-                                .foregroundColor(.black)
-                        )
-                    
-                },
-                maxRowCount: maxRowCount,
-                dataModels: self.dataModels,
-                currentDataModel: .constant(nil),
-                onChangeOfDataModel: { newDataModel in
-                    
-                }
-            )
-        }
+        CJBaseGridView(
+            disabledScroll: false,
+            itemsPerRow: itemsPerRow,
+            cellItemSpacing: cellItemSpacing,
+            rowHeight: rowHeight,
+            cellSizeForIndex: { index in
+                return cellWidth
+            },
+            cellViewGetter: { dataModel, isSelected in
+                return Color.random()
+                    .cornerRadius(cellWidth/2.0)
+                    .overlay(
+                        Text(dataModel.text)
+                            .foregroundColor(.black)
+                    )
+                
+            },
+            maxRowCount: maxRowCount,
+            dataModels: self.dataModels,
+            currentDataModel: .constant(nil),
+            onChangeOfDataModel: { newDataModel in
+                
+            }
+        )
+        .background(Color.white)  // 内部视图的背景色
+        .padding(EdgeInsets(top: 12.0, leading: 12.0, bottom: 12.0, trailing: 12.0))  // 内部视图的边距
+        .background(Color.green)  // 内部视图的背景色
+        .cornerRadius(22.5)  // 内部视图的圆角
+        .padding(EdgeInsets(top: 39.0, leading: 12.0, bottom: 39.0, trailing: 12.0))  // 外部视图与内部视图的边距
+        .background(Color.blue)  // 外部视图的背景色
+        .cornerRadius(12.0)  // 外部视图的圆角
         .onAppear() {
             // 创建100个 TSGridItemModel
             var dataModels: [TSGridItemModel] = []
@@ -196,42 +190,9 @@ struct TSGridItemModel: Identifiable {
 
 // MARK: 预览 BaseControlWidgetAnimationViewInApp
 @available(iOS 14.0, *)
-struct TSTSSwiftUIView_Previews: PreviewProvider {
+struct TSSwiftUIGridViewSwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        TSTSSwiftUIView(itemsPerRow: 4, cellItemSpacing: 20, cellWidth: 80, rowHeight: 50, maxRowCount: 2)
+        TSSwiftUIGridViewSwiftUIView(itemsPerRow: 4, cellItemSpacing: 20, cellWidth: 80, rowHeight: 50, maxRowCount: 2)
     }
 }
 
-
-@available(iOS 13.0, *)
-extension Color {
-    // 从十六进制颜色字符串生成 Color
-    init(hex: String) {
-        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // 如果颜色字符串以 # 开头，去掉 #
-        if hexSanitized.hasPrefix("#") {
-            hexSanitized.removeFirst()
-        }
-        
-        // 默认颜色值
-        var rgb: UInt64 = 0
-        Scanner(string: hexSanitized).scanHexInt64(&rgb)
-        
-        let red = Double((rgb >> 16) & 0xFF) / 255.0
-        let green = Double((rgb >> 8) & 0xFF) / 255.0
-        let blue = Double(rgb & 0xFF) / 255.0
-        
-        self.init(red: red, green: green, blue: blue)
-    }
-    
-    // 随机颜色生成器
-    static func random() -> Color {
-        return Color(
-            red: Double.random(in: 0...1),
-            green: Double.random(in: 0...1),
-            blue: Double.random(in: 0...1),
-            opacity: Double.random(in: 0...1)
-        )
-    }
-}

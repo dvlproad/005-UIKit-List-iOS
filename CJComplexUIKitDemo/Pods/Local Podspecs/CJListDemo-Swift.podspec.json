@@ -22,16 +22,24 @@
       "source_files": "CJListDemo-Swift/LinkedMenu/**/*.{swift}",
       "resources": "CJListDemo-Swift/LinkedMenu/**/*.{json}",
       "dependencies": {
-        "SnapKit": [],
-        "CQDemoKit/Demo_DataSourceAndDelegate": [],
-        "CJListKit-Swift/LinkedMenu": []
+        "SnapKit": [
+
+        ],
+        "CQDemoKit/Demo_DataSourceAndDelegate": [
+
+        ],
+        "CJListKit-Swift/LinkedMenu": [
+
+        ]
       }
     },
     {
       "name": "DouyinUrlAnalyze",
       "source_files": "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}",
       "dependencies": {
-        "CJBaseUIKit/UIColor": []
+        "CJBaseUIKit/UIColor": [
+
+        ]
       }
     },
     {
@@ -39,24 +47,27 @@
       "source_files": "CJListDemo-Swift/ItemPreviewHomePage/**/*.{swift}",
       "resources": "CJListDemo-Swift/ItemPreviewHomePage/**/*.{json}",
       "dependencies": {
-        "SnapKit": [],
-        "SDWebImage": [],
-        "SDWebImageWebPCoder": [],
-        "CQDemoKit/Demo_DataSourceAndDelegate": []
-      }
-    },
-    {
-      "name": "DouyinUrlAnalyze",
-      "source_files": "CJListDemo-Swift/DouyinUrlAnalyze/**/*.{swift}",
-      "dependencies": {
-        "CJBaseUIKit/UIColor": []
+        "SnapKit": [
+
+        ],
+        "SDWebImage": [
+
+        ],
+        "SDWebImageWebPCoder": [
+
+        ],
+        "CQDemoKit/Demo_DataSourceAndDelegate": [
+
+        ]
       }
     },
     {
       "name": "CollectionView_SwiftUI",
       "source_files": "CJListDemo-Swift/CollectionView_SwiftUI/**/*.{swift}",
       "dependencies": {
-        "CJListKit-Swift/CollectionView_SwiftUI": []
+        "CJListKit-Swift/CollectionView_SwiftUI": [
+
+        ]
       }
     }
   ],

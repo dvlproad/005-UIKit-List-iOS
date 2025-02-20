@@ -52,5 +52,9 @@ Pod::Spec.new do |s|
     ss.source_files = "CJListKit-Swift/CollectionView_SwiftUI/**/*.{swift}"
   end
   
+  s.subspec 'Extension' do |ss|
+    ss.source_files = "CJListKit-Swift/Extension/**/*.{swift}"
+  end
+  
 
 end

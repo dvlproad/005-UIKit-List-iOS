@@ -1,13 +1,15 @@
 //
-//  IconCollectionView.swift
+//  CJBaseScrollView_SwiftUI.swift
 //  CJListKit-Swift
 //
 //  Created by qian on 2025/1/14.
 //
+//  单行或者单列滚动的视图，且可额外设置头尾视图。（多行的滚动视图，请见 CJBaseGridView_SwiftUI.swift)
+
 import SwiftUI
 
 @available(iOS 14.0, *)
-public struct BaseIconsScrollView<CellView: View, HeaderView: View, BottomView: View, TModel: Identifiable>: View {
+public struct CJBaseScrollView<CellView: View, HeaderView: View, BottomView: View, TModel: Identifiable>: View {
     //let axes: Axis.Set
     var direction: Axis.Set // 用来设置滚动方向，支持水平和竖直
     let cellItemSpacing: CGFloat    // item 之间的间隔
@@ -20,7 +22,7 @@ public struct BaseIconsScrollView<CellView: View, HeaderView: View, BottomView: 
     
     var dataModels: [TModel]
     @Binding var currentDataModel: TModel?
-    var onChangeOfDataModel: ((_ newDataModel: TModel) -> Void)
+    var onChangeOfDataModel: ((_ newDataModel: TModel) -> Void)?
     
     @State var selectedIndex: Int?
     
@@ -35,8 +37,8 @@ public struct BaseIconsScrollView<CellView: View, HeaderView: View, BottomView: 
                 bottomView: (() -> BottomView)? = nil,
                 
                 dataModels: [TModel],
-                currentDataModel: Binding<TModel?>,
-                onChangeOfDataModel: @escaping (_: TModel) -> Void
+                currentDataModel: Binding<TModel?> = .constant(nil),
+                onChangeOfDataModel: ((_ newDataModel: TModel) -> Void)? = nil
     ) {
         self.direction = direction
         
@@ -100,7 +102,8 @@ public struct BaseIconsScrollView<CellView: View, HeaderView: View, BottomView: 
 //                let showItems = dataModels.prefix(showCount) // 截取最多 showCount 个元素
 //                ForEach(Array(showItems.enumerated()), id: \.offset) { index, model in
                 let cellSize = cellSizeForIndex(index)
-                cellViewGetter(model, model.id == currentDataModel?.id)
+                let cellView: CellView = cellViewGetter(model, model.id == currentDataModel?.id)
+                cellView
                     .frame(width: cellSize.width, height: cellSize.height)
                     //.background(Color.randomColor)
                     .onTapGesture {
@@ -123,6 +126,6 @@ public struct BaseIconsScrollView<CellView: View, HeaderView: View, BottomView: 
         
         selectedIndex = dataModels.firstIndex(where: { $0.id == model.id }) ?? -1
         
-        onChangeOfDataModel(model)
+        onChangeOfDataModel?(model)
     }
 }

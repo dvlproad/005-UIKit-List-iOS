@@ -4,112 +4,13 @@
 //
 //  Created by qian on 2025/1/14.
 //
+//  多行的滚动视图。（单行或者单列滚动的视图，且可额外设置头尾视图，请见 CJBaseScrollView_SwiftUI.swift)
+
 import SwiftUI
-
-@available(iOS 14.0, *)
-public struct CJEdgeInsetGridView<CellView: View, TModel: Identifiable>: View {
-    let backgroundView: any View            // 视图的背景色
-    let contentEdgeInset: UIEdgeInsets      // 内容的边距
-    let contentBackgroundColor: Color       // 内容的背景色
-    let contentCornerRadius: CGFloat        // 内容的圆角
-    
-    let disabledScroll: Bool
-    let cellEdgeInset: UIEdgeInsets      // cell离边缘的边距
-    let itemsPerRow: Int // 每行显示的项数
-    let cellItemSpacing: CGFloat    // item 之间的间隔
-    let rowHeight: CGFloat
-    let cellSizeForIndex:  (_ index: Int) -> (CGFloat)
-    let cellViewGetter: (_ dataModel: TModel, _ isSelected: Bool) -> CellView
-    
-    let maxRowCount: Int? // 视图允许占用的最大行数
-    
-    var dataModels: [TModel]
-    @Binding var currentDataModel: TModel?
-    var onChangeOfDataModel: ((_ newDataModel: TModel) -> Void)?
-    
-    public init(
-        backgroundView: () -> (any View),
-        contentEdgeInset: UIEdgeInsets,
-        contentBackgroundColor: Color,
-        contentCornerRadius: CGFloat,
-        
-        disabledScroll: Bool = false,
-        cellEdgeInset: UIEdgeInsets = .zero,
-        itemsPerRow: Int,
-        cellItemSpacing: CGFloat,
-        rowHeight: CGFloat,
-        cellSizeForIndex: @escaping (_: Int) -> CGFloat,
-        cellViewGetter: @escaping (_ dataModel: TModel, _ isSelected: Bool) -> CellView,
-        maxRowCount: Int?,
-        dataModels: [TModel],
-        currentDataModel: Binding<TModel?> = .constant(nil),
-        onChangeOfDataModel: ((_ newDataModel: TModel) -> Void)? = nil
-    ) {
-        self.backgroundView = backgroundView()
-        self.contentEdgeInset = contentEdgeInset
-        self.contentBackgroundColor = contentBackgroundColor
-        self.contentCornerRadius = contentCornerRadius
-        
-        self.disabledScroll = disabledScroll
-        self.cellEdgeInset = cellEdgeInset
-        self.itemsPerRow = itemsPerRow
-        self.cellItemSpacing = cellItemSpacing
-        self.rowHeight = rowHeight
-        self.cellSizeForIndex = cellSizeForIndex
-        self.cellViewGetter = cellViewGetter
-        self.maxRowCount = maxRowCount
-        self.dataModels = dataModels
-        self._currentDataModel = currentDataModel
-        self.onChangeOfDataModel = onChangeOfDataModel
-    }
-    
-    public var body: some View {
-        let viewHeight: CGFloat? = CJBaseGridViewLayoutUtil.getViewHeight(
-            dataCount: dataModels.count,
-            itemsPerRow: itemsPerRow,
-            rowHeight: rowHeight,
-            cellItemSpacing: cellItemSpacing,
-            maxRowCount: maxRowCount,
-            edgeInset: UIEdgeInsets(
-                top: contentEdgeInset.top + cellEdgeInset.top,
-                left: contentEdgeInset.left + cellEdgeInset.left,
-                bottom: contentEdgeInset.bottom + cellEdgeInset.bottom,
-                right: contentEdgeInset.right + cellEdgeInset.right
-            )
-        )
-        
-        VStack(alignment: .center, spacing: 0) {
-            ZStack {
-                AnyView(backgroundView)
-                
-                CJBaseGridView(
-                    disabledScroll: disabledScroll,
-                    edgeInset: cellEdgeInset,
-                    itemsPerRow: itemsPerRow,
-                    cellItemSpacing: cellItemSpacing,
-                    rowHeight: rowHeight,
-                    cellSizeForIndex: cellSizeForIndex,
-                    cellViewGetter: cellViewGetter,
-                    maxRowCount: maxRowCount,
-                    dataModels: dataModels,
-                    currentDataModel: $currentDataModel,
-                    onChangeOfDataModel: onChangeOfDataModel
-                )
-                .background(contentBackgroundColor)
-                .cornerRadius(contentCornerRadius) // 添加圆角
-                .padding(.leading, contentEdgeInset.left)
-                .padding(.trailing, contentEdgeInset.right) // 上下不用设置，因为内部使用先居中布局了
-            }
-            .modifier(ConditionalFrameModifier(viewHeight: viewHeight))
-        }
-    }
-}
-
 
 @available(iOS 14.0, *)
 public struct CJBaseGridView<CellView: View, TModel: Identifiable>: View {
     let disabledScroll: Bool
-    let edgeInset: UIEdgeInsets      // cell离边缘的边距
     let itemsPerRow: Int // 每行显示的项数
     let cellItemSpacing: CGFloat    // item 之间的间隔
     let rowHeight: CGFloat
@@ -124,19 +25,17 @@ public struct CJBaseGridView<CellView: View, TModel: Identifiable>: View {
     
     public init(
         disabledScroll: Bool = false,
-        edgeInset: UIEdgeInsets = .zero,
         itemsPerRow: Int,
         cellItemSpacing: CGFloat,
         rowHeight: CGFloat,
         cellSizeForIndex: @escaping (_: Int) -> CGFloat,
         cellViewGetter: @escaping (_ dataModel: TModel, _ isSelected: Bool) -> CellView,
-        maxRowCount: Int?,
+        maxRowCount: Int? = nil,
         dataModels: [TModel],
-        currentDataModel: Binding<TModel?>,
+        currentDataModel: Binding<TModel?> = .constant(nil),
         onChangeOfDataModel: ((_ newDataModel: TModel) -> Void)? = nil
     ) {
         self.disabledScroll = disabledScroll
-        self.edgeInset = edgeInset
         self.itemsPerRow = itemsPerRow
         self.cellItemSpacing = cellItemSpacing
         self.rowHeight = rowHeight
@@ -154,8 +53,7 @@ public struct CJBaseGridView<CellView: View, TModel: Identifiable>: View {
             itemsPerRow: itemsPerRow,
             rowHeight: rowHeight,
             cellItemSpacing: cellItemSpacing,
-            maxRowCount: maxRowCount,
-            edgeInset: edgeInset
+            maxRowCount: maxRowCount
         )
         ScrollView {
             let columns: [GridItem] = Array(repeating: GridItem(.flexible()), count: itemsPerRow)
@@ -175,10 +73,6 @@ public struct CJBaseGridView<CellView: View, TModel: Identifiable>: View {
                 }
             }
 //            .background(Color.blue)
-            .padding(.leading, edgeInset.left)
-            .padding(.trailing, edgeInset.right)
-            .padding(.top, edgeInset.top)
-            .padding(.bottom, edgeInset.bottom)
         }
         .disabled(self.disabledScroll) // 禁用滚动
         .modifier(ConditionalFrameModifier(viewHeight: viewHeight))  // 使用自定义修饰符

@@ -171,7 +171,7 @@
 //                    [CJUIKitToastUtil showMessage:message];
 //                }];
                 if (@available(iOS 14.0, *)) {
-                    UIView *tsView = [[TSTSUIView alloc] initWithItemsPerRow:4 cellItemSpacing:20 cellWidth:80 rowHeight:50 maxRowCount:9999];
+                    UIView *tsView = [[TSSwiftUIGridViewUIView alloc] initWithItemsPerRow:4 cellItemSpacing:20 cellWidth:70.0 rowHeight:70.0 maxRowCount:9999];
                     return tsView;
                 } else {
                     // Fallback on earlier versions
@@ -187,7 +187,7 @@
             previewListModule.contentLines = 2;
             previewListModule.viewGetterHandle = ^UIView * _Nonnull{
                 if (@available(iOS 14.0, *)) {
-                    UIView *tsView = [[TSTSUIView alloc] initWithItemsPerRow:4 cellItemSpacing:20 cellWidth:80 rowHeight:50 maxRowCount:2];
+                    UIView *tsView = [[TSSwiftUIGridViewUIView alloc] initWithItemsPerRow:4 cellItemSpacing:20 cellWidth:70.0 rowHeight:70.0 maxRowCount:2];
                     return tsView;
                 } else {
                     // Fallback on earlier versions

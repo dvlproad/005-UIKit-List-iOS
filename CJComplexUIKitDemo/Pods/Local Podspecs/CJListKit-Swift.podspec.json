@@ -28,6 +28,10 @@
     {
       "name": "CollectionView_SwiftUI",
       "source_files": "CJListKit-Swift/CollectionView_SwiftUI/**/*.{swift}"
+    },
+    {
+      "name": "Extension",
+      "source_files": "CJListKit-Swift/Extension/**/*.{swift}"
     }
   ],
   "swift_version": "5.0"
