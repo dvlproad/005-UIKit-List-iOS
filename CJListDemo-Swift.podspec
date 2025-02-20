@@ -62,5 +62,10 @@ Pod::Spec.new do |s|
 #    ss.dependency "CJListKit-Swift/LinkedMenu"
   end
   
+  
+  s.subspec 'CollectionView_SwiftUI' do |ss|
+    ss.source_files = "CJListDemo-Swift/CollectionView_SwiftUI/**/*.{swift}"
+    ss.dependency "CJListKit-Swift/CollectionView_SwiftUI"
+  end
 
 end

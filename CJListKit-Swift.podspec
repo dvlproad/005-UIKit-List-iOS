@@ -47,6 +47,10 @@ Pod::Spec.new do |s|
   s.subspec 'LinkedMenu' do |ss|
     ss.source_files = "CJListKit-Swift/LinkedMenu/**/*.{swift}"
   end
+
+  s.subspec 'CollectionView_SwiftUI' do |ss|
+    ss.source_files = "CJListKit-Swift/CollectionView_SwiftUI/**/*.{swift}"
+  end
   
 
 end

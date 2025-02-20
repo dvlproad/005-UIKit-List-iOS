@@ -8,8 +8,6 @@
 import UIKit
 import CQDemoKit
 
-import UIKit
-
 class GuideMenuTableViewCell: UITableViewCell {
     
     // MARK: - Properties

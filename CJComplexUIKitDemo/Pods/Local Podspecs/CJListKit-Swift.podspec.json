@@ -24,6 +24,10 @@
     {
       "name": "LinkedMenu",
       "source_files": "CJListKit-Swift/LinkedMenu/**/*.{swift}"
+    },
+    {
+      "name": "CollectionView_SwiftUI",
+      "source_files": "CJListKit-Swift/CollectionView_SwiftUI/**/*.{swift}"
     }
   ],
   "swift_version": "5.0"

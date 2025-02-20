@@ -82,9 +82,7 @@
       "name": "UITextField",
       "source_files": "CJBaseUIKit/UITextField/**/*.{h,m}",
       "dependencies": {
-        "CJBaseUIKit/UIView/CJPopupAction": [
-
-        ]
+        "CJBaseUIKit/UIView/CJPopupAction": []
       }
     },
     {
@@ -103,9 +101,7 @@
       "name": "UIToolbar",
       "source_files": "CJBaseUIKit/UIToolbar/**/*.{h,m}",
       "dependencies": {
-        "CJBaseUIKit/UIImage": [
-
-        ]
+        "CJBaseUIKit/UIImage": []
       }
     },
     {
@@ -126,9 +122,7 @@
       "source_files": "CJBaseUIKit/CJBaseTableViewCell/**/*.{h,m}",
       "resources": "CJBaseUIKit/CJBaseTableViewCell/**/*.{png}",
       "dependencies": {
-        "CJBaseUIKit/UIButton": [
-
-        ]
+        "CJBaseUIKit/UIButton": []
       }
     },
     {
@@ -140,42 +134,30 @@
       "source_files": "CJBaseUIKit/CJToast/**/*.{h,m}",
       "resources": "CJBaseUIKit/CJToast/**/*.{png,xib}",
       "dependencies": {
-        "MBProgressHUD": [
-
-        ]
+        "MBProgressHUD": []
       }
     },
     {
       "name": "CJAlert",
       "source_files": "CJBaseUIKit/CJAlert/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ],
-        "CJBaseUIKit/UIView/CJPopupAction": [
-
-        ]
+        "Masonry": [],
+        "CJBaseUIKit/UIView/CJPopupAction": []
       }
     },
     {
       "name": "CJActionSheet",
       "source_files": "CJBaseUIKit/CJActionSheet/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ],
-        "CJBaseUIKit/UIView/CJPopupAction": [
-
-        ]
+        "Masonry": [],
+        "CJBaseUIKit/UIView/CJPopupAction": []
       }
     },
     {
       "name": "CJProgressHUD",
       "source_files": "CJBaseUIKit/CJProgressHUD/**/*.{h,m}",
       "dependencies": {
-        "Masonry": [
-
-        ],
+        "Masonry": [],
         "lottie-ios": [
           "~> 2.5.3"
         ]

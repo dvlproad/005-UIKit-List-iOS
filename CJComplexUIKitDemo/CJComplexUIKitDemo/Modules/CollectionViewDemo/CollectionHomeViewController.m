@@ -155,6 +155,51 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
+    
+    // SwiftUI
+    {
+        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
+        sectionDataModel.theme = @"SwiftUI";
+        {
+            CQDMModuleModel *previewListModule = [[CQDMModuleModel alloc] init];
+            previewListModule.title = @"每行4个，不够继续下一行(SwiftUI)";
+            previewListModule.content = @"视图高度自动适配";
+            previewListModule.contentLines = 2;
+            previewListModule.viewGetterHandle = ^UIView * _Nonnull{
+//                UIView *tsView = [[TSTSUIView alloc] initWithIsUseLeftAlignedFlowLayout:NO onTapEntity:^(TSPreviewModel * _Nonnull previewModel) {
+//                    NSString *message = [NSString stringWithFormat:@"点击了预览项: %@", previewModel.name];
+//                    [CJUIKitToastUtil showMessage:message];
+//                }];
+                if (@available(iOS 14.0, *)) {
+                    UIView *tsView = [[TSTSUIView alloc] initWithItemsPerRow:4 cellItemSpacing:20 cellWidth:80 rowHeight:50 maxRowCount:9999];
+                    return tsView;
+                } else {
+                    // Fallback on earlier versions
+                    return UIView.new;
+                }
+            };
+            [sectionDataModel.values addObject:previewListModule];
+        }
+        {
+            CQDMModuleModel *previewListModule = [[CQDMModuleModel alloc] init];
+            previewListModule.title = @"每行4个，不够继续下一行(SwiftUI)";
+            previewListModule.content = @"视图高度自动适配，最多2行";
+            previewListModule.contentLines = 2;
+            previewListModule.viewGetterHandle = ^UIView * _Nonnull{
+                if (@available(iOS 14.0, *)) {
+                    UIView *tsView = [[TSTSUIView alloc] initWithItemsPerRow:4 cellItemSpacing:20 cellWidth:80 rowHeight:50 maxRowCount:2];
+                    return tsView;
+                } else {
+                    // Fallback on earlier versions
+                    return UIView.new;
+                }
+            };
+            [sectionDataModel.values addObject:previewListModule];
+        }
+        
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
     self.sectionDataModels = sectionDataModels;
 }
 
