@@ -134,7 +134,7 @@ struct TSSwiftUIGridViewSwiftUIView: View {
                 return cellWidth
             },
             cellViewGetter: { dataModel, isSelected in
-                return Color.random()
+                return dataModel.color
                     .cornerRadius(cellWidth/2.0)
                     .overlay(
                         Text(dataModel.text)
@@ -183,9 +183,11 @@ public struct ConditionalFrameModifier: ViewModifier {
 }
 
 
+@available(iOS 13.0, *)
 struct TSGridItemModel: Identifiable {
     var id: Int
     var text: String
+    var color: Color = Color.random()
 }
 
 // MARK: 预览 BaseControlWidgetAnimationViewInApp

@@ -67,6 +67,9 @@
       "dependencies": {
         "CJListKit-Swift/CollectionView_SwiftUI": [
 
+        ],
+        "CQDemoKit-Swift": [
+
         ]
       }
     }

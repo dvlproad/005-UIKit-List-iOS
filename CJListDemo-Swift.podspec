@@ -66,6 +66,7 @@ Pod::Spec.new do |s|
   s.subspec 'CollectionView_SwiftUI' do |ss|
     ss.source_files = "CJListDemo-Swift/CollectionView_SwiftUI/**/*.{swift}"
     ss.dependency "CJListKit-Swift/CollectionView_SwiftUI"
+    ss.dependency 'CQDemoKit-Swift'
   end
 
 end
