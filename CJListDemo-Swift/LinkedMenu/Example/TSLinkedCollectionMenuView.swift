@@ -16,6 +16,7 @@ import CQDemoKit
     private var layoutModel: CJLinkedMenuLayoutModel
     public var isUseForText: Bool   // true: 文案库选择   false: 图标库选择
     public var isForCloseState: Bool
+    private var selectedImageId: String?
     private var onTapRightIndexPath: ((IndexPath, _ newImageModel: CJBaseImageModel) -> Void)
     @objc public init(
         rightColumnCount: Int,
@@ -28,6 +29,7 @@ import CQDemoKit
         self.layoutModel = layoutModel
         self.isUseForText = isUseForText
         self.isForCloseState = isForCloseState
+        self.selectedImageId = "imageId_test_22_open"
         self.onTapRightIndexPath = onTapRightIndexPath
         super.init(frame: .zero)
         setupViews()
@@ -72,12 +74,10 @@ import CQDemoKit
         }
         
         // 请求数据
-        let sectionRowCounts: [NSNumber] = [6, 20, 23, 10, 15, 28]
-        let selectedIndexPaths = [IndexPath(item: 10, section: 2)]
-        self.requestData(sectionRowCounts: sectionRowCounts, selectedIndexPaths: selectedIndexPaths)
+        self.requestData()
     }
     
-    private func requestData(sectionRowCounts: [NSNumber], selectedIndexPaths: [IndexPath]?) {
+    private func requestData() {
         let sectionDataModels: [TSLinkMenuSectionModel] = isUseForText ? CQControlWidgetExample.textSectionExamples() : CQControlWidgetExample.iconSectionExamples()
         
         // 2秒后执行
@@ -101,7 +101,7 @@ import CQDemoKit
             let valueCount = sectionDataModel.values.count
             for item in 0..<valueCount {
                 var module: CJBaseImageModel = sectionDataModel.values[item] 
-                if module.imageName == "icon_control_katong_1" {
+                if module.id == self.selectedImageId {
                     selectedIndexPaths.append(IndexPath(item: item, section: section))
                 }
             }

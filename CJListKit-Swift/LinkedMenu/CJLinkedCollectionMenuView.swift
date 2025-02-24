@@ -98,11 +98,20 @@ import UIKit
      */
     @objc public func updateSelectedIndexPaths(_ selectedIndexPaths: [IndexPath]?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) {
         selectedIndexPaths?.forEach { indexPath in
-            if animated == false { // animated 为 true 的时候, rightCollectionView 滚动会自动对左侧适配。但为 false 的时候需要自己适配
+            var needManualSelectedLeft: Bool = false // 是否需要手动选择左侧（一般情况下如果右侧有触发滚动则会自动带动左侧，但如果选中部分在右侧可见，则右侧 rightCollectionView.selectItem 无法触发滚动，需要自己选中）
+            if !rightCollectionView.indexPathsForVisibleItems.contains(indexPath) {
+                needManualSelectedLeft = true
+            }
+            if needManualSelectedLeft {
                 leftTableView.selectRow(at: IndexPath(row: indexPath.section, section: 0), animated: animated, scrollPosition: .none)
             }
             rightCollectionView.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
         }
+    }
+    
+    /// 未有任何选中时候，左侧菜单默认选中第几个
+    @objc public func leftSelectedRowIndex(row: Int, animated: Bool, scrollPosition: UITableView.ScrollPosition) {
+        leftTableView.selectRow(at: IndexPath(row: row, section: 0), animated: animated, scrollPosition: scrollPosition)
     }
     
     private func setupViews() {

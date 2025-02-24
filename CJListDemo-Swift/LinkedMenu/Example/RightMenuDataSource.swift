@@ -98,7 +98,7 @@ class RightMenuCollectionViewCell: UICollectionViewCell {
         isSelected = false
         
         let parentView = contentView
-        parentView.backgroundColor = UIColor(red: 233/255.0, green: 233/255.0, blue: 233/255.0, alpha: 1.0)
+        parentView.backgroundColor = UIColor(red: 248/255.0, green: 248/255.0, blue: 248/255.0, alpha: 1.0)
         
         // ImageView setup
         imageView = UIImageView()

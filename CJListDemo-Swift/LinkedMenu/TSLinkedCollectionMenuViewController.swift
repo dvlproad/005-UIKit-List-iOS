@@ -114,6 +114,9 @@ import CQDemoKit
         self.rightDataSource.sectionDataModels = sectionDataModels
         self.leftDataSource.dataModels = menuDataModels
         self.menuView.reloadData()
+        if sectionDataModels.count > 0, selectedIndexPaths.count == 0 {
+            self.menuView.leftSelectedRowIndex(row: 2, animated: true, scrollPosition: .none)
+        }
         self.menuView.updateSelectedIndexPaths(selectedIndexPaths, animated: true, scrollPosition: .centeredVertically)
     }
     
