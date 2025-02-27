@@ -34,13 +34,24 @@ import CQDemoKit
         self.view.backgroundColor = UIColor.cyan.withAlphaComponent(0.8)
         
         
-        self.rightDataSource = CQTSRipeBaseCollectionViewDataSource(sectionDataModels: [])
+        self.rightDataSource = CQTSRipeBaseCollectionViewDataSource(sectionDataModels: [], registerHandler: {
+//            self.rightDataSource.registerAllCells(for: rightCollectionView)
+//            collectionView.register(RightMenuCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        }, cellForItemAtIndexPath: { collectionView, indexPath, localImageDataModel in
+            let cell: RightMenuCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! RightMenuCollectionViewCell
+            cell.imageView.image = UIImage.cqdemokit_xcassetImageNamed(localImageDataModel.imageName)
+            cell.textLabel.text = localImageDataModel.name;
+
+            return cell;
+            
+        })
         self.leftDataSource = GuideMenuDataSource()
         
         self.menuView = CJLinkedCollectionMenuView(leftWidth: 100, rightColumnCount: self.rightColumnCount, leftCellHeight: 44.0, layoutModel: self.layoutModel, leftSetupBlock: { leftTableView in
             self.leftDataSource.registerAllCells(for: leftTableView)
         }, leftDataSource: self.leftDataSource, rightSetupBlock: { rightCollectionView in
-            self.rightDataSource.registerAllCells(for: rightCollectionView)
+//            self.rightDataSource.registerAllCells(for: rightCollectionView)
+            rightCollectionView.register(RightMenuCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         }, rightDataSource: self.rightDataSource, onTapRightIndexPath: { indexPath in
             if let dataModel = self.rightDataSource.dataModel(at: indexPath) as? CQTSLocImageDataModel {
                 let message = "点击了:\(dataModel.name)"
@@ -72,7 +83,7 @@ import CQDemoKit
             
             let sectionDataModel = CQDMSectionDataModel()
             sectionDataModel.theme = "section \(section)"
-            sectionDataModel.values = CQTSLocImagesUtil.__getTestLocalImageDataModels(withCount: iRowCount, randomOrder: false)
+            sectionDataModel.values = CQTSLocImagesUtil.imageModels(withCount: iRowCount, randomOrder: false, changeImageNameToNetworkUrl: false)
             
             for item in 0..<iRowCount {
                 var module: CQTSLocImageDataModel = sectionDataModel.values[item] as! CQTSLocImageDataModel

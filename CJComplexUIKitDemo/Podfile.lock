@@ -294,16 +294,16 @@ PODS:
   - CJNetwork/CJNetworkBase (0.5.0)
   - CJNetwork/CJRequestUtil (0.5.0):
     - CJNetwork/CJNetworkBase
-  - CQDemoKit (0.7.5):
-    - CQDemoKit/Auxiliary (= 0.7.5)
-    - CQDemoKit/BaseUIKit (= 0.7.5)
-    - CQDemoKit/BaseUtil (= 0.7.5)
-    - CQDemoKit/BaseVC (= 0.7.5)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.5)
-    - CQDemoKit/Demo_Resource (= 0.7.5)
-    - CQDemoKit/Demo_RipeView (= 0.7.5)
-    - CQDemoKit/Helper (= 0.7.5)
-    - CQDemoKit/Monitor (= 0.7.5)
+  - CQDemoKit (0.7.6):
+    - CQDemoKit/Auxiliary (= 0.7.6)
+    - CQDemoKit/BaseUIKit (= 0.7.6)
+    - CQDemoKit/BaseUtil (= 0.7.6)
+    - CQDemoKit/BaseVC (= 0.7.6)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.6)
+    - CQDemoKit/Demo_Resource (= 0.7.6)
+    - CQDemoKit/Demo_RipeView (= 0.7.6)
+    - CQDemoKit/Helper (= 0.7.6)
+    - CQDemoKit/Monitor (= 0.7.6)
   - CQDemoKit-Swift (0.0.1):
     - CQDemoKit
     - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.1)
@@ -312,51 +312,51 @@ PODS:
     - CQDemoKit
   - CQDemoKit-Swift/SwiftUI (0.0.1):
     - CQDemoKit
-  - CQDemoKit/Auxiliary (0.7.5):
+  - CQDemoKit/Auxiliary (0.7.6):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.7.5):
+  - CQDemoKit/BaseUIKit (0.7.6):
     - Masonry
-  - CQDemoKit/BaseUtil (0.7.5)
-  - CQDemoKit/BaseVC (0.7.5):
-    - CQDemoKit/BaseVC/Base (= 0.7.5)
-    - CQDemoKit/BaseVC/Collection (= 0.7.5)
-    - CQDemoKit/BaseVC/ScrollView (= 0.7.5)
-    - CQDemoKit/BaseVC/TabBar (= 0.7.5)
-    - CQDemoKit/BaseVC/TableView (= 0.7.5)
-    - CQDemoKit/BaseVC/TextView (= 0.7.5)
+  - CQDemoKit/BaseUtil (0.7.6)
+  - CQDemoKit/BaseVC (0.7.6):
+    - CQDemoKit/BaseVC/Base (= 0.7.6)
+    - CQDemoKit/BaseVC/Collection (= 0.7.6)
+    - CQDemoKit/BaseVC/ScrollView (= 0.7.6)
+    - CQDemoKit/BaseVC/TabBar (= 0.7.6)
+    - CQDemoKit/BaseVC/TableView (= 0.7.6)
+    - CQDemoKit/BaseVC/TextView (= 0.7.6)
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/Base (0.7.5):
+  - CQDemoKit/BaseVC/Base (0.7.6):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.7.5):
+  - CQDemoKit/BaseVC/Collection (0.7.6):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/ScrollView (0.7.5):
+  - CQDemoKit/BaseVC/ScrollView (0.7.6):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TabBar (0.7.5):
+  - CQDemoKit/BaseVC/TabBar (0.7.6):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.7.5):
+  - CQDemoKit/BaseVC/TableView (0.7.6):
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TextView (0.7.5):
+  - CQDemoKit/BaseVC/TextView (0.7.6):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.5):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.6):
     - CQDemoKit/BaseVC
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Demo_Resource (0.7.5):
+  - CQDemoKit/Demo_Resource (0.7.6):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.7.5):
+  - CQDemoKit/Demo_RipeView (0.7.6):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.7.5)
-  - CQDemoKit/Monitor (0.7.5)
+  - CQDemoKit/Helper (0.7.6)
+  - CQDemoKit/Monitor (0.7.6)
   - DZNEmptyDataSet (1.8.1)
   - IjinbuNetwork (0.1.0):
     - CJNetwork/AFNetworkingBaseComponent
@@ -414,8 +414,8 @@ DEPENDENCIES:
   - CJMedia/CJUploadImagePickerUtil (~> 0.0.7)
   - CJNetwork
   - CJNetwork/AFNetworkingBaseComponent
-  - CQDemoKit/BaseVC (~> 0.7.5)
-  - CQDemoKit/Demo_DataSourceAndDelegate (~> 0.7.5)
+  - CQDemoKit/BaseVC (~> 0.7.6)
+  - CQDemoKit/Demo_DataSourceAndDelegate (~> 0.7.6)
   - DZNEmptyDataSet
   - IjinbuNetwork (~> 0.1.0)
   - JGActionSheet
@@ -486,7 +486,7 @@ SPEC CHECKSUMS:
   CJListKit-Swift: 117d2cede7e5abdbba0e5e3fc4ea15b2d4a3a4cb
   CJMedia: 29b1bd8c127fb80c4993a76420a3bcc31a4657e5
   CJNetwork: a75f849e5c6ec8fc85ca7aa5027f73d6c48a4af1
-  CQDemoKit: 1c1e5b27b6a973ab0b6535f4c3df3164e6c82285
+  CQDemoKit: fe9351204eeaeba1af1687972aeffaf084b32191
   CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IjinbuNetwork: 307e7e12d35b547f04b885cc2aa098625e4b9768
@@ -507,6 +507,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: a6c5cc46d348413304746ccaf396f506daf99783
+PODFILE CHECKSUM: 6213ae7e7044a3b5b774eb97fdcccf008bc47e47
 
 COCOAPODS: 1.16.2
