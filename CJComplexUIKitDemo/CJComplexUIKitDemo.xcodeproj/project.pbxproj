@@ -1800,7 +1800,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = CJComplexUIKitDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/CJComplexUIKitDemo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJComplexUIKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1819,7 +1819,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = CJComplexUIKitDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/CJComplexUIKitDemo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dvlproad.CJComplexUIKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
