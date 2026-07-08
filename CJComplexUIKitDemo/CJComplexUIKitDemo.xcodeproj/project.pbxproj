@@ -150,6 +150,13 @@
 		976CB3662FFE710E000505DD /* loading_coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = 976CB35F2FFE710E000505DD /* loading_coffee.json */; };
 		976CB36C2FFE76A0000505DD /* TSAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB36A2FFE76A0000505DD /* TSAlertManager.m */; };
 		976CB36D2FFE76A0000505DD /* CJBaseAlertView+TSPopupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3682FFE76A0000505DD /* CJBaseAlertView+TSPopupAction.m */; };
+		976CB3762FFE8262000505DD /* AppAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976CB36E2FFE8262000505DD /* AppAssets.xcassets */; };
+		976CB3772FFE8262000505DD /* CQControlWidgetTextSectionExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 976CB3722FFE8262000505DD /* CQControlWidgetTextSectionExample.json */; };
+		976CB3782FFE8262000505DD /* bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 976CB3702FFE8262000505DD /* bg@2x.jpg */; };
+		976CB3792FFE8262000505DD /* MainAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976CB3742FFE8262000505DD /* MainAsset.xcassets */; };
+		976CB37A2FFE8262000505DD /* ThirdPartIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976CB3752FFE8262000505DD /* ThirdPartIcon.xcassets */; };
+		976CB37B2FFE8262000505DD /* AppCommon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976CB36F2FFE8262000505DD /* AppCommon.xcassets */; };
+		976CB37C2FFE8262000505DD /* CQControlWidgetColorSymbolSectionExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 976CB3712FFE8262000505DD /* CQControlWidgetColorSymbolSectionExample.json */; };
 		C2849CA383CBF0E734AE6DE8 /* Pods_CJComplexUIKitDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30757D6810FE9E3D37A620D8 /* Pods_CJComplexUIKitDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -396,6 +403,13 @@
 		976CB3682FFE76A0000505DD /* CJBaseAlertView+TSPopupAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CJBaseAlertView+TSPopupAction.m"; sourceTree = "<group>"; };
 		976CB3692FFE76A0000505DD /* TSAlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAlertManager.h; sourceTree = "<group>"; };
 		976CB36A2FFE76A0000505DD /* TSAlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAlertManager.m; sourceTree = "<group>"; };
+		976CB36E2FFE8262000505DD /* AppAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppAssets.xcassets; sourceTree = "<group>"; };
+		976CB36F2FFE8262000505DD /* AppCommon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppCommon.xcassets; sourceTree = "<group>"; };
+		976CB3702FFE8262000505DD /* bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg@2x.jpg"; sourceTree = "<group>"; };
+		976CB3712FFE8262000505DD /* CQControlWidgetColorSymbolSectionExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CQControlWidgetColorSymbolSectionExample.json; sourceTree = "<group>"; };
+		976CB3722FFE8262000505DD /* CQControlWidgetTextSectionExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CQControlWidgetTextSectionExample.json; sourceTree = "<group>"; };
+		976CB3742FFE8262000505DD /* MainAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MainAsset.xcassets; sourceTree = "<group>"; };
+		976CB3752FFE8262000505DD /* ThirdPartIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ThirdPartIcon.xcassets; sourceTree = "<group>"; };
 		D92FC512BBC21CC0D27F656A /* Pods-CJComplexUIKitDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJComplexUIKitDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CJComplexUIKitDemoTests/Pods-CJComplexUIKitDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1008,6 +1022,12 @@
 				976CB35F2FFE710E000505DD /* loading_coffee.json */,
 				976CB3602FFE710E000505DD /* loading_tea.json */,
 				976CB3612FFE710E000505DD /* loading_test.json */,
+				976CB36E2FFE8262000505DD /* AppAssets.xcassets */,
+				976CB36F2FFE8262000505DD /* AppCommon.xcassets */,
+				976CB3702FFE8262000505DD /* bg@2x.jpg */,
+				976CB3732FFE8262000505DD /* data */,
+				976CB3742FFE8262000505DD /* MainAsset.xcassets */,
+				976CB3752FFE8262000505DD /* ThirdPartIcon.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1021,6 +1041,15 @@
 				976CB36A2FFE76A0000505DD /* TSAlertManager.m */,
 			);
 			path = TSAlert;
+			sourceTree = "<group>";
+		};
+		976CB3732FFE8262000505DD /* data */ = {
+			isa = PBXGroup;
+			children = (
+				976CB3712FFE8262000505DD /* CQControlWidgetColorSymbolSectionExample.json */,
+				976CB3722FFE8262000505DD /* CQControlWidgetTextSectionExample.json */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		E75FB8B4AF71C8FE7F95B93C /* Pods */ = {
@@ -1187,6 +1216,13 @@
 				976CB3652FFE710E000505DD /* loading_test.json in Resources */,
 				976CB3662FFE710E000505DD /* loading_coffee.json in Resources */,
 				789A4F3B21FAF3A8001528B9 /* MemoryAD05.jpg in Resources */,
+				976CB3762FFE8262000505DD /* AppAssets.xcassets in Resources */,
+				976CB3772FFE8262000505DD /* CQControlWidgetTextSectionExample.json in Resources */,
+				976CB3782FFE8262000505DD /* bg@2x.jpg in Resources */,
+				976CB3792FFE8262000505DD /* MainAsset.xcassets in Resources */,
+				976CB37A2FFE8262000505DD /* ThirdPartIcon.xcassets in Resources */,
+				976CB37B2FFE8262000505DD /* AppCommon.xcassets in Resources */,
+				976CB37C2FFE8262000505DD /* CQControlWidgetColorSymbolSectionExample.json in Resources */,
 				789A4F6621FAF3A8001528B9 /* cvSupplementaryHead.xib in Resources */,
 				789A4F3F21FAF3A8001528B9 /* MemoryADExample02.jpg in Resources */,
 				78590D0D215C79DD00F45AD5 /* UploadDirectlyImagePickerViewController.xib in Resources */,
