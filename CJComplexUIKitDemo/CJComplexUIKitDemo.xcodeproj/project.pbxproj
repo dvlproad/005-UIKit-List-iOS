@@ -134,16 +134,12 @@
 		9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */; };
 		974C88742D623E3100E92464 /* previewDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = 974C88732D623E3100E92464 /* previewDatas.json */; };
 		976CB3242FFE6AA4000505DD /* DataEmptyViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB2FC2FFE6AA4000505DD /* DataEmptyViewFactory.m */; };
-		976CB3292FFE6AA4000505DD /* CJDemoPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB2F72FFE6AA4000505DD /* CJDemoPopupView.m */; };
-		976CB32E2FFE6AA4000505DD /* UIView+CJDemoPopupAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB2F92FFE6AA4000505DD /* UIView+CJDemoPopupAction.m */; };
-		976CB3312FFE6AA4000505DD /* DemoTextFieldFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3022FFE6AA4000505DD /* DemoTextFieldFactory.m */; };
 		976CB34F2FFE6C9D000505DD /* DemoCacheUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3492FFE6C9D000505DD /* DemoCacheUtil.m */; };
 		976CB3502FFE6C9D000505DD /* TestDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3412FFE6C9D000505DD /* TestDataModel.m */; };
 		976CB3512FFE6C9D000505DD /* TestDataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3442FFE6C9D000505DD /* TestDataUtil.m */; };
 		976CB3522FFE6C9D000505DD /* DemoInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB33F2FFE6C9D000505DD /* DemoInfo.m */; };
 		976CB3592FFE6CF6000505DD /* AppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3542FFE6CF6000505DD /* AppInfo.m */; };
 		976CB35A2FFE6CF6000505DD /* AppInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3562FFE6CF6000505DD /* AppInfoManager.m */; };
-		976CB35D2FFE6D71000505DD /* UITextField+CJForbidKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB35C2FFE6D71000505DD /* UITextField+CJForbidKeyboard.m */; };
 		976CB3632FFE710E000505DD /* loading_03.json in Resources */ = {isa = PBXBuildFile; fileRef = 976CB35E2FFE710E000505DD /* loading_03.json */; };
 		976CB3642FFE710E000505DD /* loading_tea.json in Resources */ = {isa = PBXBuildFile; fileRef = 976CB3602FFE710E000505DD /* loading_tea.json */; };
 		976CB3652FFE710E000505DD /* loading_test.json in Resources */ = {isa = PBXBuildFile; fileRef = 976CB3612FFE710E000505DD /* loading_test.json */; };
@@ -373,14 +369,8 @@
 		9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedMenuHomeViewController.m; sourceTree = "<group>"; };
 		974C88732D623E3100E92464 /* previewDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = previewDatas.json; sourceTree = "<group>"; };
 		976CB2EA2FFE6AA4000505DD /* DemoConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoConstant.h; sourceTree = "<group>"; };
-		976CB2F62FFE6AA4000505DD /* CJDemoPopupView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJDemoPopupView.h; sourceTree = "<group>"; };
-		976CB2F72FFE6AA4000505DD /* CJDemoPopupView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJDemoPopupView.m; sourceTree = "<group>"; };
-		976CB2F82FFE6AA4000505DD /* UIView+CJDemoPopupAction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CJDemoPopupAction.h"; sourceTree = "<group>"; };
-		976CB2F92FFE6AA4000505DD /* UIView+CJDemoPopupAction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJDemoPopupAction.m"; sourceTree = "<group>"; };
 		976CB2FB2FFE6AA4000505DD /* DataEmptyViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataEmptyViewFactory.h; sourceTree = "<group>"; };
 		976CB2FC2FFE6AA4000505DD /* DataEmptyViewFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataEmptyViewFactory.m; sourceTree = "<group>"; };
-		976CB3012FFE6AA4000505DD /* DemoTextFieldFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoTextFieldFactory.h; sourceTree = "<group>"; };
-		976CB3022FFE6AA4000505DD /* DemoTextFieldFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoTextFieldFactory.m; sourceTree = "<group>"; };
 		976CB33E2FFE6C9D000505DD /* DemoInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoInfo.h; sourceTree = "<group>"; };
 		976CB33F2FFE6C9D000505DD /* DemoInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoInfo.m; sourceTree = "<group>"; };
 		976CB3402FFE6C9D000505DD /* TestDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestDataModel.h; sourceTree = "<group>"; };
@@ -393,8 +383,6 @@
 		976CB3542FFE6CF6000505DD /* AppInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInfo.m; sourceTree = "<group>"; };
 		976CB3552FFE6CF6000505DD /* AppInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInfoManager.h; sourceTree = "<group>"; };
 		976CB3562FFE6CF6000505DD /* AppInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInfoManager.m; sourceTree = "<group>"; };
-		976CB35B2FFE6D71000505DD /* UITextField+CJForbidKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+CJForbidKeyboard.h"; sourceTree = "<group>"; };
-		976CB35C2FFE6D71000505DD /* UITextField+CJForbidKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CJForbidKeyboard.m"; sourceTree = "<group>"; };
 		976CB35E2FFE710E000505DD /* loading_03.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading_03.json; sourceTree = "<group>"; };
 		976CB35F2FFE710E000505DD /* loading_coffee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading_coffee.json; sourceTree = "<group>"; };
 		976CB3602FFE710E000505DD /* loading_tea.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = loading_tea.json; sourceTree = "<group>"; };
@@ -922,17 +910,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		976CB2FA2FFE6AA4000505DD /* CJDemoPopupView */ = {
-			isa = PBXGroup;
-			children = (
-				976CB2F62FFE6AA4000505DD /* CJDemoPopupView.h */,
-				976CB2F72FFE6AA4000505DD /* CJDemoPopupView.m */,
-				976CB2F82FFE6AA4000505DD /* UIView+CJDemoPopupAction.h */,
-				976CB2F92FFE6AA4000505DD /* UIView+CJDemoPopupAction.m */,
-			);
-			path = CJDemoPopupView;
-			sourceTree = "<group>";
-		};
 		976CB2FD2FFE6AA4000505DD /* DemoEmptyViewFactory */ = {
 			isa = PBXGroup;
 			children = (
@@ -942,25 +919,12 @@
 			path = DemoEmptyViewFactory;
 			sourceTree = "<group>";
 		};
-		976CB3032FFE6AA4000505DD /* DemoTextFieldFactory */ = {
-			isa = PBXGroup;
-			children = (
-				976CB3012FFE6AA4000505DD /* DemoTextFieldFactory.h */,
-				976CB3022FFE6AA4000505DD /* DemoTextFieldFactory.m */,
-				976CB35B2FFE6D71000505DD /* UITextField+CJForbidKeyboard.h */,
-				976CB35C2FFE6D71000505DD /* UITextField+CJForbidKeyboard.m */,
-			);
-			path = DemoTextFieldFactory;
-			sourceTree = "<group>";
-		};
 		976CB3232FFE6AA4000505DD /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
 				976CB36B2FFE76A0000505DD /* TSAlert */,
 				976CB2EB2FFE6AA4000505DD /* Base */,
-				976CB2FA2FFE6AA4000505DD /* CJDemoPopupView */,
 				976CB2FD2FFE6AA4000505DD /* DemoEmptyViewFactory */,
-				976CB3032FFE6AA4000505DD /* DemoTextFieldFactory */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -1449,13 +1413,9 @@
 				789A4F9921FAF3FB001528B9 /* OpenTableViewController1.m in Sources */,
 				789A4F5521FAF3A8001528B9 /* DetailCell.m in Sources */,
 				789A4F6821FAF3A8001528B9 /* cvSupplementaryHead.m in Sources */,
-				976CB35D2FFE6D71000505DD /* UITextField+CJForbidKeyboard.m in Sources */,
 				789A4F5C21FAF3A8001528B9 /* MyEqualCellSizeCollectionViewController.m in Sources */,
 				789A4F9C21FAF3FB001528B9 /* MyOpenTableView.m in Sources */,
 				976CB3242FFE6AA4000505DD /* DataEmptyViewFactory.m in Sources */,
-				976CB3292FFE6AA4000505DD /* CJDemoPopupView.m in Sources */,
-				976CB32E2FFE6AA4000505DD /* UIView+CJDemoPopupAction.m in Sources */,
-				976CB3312FFE6AA4000505DD /* DemoTextFieldFactory.m in Sources */,
 				789A4F5821FAF3A8001528B9 /* OpenCollectionViewController.m in Sources */,
 				976CB34F2FFE6C9D000505DD /* DemoCacheUtil.m in Sources */,
 				976CB3502FFE6C9D000505DD /* TestDataModel.m in Sources */,
