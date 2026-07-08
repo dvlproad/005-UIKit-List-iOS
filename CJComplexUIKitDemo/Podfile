@@ -29,11 +29,10 @@ target 'CJComplexUIKitDemo' do
   pod 'CQDemoKit',          '~> 0.9.2',      :subspecs => ['BaseVC', 'Demo_Resource', 'Demo_DataSourceAndDelegate']
   #pod 'CQDemoKit',          :path => '../../001-UIKit-CQDemo-iOS',      :subspecs => ['BaseVC', 'Demo_DataSourceAndDelegate']
   
-  pod 'CJBaseUIKit'
+  pod 'CJBaseUIKit',      :subspecs => ['UINavigationBar', 'UIButton', 'UIImage', 'UITextField', 'CJBaseTableViewHeaderFooterView']
+  pod 'CJBaseUtil',       :subspecs => ['CJDataUtil', 'CJPinyinHelper']
+  pod 'CJBaseHelper',     :subspecs => ['AuthorizationCJHelper']
   pod 'CJOverlayView'
-  pod 'CJBaseUtil'
-  pod 'CJBaseHelper'
-  pod 'CJFoundation'
   pod 'CJBaseEffectKit'
   pod 'CJPopupAction'
   

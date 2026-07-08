@@ -7,8 +7,9 @@
 //
 
 #import "DemoTextFieldFactory.h"
+#import <CJBaseUIKit/UIButton+CJMoreProperty.h>
+
 #import "UITextField+CJForbidKeyboard.h"
-#import "UIButton+CJMoreProperty.h"
 
 @implementation DemoTextFieldFactory
 

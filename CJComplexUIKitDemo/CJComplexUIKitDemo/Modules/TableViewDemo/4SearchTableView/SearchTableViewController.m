@@ -9,14 +9,8 @@
 #import "SearchTableViewController.h"
 #import "TestDataUtil.h"
 
-#ifdef TEST_CJCOMPLEXUIKIT_POD
-#import "CJDataAllUtil.h"
-#else
 #import <CJBaseUtil/CJDataAllUtil.h>
-#endif
-
-
-#import "CJPinyinHelper.h"
+#import <CJBaseUtil/CJPinyinHelper.h>
 
 @interface SearchTableViewController ()
 
