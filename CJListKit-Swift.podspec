@@ -1,9 +1,11 @@
-Pod::Spec.new do |s|
+  # pod的本地索引文件：~/Library/Caches/CocoaPods/search_index.json
+
   # 上传到github公有库:
   #验证方法1：pod lib lint CJListKit-Swift.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
-  #验证方法2：pod lib lint CJListKit-Swift.podspec --sources=master --allow-warnings --use-libraries --verbose
+  #验证方法2：pod lib lint CJListKit-Swift.podspec --sources=cocoapods --allow-warnings --use-libraries --verbose
   #提交方法(github公有库)： pod trunk push CJListKit-Swift.podspec --allow-warnings
   
+Pod::Spec.new do |s|  
   s.name         = "CJListKit-Swift"
   s.version      = "0.0.1"
   s.summary      = "数据万象SDK"

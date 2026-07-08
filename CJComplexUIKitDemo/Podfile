@@ -39,6 +39,7 @@ target 'CJComplexUIKitDemo' do
   pod 'CJListDemo-Swift',         :path => '../’
   pod 'CJComplexUIKit',           :path => '../’
   pod 'CJListKit-Swift',          :path => '../’
+  pod 'CJCollectionViewLayout-Swift',   :path => '../'
 #  pod 'CJComplexUIKit/CJScrollView',      :path => '../’
 #  pod 'CJComplexUIKit/CJCollectionView',  :path => '../’
 #  pod 'CJComplexUIKit/CJHomeCollectionView',  :path => '../’

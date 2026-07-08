@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import CJListKit_Swift
+import CJCollectionViewLayout_Swift
+//import CJListKit_Swift
 
 @objc class TSPreviewGroupCollectionViewCell: UICollectionViewCell {
     var titleLabel: UILabel!

@@ -7,7 +7,8 @@
 //  自定义的 FlowLayout (如不同cell宽度时候左对齐)
 
 import UIKit
-import CJListKit_Swift
+import CJCollectionViewLayout_Swift
+//import CJListKit_Swift
 import CQDemoKit
 
 @objc public class TSPreviewCollectionView: UICollectionView {

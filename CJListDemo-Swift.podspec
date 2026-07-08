@@ -61,6 +61,7 @@ Pod::Spec.new do |s|
     ss.dependency 'SDWebImageWebPCoder'
     ss.dependency "CQDemoKit/Demo_DataSourceAndDelegate"
 #    ss.dependency "CJListKit-Swift/LinkedMenu"
+    ss.dependency "CJCollectionViewLayout-Swift/FlowLayout"
   end
   
   

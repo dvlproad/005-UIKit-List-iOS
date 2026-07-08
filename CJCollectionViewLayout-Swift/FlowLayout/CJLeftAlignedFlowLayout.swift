@@ -1,6 +1,6 @@
 //
 //  CJLeftAlignedFlowLayout.swift
-//  CJListKit-Swift
+//  CJCollectionViewLayout-Swift
 //
 //  Created by qian on 2025/1/17.
 //

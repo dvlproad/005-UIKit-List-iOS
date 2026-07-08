@@ -43,7 +43,8 @@
         "SnapKit": [],
         "SDWebImage": [],
         "SDWebImageWebPCoder": [],
-        "CQDemoKit/Demo_DataSourceAndDelegate": []
+        "CQDemoKit/Demo_DataSourceAndDelegate": [],
+        "CJCollectionViewLayout-Swift/FlowLayout": []
       }
     },
     {
