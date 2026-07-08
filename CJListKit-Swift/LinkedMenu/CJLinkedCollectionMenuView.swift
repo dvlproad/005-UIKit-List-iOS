@@ -8,11 +8,21 @@
 import UIKit
 
 @objc public class CJLinkedMenuLayoutModel: NSObject {
+    var sectionInset: UIEdgeInsets
+    var rightHeaderHeight: CGFloat
     var rightCellWidthHeightRatio: CGFloat = 1.0    // 右侧列表单元的宽高比
     var minimumLineSpacing: CGFloat = 17.0
     var minimumInteritemSpacing: CGFloat = 17.0
     
-    @objc public init(rightCellWidthHeightRatio: CGFloat, minimumLineSpacing: CGFloat, minimumInteritemSpacing: CGFloat) {
+    @objc public init(
+        sectionInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0),
+        rightHeaderHeight: CGFloat,
+        rightCellWidthHeightRatio: CGFloat,
+        minimumLineSpacing: CGFloat,
+        minimumInteritemSpacing: CGFloat
+    ) {
+        self.sectionInset = sectionInset
+        self.rightHeaderHeight = rightHeaderHeight
         self.rightCellWidthHeightRatio = rightCellWidthHeightRatio
         self.minimumLineSpacing = minimumLineSpacing
         self.minimumInteritemSpacing = minimumInteritemSpacing
@@ -98,11 +108,11 @@ import UIKit
      */
     @objc public func updateSelectedIndexPaths(_ selectedIndexPaths: [IndexPath]?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) {
         selectedIndexPaths?.forEach { indexPath in
-            var needManualSelectedLeft: Bool = false // 是否需要手动选择左侧（一般情况下如果右侧有触发滚动则会自动带动左侧，但如果选中部分在右侧可见，则右侧 rightCollectionView.selectItem 无法触发滚动，需要自己选中）
+//            var needManualSelectedLeft: Bool = false // 是否需要手动选择左侧（一般情况下如果右侧有触发滚动则会自动带动左侧，但如果选中部分在右侧可见，则右侧 rightCollectionView.selectItem 无法触发滚动，需要自己选中）
             if !rightCollectionView.indexPathsForVisibleItems.contains(indexPath) {
-                needManualSelectedLeft = true
-            }
-            if needManualSelectedLeft {
+//                needManualSelectedLeft = true
+//            }
+//            if needManualSelectedLeft {
                 leftTableView.selectRow(at: IndexPath(row: indexPath.section, section: 0), animated: animated, scrollPosition: .none)
             }
             rightCollectionView.selectItem(at: indexPath, animated: animated, scrollPosition: scrollPosition)
@@ -118,6 +128,7 @@ import UIKit
         click = false
         
         leftTableView = UITableView(frame: .zero, style: .plain)
+        leftTableView.separatorStyle = .none    // 去掉 UITableViewCell 的分隔线（下划线）
         leftTableViewSetupBlock?(leftTableView)
         leftTableView.delegate = self
         leftTableView.dataSource = leftDataSource
@@ -126,6 +137,7 @@ import UIKit
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         rightCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        //rightCollectionView.bounces = true
         rightCollectionViewSetupBlock?(rightCollectionView)
         rightCollectionView.delegate = self
         rightCollectionView.dataSource = rightDataSource
@@ -147,7 +159,7 @@ import UIKit
             rightCollectionView.leadingAnchor.constraint(equalTo: leftTableView.trailingAnchor),
             rightCollectionView.topAnchor.constraint(equalTo: topAnchor),
             rightCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            rightCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            rightCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
         ])
     }
     
@@ -176,15 +188,19 @@ import UIKit
     
     // MARK: - UICollectionViewDelegateFlowLayout
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
+        return layoutModel.sectionInset
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: layoutModel.rightHeaderHeight)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return self.layoutModel.minimumLineSpacing
+        return layoutModel.minimumLineSpacing
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return self.layoutModel.minimumInteritemSpacing
+        return layoutModel.minimumInteritemSpacing
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

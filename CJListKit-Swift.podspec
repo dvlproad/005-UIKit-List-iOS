@@ -8,19 +8,20 @@
 Pod::Spec.new do |s|  
   s.name         = "CJListKit-Swift"
   s.version      = "0.0.1"
-  s.summary      = "数据万象SDK"
+  s.summary      = "各种列表"
   s.homepage     = "https://github.com/dvlproad/005-UIKit-List-iOS"
   s.license      = "MIT"
   s.author       = "dvlproad"
 
   s.description  = <<-DESC
-                   A longer description of CJListKit-Swift in Markdown format.
+                 各种列表，可按需独立引入：
+                 • CJListKit-Swift/LinkedMenu - 可联动的菜单
+                 • CJListKit-Swift/CollectionView_SwiftUI - CollectionView_SwiftUI
+                 • CJListKit-Swift/ScrollView_SwiftUI - ScrollView_SwiftUI
+                 • CJListKit-Swift/Extension - Extension
 
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
-                   DESC
+                 每个子库可独立引入，详见各子库描述。
+                 DESC
 
   # s.social_media_url   = "http://twitter.com/dvlproad"
 
@@ -40,20 +41,22 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
 
-  # 自定义的 FlowLayout (如不同cell宽度时候左对齐)
-  s.subspec 'FlowLayout' do |ss|
-    ss.source_files = "CJListKit-Swift/FlowLayout/**/*.{swift}"
-  end
-
   # 可联动的菜单
   s.subspec 'LinkedMenu' do |ss|
     ss.source_files = "CJListKit-Swift/LinkedMenu/**/*.{swift}"
   end
 
+  # CollectionView_SwiftUI
   s.subspec 'CollectionView_SwiftUI' do |ss|
     ss.source_files = "CJListKit-Swift/CollectionView_SwiftUI/**/*.{swift}"
   end
+
+  # ScrollView_SwiftUI
+  s.subspec 'ScrollView_SwiftUI' do |ss|
+    ss.source_files = "CJListKit-Swift/ScrollView_SwiftUI/**/*.{swift}"
+  end
   
+  # Extension
   s.subspec 'Extension' do |ss|
     ss.source_files = "CJListKit-Swift/Extension/**/*.{swift}"
   end

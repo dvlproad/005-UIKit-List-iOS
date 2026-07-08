@@ -35,7 +35,7 @@
             refreshScrollViewModule.title = @"联动的菜单(左右)";
             refreshScrollViewModule.content = @"右侧是 CollectionView（4列)";
             refreshScrollViewModule.actionBlock = ^{
-                CJLinkedMenuLayoutModel *layoutModel = [[CJLinkedMenuLayoutModel alloc] initWithRightCellWidthHeightRatio:1.0 minimumLineSpacing:17.0 minimumInteritemSpacing:17.0];
+                CJLinkedMenuLayoutModel *layoutModel = [[CJLinkedMenuLayoutModel alloc] initWithSectionInset:UIEdgeInsetsMake(0, 0, 17.0, 0) rightHeaderHeight:0 rightCellWidthHeightRatio:1.0 minimumLineSpacing:17.0 minimumInteritemSpacing:17.0];
                 
                 UIViewController *vc = [[TSLinkedCollectionMenuViewController alloc] initWithRightColumnCount:4 layoutModel:layoutModel];
                 vc.hidesBottomBarWhenPushed = YES;
@@ -48,7 +48,7 @@
             refreshScrollViewModule.title = @"联动的菜单(左右)";
             refreshScrollViewModule.content = @"右侧是 CollectionView（1列)";
             refreshScrollViewModule.actionBlock = ^{
-                CJLinkedMenuLayoutModel *layoutModel = [[CJLinkedMenuLayoutModel alloc] initWithRightCellWidthHeightRatio:273.0/45.0 minimumLineSpacing:10.0 minimumInteritemSpacing:10.0];
+                CJLinkedMenuLayoutModel *layoutModel = [[CJLinkedMenuLayoutModel alloc] initWithSectionInset:UIEdgeInsetsMake(0, 0, 0, 0) rightHeaderHeight:45.0 rightCellWidthHeightRatio:273.0/45.0 minimumLineSpacing:10.0 minimumInteritemSpacing:10.0];
                 UIViewController *vc = [[TSLinkedCollectionMenuViewController alloc] initWithRightColumnCount:1 layoutModel:layoutModel];
                 vc.hidesBottomBarWhenPushed = YES;
                 [weakSelf.navigationController pushViewController:vc animated:YES];
@@ -67,7 +67,8 @@
             refreshScrollViewModule.title = @"联动的菜单(左右)--项目中的示例";
             refreshScrollViewModule.content = @"右侧是 CollectionView（4列)";
             refreshScrollViewModule.viewGetterHandle = ^UIView * _Nonnull{
-                CJLinkedMenuLayoutModel *layoutModel = [[CJLinkedMenuLayoutModel alloc] initWithRightCellWidthHeightRatio:1.0 minimumLineSpacing:17.0 minimumInteritemSpacing:17.0];
+                CJLinkedMenuLayoutModel *layoutModel = [[CJLinkedMenuLayoutModel alloc] initWithSectionInset:UIEdgeInsetsMake(0, 0, 17.0, 0) rightHeaderHeight:0 rightCellWidthHeightRatio:1.0 minimumLineSpacing:17.0 minimumInteritemSpacing:17.0];
+                
                 TSLinkedCollectionMenuView *view = [[TSLinkedCollectionMenuView alloc] initWithRightColumnCount:4 layoutModel:layoutModel isUseForText:NO isForCloseState:NO onTapRightIndexPath:^(NSIndexPath * _Nonnull indexPath, CJBaseImageModel * _Nonnull imageModel) {
                     
                 }];

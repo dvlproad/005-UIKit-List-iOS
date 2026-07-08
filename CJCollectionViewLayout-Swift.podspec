@@ -3,7 +3,7 @@
   # 上传到github公有库:
   #验证方法1：pod lib lint CJCollectionViewLayout-Swift.podspec --sources='https://github.com/CocoaPods/Specs.git' --allow-warnings --use-libraries --verbose
   #验证方法2：pod lib lint CJCollectionViewLayout-Swift.podspec --sources=cocoapods --allow-warnings --use-libraries --verbose
-  #提交方法(github公有库)： pod trunk push CJCollectionViewLayout-Swift.podspec --allow-warnings
+  #提交方法(github公有库)： pod trunk push CJCollectionViewLayout-Swift.podspec --allow-warnings --verbose
 
 Pod::Spec.new do |s|
   s.name         = "CJCollectionViewLayout-Swift"
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.description  = <<-DESC
                  列表的各种layout布局，可按需独立引入：
-                 • CJCollectionViewLayout-Swift/FlowLayout - FlowLayout
+                 • CJCollectionViewLayout-Swift/FlowLayout - 自定义的 FlowLayout (如不同cell宽度时候左对齐)
 
                  每个子库可独立引入，详见各子库描述。
                  DESC
@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   # s.frameworks = "MediaPlayer"
   # s.dependency 'Masonry'
 
-  # FlowLayout
+  # 自定义的 FlowLayout (如不同cell宽度时候左对齐)
   s.subspec 'FlowLayout' do |ss|
     ss.source_files = "CJCollectionViewLayout-Swift/FlowLayout/**/*.{swift}"
   end
