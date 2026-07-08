@@ -14,130 +14,100 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CJBaseEffectKit (0.0.2):
-    - CJBaseEffectKit/CJDataEmptyView (= 0.0.2)
-    - CJBaseEffectKit/CJMJRefreshComponent (= 0.0.2)
-    - CJBaseEffectKit/CJRefreshView (= 0.0.2)
-    - CJBaseEffectKit/CJRefreshWithJSON (= 0.0.2)
-    - CJBaseEffectKit/CJScaleHeadView (= 0.0.2)
-  - CJBaseEffectKit/CJDataEmptyView (0.0.2):
+  - CJBaseEffectKit (0.3.0):
+    - CJBaseEffectKit/CJDataEmptyView (= 0.3.0)
+    - CJBaseEffectKit/CJMJRefreshComponent (= 0.3.0)
+    - CJBaseEffectKit/CJRefreshView (= 0.3.0)
+    - CJBaseEffectKit/CJRefreshWithJSON (= 0.3.0)
+    - CJBaseEffectKit/CJScaleHeadView (= 0.3.0)
+  - CJBaseEffectKit/CJDataEmptyView (0.3.0):
     - CJFoundation/NSString
     - Masonry
-  - CJBaseEffectKit/CJMJRefreshComponent (0.0.2):
+  - CJBaseEffectKit/CJMJRefreshComponent (0.3.0):
     - MJRefresh
-  - CJBaseEffectKit/CJRefreshView (0.0.2)
-  - CJBaseEffectKit/CJRefreshWithJSON (0.0.2):
-    - lottie-ios (~> 2.5.3)
+  - CJBaseEffectKit/CJRefreshView (0.3.0)
+  - CJBaseEffectKit/CJRefreshWithJSON (0.3.0):
+    - CQBridgeSTOLottie
     - Masonry
     - MJRefresh
-  - CJBaseEffectKit/CJScaleHeadView (0.0.2)
-  - CJBaseHelper (0.1.4):
-    - CJBaseHelper/AuthorizationCJHelper (= 0.1.4)
-    - CJBaseHelper/DeviceCJHelper (= 0.1.4)
-    - CJBaseHelper/HookCJHelper (= 0.1.4)
-    - CJBaseHelper/NSCalendarCJHelper (= 0.1.4)
-    - CJBaseHelper/NSDateFormatterCJHelper (= 0.1.4)
-    - CJBaseHelper/NSObjectCJHelper (= 0.1.4)
-    - CJBaseHelper/NSOperationQueueCJHelper (= 0.1.4)
-    - CJBaseHelper/UIViewControllerCJHelper (= 0.1.4)
-    - CJBaseHelper/WebCJHelper (= 0.1.4)
-  - CJBaseHelper/AuthorizationCJHelper (0.1.4)
-  - CJBaseHelper/DeviceCJHelper (0.1.4)
-  - CJBaseHelper/HookCJHelper (0.1.4)
-  - CJBaseHelper/NSCalendarCJHelper (0.1.4)
-  - CJBaseHelper/NSDateFormatterCJHelper (0.1.4)
-  - CJBaseHelper/NSObjectCJHelper (0.1.4)
-  - CJBaseHelper/NSOperationQueueCJHelper (0.1.4)
-  - CJBaseHelper/UIViewControllerCJHelper (0.1.4)
-  - CJBaseHelper/WebCJHelper (0.1.4)
-  - CJBaseOverlayKit (0.2.1):
-    - CJBaseOverlayKit/CJActionSheet (= 0.2.1)
-    - CJBaseOverlayKit/CJAlert (= 0.2.1)
-    - CJBaseOverlayKit/CJBaseOverlayTheme (= 0.2.1)
-    - CJBaseOverlayKit/CJProgressHUD (= 0.2.1)
-    - CJBaseOverlayKit/CJToast (= 0.2.1)
-  - CJBaseOverlayKit/CJActionSheet (0.2.1):
-    - CJBaseOverlayKit/CJBaseOverlayTheme
-    - Masonry
-  - CJBaseOverlayKit/CJAlert (0.2.1):
-    - CJBaseOverlayKit/CJBaseOverlayTheme
-    - Masonry
-  - CJBaseOverlayKit/CJBaseOverlayTheme (0.2.1)
-  - CJBaseOverlayKit/CJProgressHUD (0.2.1):
-    - CJBaseOverlayKit/CJBaseOverlayTheme
-    - lottie-ios (~> 2.5.3)
-    - Masonry
-    - MBProgressHUD
-  - CJBaseOverlayKit/CJToast (0.2.1):
-    - CJBaseOverlayKit/CJBaseOverlayTheme
-    - MBProgressHUD
-  - CJBaseUIKit (0.6.0):
-    - CJBaseUIKit/CJActionSheet (= 0.6.0)
-    - CJBaseUIKit/CJAlert (= 0.6.0)
-    - CJBaseUIKit/CJBaseTableViewCell (= 0.6.0)
-    - CJBaseUIKit/CJBaseTableViewHeaderFooterView (= 0.6.0)
-    - CJBaseUIKit/CJProgressHUD (= 0.6.0)
-    - CJBaseUIKit/CJSearchBar (= 0.6.0)
-    - CJBaseUIKit/CJSlider (= 0.6.0)
-    - CJBaseUIKit/CJTextView (= 0.6.0)
-    - CJBaseUIKit/CJTheme (= 0.6.0)
-    - CJBaseUIKit/CJToast (= 0.6.0)
-    - CJBaseUIKit/CJUIKitConstant (= 0.6.0)
-    - CJBaseUIKit/UIButton (= 0.6.0)
-    - CJBaseUIKit/UIColor (= 0.6.0)
-    - CJBaseUIKit/UIImage (= 0.6.0)
-    - CJBaseUIKit/UILabel (= 0.6.0)
-    - CJBaseUIKit/UINavigationBar (= 0.6.0)
-    - CJBaseUIKit/UIScrollView (= 0.6.0)
-    - CJBaseUIKit/UITextField (= 0.6.0)
-    - CJBaseUIKit/UIToolbar (= 0.6.0)
-    - CJBaseUIKit/UIView (= 0.6.0)
-    - CJBaseUIKit/UIViewController (= 0.6.0)
-    - CJBaseUIKit/UIWindow (= 0.6.0)
-  - CJBaseUIKit/CJActionSheet (0.6.0):
-    - CJBaseUIKit/UIView/CJPopupAction
-    - Masonry
-  - CJBaseUIKit/CJAlert (0.6.0):
-    - CJBaseUIKit/UIView/CJPopupAction
-    - Masonry
-  - CJBaseUIKit/CJBaseTableViewCell (0.6.0):
+  - CJBaseEffectKit/CJScaleHeadView (0.3.0)
+  - CJBaseHelper (0.1.8):
+    - CJBaseHelper/AppInfoCJHelper (= 0.1.8)
+    - CJBaseHelper/AuthorizationCJHelper (= 0.1.8)
+    - CJBaseHelper/DeviceCJHelper (= 0.1.8)
+    - CJBaseHelper/HookCJHelper (= 0.1.8)
+    - CJBaseHelper/NSCalendarCJHelper (= 0.1.8)
+    - CJBaseHelper/NSDateFormatterCJHelper (= 0.1.8)
+    - CJBaseHelper/NSObjectCJHelper (= 0.1.8)
+    - CJBaseHelper/NSOperationQueueCJHelper (= 0.1.8)
+    - CJBaseHelper/ServerCJHelper (= 0.1.8)
+    - CJBaseHelper/UIViewControllerCJHelper (= 0.1.8)
+    - CJBaseHelper/WebCJHelper (= 0.1.8)
+  - CJBaseHelper/AppInfoCJHelper (0.1.8)
+  - CJBaseHelper/AuthorizationCJHelper (0.1.8)
+  - CJBaseHelper/DeviceCJHelper (0.1.8)
+  - CJBaseHelper/HookCJHelper (0.1.8)
+  - CJBaseHelper/NSCalendarCJHelper (0.1.8)
+  - CJBaseHelper/NSDateFormatterCJHelper (0.1.8)
+  - CJBaseHelper/NSObjectCJHelper (0.1.8)
+  - CJBaseHelper/NSOperationQueueCJHelper (0.1.8)
+  - CJBaseHelper/ServerCJHelper (0.1.8)
+  - CJBaseHelper/UIViewControllerCJHelper (0.1.8)
+  - CJBaseHelper/WebCJHelper (0.1.8)
+  - CJBaseUIKit (0.8.1):
+    - CJBaseUIKit/CJBaseTableViewCell (= 0.8.1)
+    - CJBaseUIKit/CJBaseTableViewHeaderFooterView (= 0.8.1)
+    - CJBaseUIKit/CJSlider (= 0.8.1)
+    - CJBaseUIKit/CJUIKitConstant (= 0.8.1)
+    - CJBaseUIKit/UIButton (= 0.8.1)
+    - CJBaseUIKit/UIColor (= 0.8.1)
+    - CJBaseUIKit/UIImage (= 0.8.1)
+    - CJBaseUIKit/UILabel (= 0.8.1)
+    - CJBaseUIKit/UINavigationBar (= 0.8.1)
+    - CJBaseUIKit/UIScrollView (= 0.8.1)
+    - CJBaseUIKit/UITextField (= 0.8.1)
+    - CJBaseUIKit/UITextHeightCenterCJHelper (= 0.8.1)
+    - CJBaseUIKit/UITextInputCJHelper (= 0.8.1)
+    - CJBaseUIKit/UITextView (= 0.8.1)
+    - CJBaseUIKit/UIToolbar (= 0.8.1)
+    - CJBaseUIKit/UIView (= 0.8.1)
+    - CJBaseUIKit/UIViewController (= 0.8.1)
+    - CJBaseUIKit/UIWindow (= 0.8.1)
+  - CJBaseUIKit/CJBaseTableViewCell (0.8.1):
     - CJBaseUIKit/UIButton
-  - CJBaseUIKit/CJBaseTableViewHeaderFooterView (0.6.0)
-  - CJBaseUIKit/CJProgressHUD (0.6.0):
-    - lottie-ios (~> 2.5.3)
-    - Masonry
-  - CJBaseUIKit/CJSearchBar (0.6.0)
-  - CJBaseUIKit/CJSlider (0.6.0)
-  - CJBaseUIKit/CJTextView (0.6.0)
-  - CJBaseUIKit/CJTheme (0.6.0)
-  - CJBaseUIKit/CJToast (0.6.0):
-    - MBProgressHUD
-  - CJBaseUIKit/CJUIKitConstant (0.6.0)
-  - CJBaseUIKit/UIButton (0.6.0)
-  - CJBaseUIKit/UIColor (0.6.0)
-  - CJBaseUIKit/UIImage (0.6.0)
-  - CJBaseUIKit/UILabel (0.6.0)
-  - CJBaseUIKit/UINavigationBar (0.6.0)
-  - CJBaseUIKit/UIScrollView (0.6.0):
-    - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (= 0.6.0)
-  - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (0.6.0)
-  - CJBaseUIKit/UITextField (0.6.0):
-    - CJBaseUIKit/UIView/CJPopupAction
-  - CJBaseUIKit/UIToolbar (0.6.0):
+  - CJBaseUIKit/CJBaseTableViewHeaderFooterView (0.8.1)
+  - CJBaseUIKit/CJSlider (0.8.1)
+  - CJBaseUIKit/CJUIKitConstant (0.8.1)
+  - CJBaseUIKit/UIButton (0.8.1)
+  - CJBaseUIKit/UIColor (0.8.1)
+  - CJBaseUIKit/UIImage (0.8.1)
+  - CJBaseUIKit/UILabel (0.8.1)
+  - CJBaseUIKit/UINavigationBar (0.8.1)
+  - CJBaseUIKit/UIScrollView (0.8.1):
+    - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (= 0.8.1)
+  - CJBaseUIKit/UIScrollView/CJKeyboardAvoiding (0.8.1)
+  - CJBaseUIKit/UITextField (0.8.1)
+  - CJBaseUIKit/UITextHeightCenterCJHelper (0.8.1)
+  - CJBaseUIKit/UITextInputCJHelper (0.8.1)
+  - CJBaseUIKit/UITextView (0.8.1):
+    - CJBaseUIKit/UITextHeightCenterCJHelper
+  - CJBaseUIKit/UIToolbar (0.8.1):
     - CJBaseUIKit/UIImage
-  - CJBaseUIKit/UIView (0.6.0):
-    - CJBaseUIKit/UIView/CJAnimation (= 0.6.0)
-    - CJBaseUIKit/UIView/CJDragAction (= 0.6.0)
-    - CJBaseUIKit/UIView/CJGestureRecognizer (= 0.6.0)
-    - CJBaseUIKit/UIView/CJPopupAction (= 0.6.0)
-    - CJBaseUIKit/UIView/CJShakeAction (= 0.6.0)
-  - CJBaseUIKit/UIView/CJAnimation (0.6.0)
-  - CJBaseUIKit/UIView/CJDragAction (0.6.0)
-  - CJBaseUIKit/UIView/CJGestureRecognizer (0.6.0)
-  - CJBaseUIKit/UIView/CJPopupAction (0.6.0)
-  - CJBaseUIKit/UIView/CJShakeAction (0.6.0)
-  - CJBaseUIKit/UIViewController (0.6.0)
-  - CJBaseUIKit/UIWindow (0.6.0)
+  - CJBaseUIKit/UIView (0.8.1):
+    - CJBaseUIKit/UIView/CJAddCorner (= 0.8.1)
+    - CJBaseUIKit/UIView/CJAnimation (= 0.8.1)
+    - CJBaseUIKit/UIView/CJAutoMoveUp (= 0.8.1)
+    - CJBaseUIKit/UIView/CJDragAction (= 0.8.1)
+    - CJBaseUIKit/UIView/CJGestureRecognizer (= 0.8.1)
+    - CJBaseUIKit/UIView/CJShakeAction (= 0.8.1)
+  - CJBaseUIKit/UIView/CJAddCorner (0.8.1)
+  - CJBaseUIKit/UIView/CJAnimation (0.8.1)
+  - CJBaseUIKit/UIView/CJAutoMoveUp (0.8.1)
+  - CJBaseUIKit/UIView/CJDragAction (0.8.1)
+  - CJBaseUIKit/UIView/CJGestureRecognizer (0.8.1)
+  - CJBaseUIKit/UIView/CJShakeAction (0.8.1)
+  - CJBaseUIKit/UIViewController (0.8.1)
+  - CJBaseUIKit/UIWindow (0.8.1)
   - CJBaseUtil (0.5.1):
     - CJBaseUtil/CJAppLastUtil (= 0.5.1)
     - CJBaseUtil/CJCallUtil (= 0.5.1)
@@ -225,6 +195,8 @@ PODS:
     - CJListKit-Swift
     - Masonry
     - SVProgressHUD
+  - CJContainer (0.1.0):
+    - Masonry
   - CJFile/CJFileManager (0.0.9)
   - CJFoundation (0.1.3):
     - CJFoundation/NSDictionary (= 0.1.3)
@@ -251,6 +223,7 @@ PODS:
   - CJListDemo-Swift/LinkedMenu (0.0.1):
     - CJListKit-Swift/LinkedMenu
     - CQDemoKit/Demo_DataSourceAndDelegate
+    - CQDemoResource/Images
     - SnapKit
   - CJListKit-Swift (0.0.1):
     - CJListKit-Swift/CollectionView_SwiftUI (= 0.0.1)
@@ -294,16 +267,57 @@ PODS:
   - CJNetwork/CJNetworkBase (0.5.0)
   - CJNetwork/CJRequestUtil (0.5.0):
     - CJNetwork/CJNetworkBase
-  - CQDemoKit (0.7.6):
-    - CQDemoKit/Auxiliary (= 0.7.6)
-    - CQDemoKit/BaseUIKit (= 0.7.6)
-    - CQDemoKit/BaseUtil (= 0.7.6)
-    - CQDemoKit/BaseVC (= 0.7.6)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.7.6)
-    - CQDemoKit/Demo_Resource (= 0.7.6)
-    - CQDemoKit/Demo_RipeView (= 0.7.6)
-    - CQDemoKit/Helper (= 0.7.6)
-    - CQDemoKit/Monitor (= 0.7.6)
+  - CJOverlayView (0.7.0):
+    - CJOverlayView/AlertView_Horizontal (= 0.7.0)
+    - CJOverlayView/AlertView_Image (= 0.7.0)
+    - CJOverlayView/AlertView_Normal (= 0.7.0)
+    - CJOverlayView/CJActionSheet (= 0.7.0)
+    - CJOverlayView/CJBaseOverlayTheme (= 0.7.0)
+    - CJOverlayView/CJProgressHUD (= 0.7.0)
+    - CJOverlayView/CJToast (= 0.7.0)
+  - CJOverlayView/AlertView_Horizontal (0.7.0):
+    - CJOverlayView/CJBaseOverlayTheme
+    - Masonry
+  - CJOverlayView/AlertView_Image (0.7.0):
+    - CJContainer
+    - SnapKit
+  - CJOverlayView/AlertView_Normal (0.7.0):
+    - CJOverlayView/CJBaseOverlayTheme
+    - Masonry
+  - CJOverlayView/CJActionSheet (0.7.0):
+    - CJOverlayView/CJBaseOverlayTheme
+    - Masonry
+  - CJOverlayView/CJBaseOverlayTheme (0.7.0)
+  - CJOverlayView/CJProgressHUD (0.7.0):
+    - CJOverlayView/CJProgressHUD/Base (= 0.7.0)
+    - CJOverlayView/CJProgressHUD/IndicatorProgressHUD (= 0.7.0)
+    - CJOverlayView/CJProgressHUD/JSONProgressHUD (= 0.7.0)
+  - CJOverlayView/CJProgressHUD/Base (0.7.0):
+    - CJOverlayView/CJBaseOverlayTheme
+  - CJOverlayView/CJProgressHUD/IndicatorProgressHUD (0.7.0):
+    - CJOverlayView/CJBaseOverlayTheme
+  - CJOverlayView/CJProgressHUD/JSONProgressHUD (0.7.0):
+    - CJOverlayView/CJBaseOverlayTheme
+    - CQBridgeSTOLottie
+    - Masonry
+    - MBProgressHUD
+  - CJOverlayView/CJToast (0.7.0):
+    - CJOverlayView/CJBaseOverlayTheme
+    - Masonry
+    - MBProgressHUD
+  - CJPopupAction (1.5.0)
+  - CQBridgeSTOLottie (0.3.0):
+    - lottie-ios
+  - CQDemoKit (0.9.2):
+    - CQDemoKit/Auxiliary (= 0.9.2)
+    - CQDemoKit/BaseUIKit (= 0.9.2)
+    - CQDemoKit/BaseUtil (= 0.9.2)
+    - CQDemoKit/BaseVC (= 0.9.2)
+    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.9.2)
+    - CQDemoKit/Demo_Resource (= 0.9.2)
+    - CQDemoKit/Demo_RipeView (= 0.9.2)
+    - CQDemoKit/Helper (= 0.9.2)
+    - CQDemoKit/Monitor (= 0.9.2)
   - CQDemoKit-Swift (0.0.1):
     - CQDemoKit
     - CQDemoKit-Swift/CQDemoKit-OC (= 0.0.1)
@@ -312,51 +326,48 @@ PODS:
     - CQDemoKit
   - CQDemoKit-Swift/SwiftUI (0.0.1):
     - CQDemoKit
-  - CQDemoKit/Auxiliary (0.7.6):
+  - CQDemoKit/Auxiliary (0.9.2):
     - Masonry
-  - CQDemoKit/BaseUIKit (0.7.6):
+  - CQDemoKit/BaseUIKit (0.9.2):
     - Masonry
-  - CQDemoKit/BaseUtil (0.7.6)
-  - CQDemoKit/BaseVC (0.7.6):
-    - CQDemoKit/BaseVC/Base (= 0.7.6)
-    - CQDemoKit/BaseVC/Collection (= 0.7.6)
-    - CQDemoKit/BaseVC/ScrollView (= 0.7.6)
-    - CQDemoKit/BaseVC/TabBar (= 0.7.6)
-    - CQDemoKit/BaseVC/TableView (= 0.7.6)
-    - CQDemoKit/BaseVC/TextView (= 0.7.6)
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/Base (0.7.6):
+  - CQDemoKit/BaseUtil (0.9.2)
+  - CQDemoKit/BaseVC (0.9.2):
+    - CQDemoKit/BaseVC/Base (= 0.9.2)
+    - CQDemoKit/BaseVC/Collection (= 0.9.2)
+    - CQDemoKit/BaseVC/ScrollView (= 0.9.2)
+    - CQDemoKit/BaseVC/TabBar (= 0.9.2)
+    - CQDemoKit/BaseVC/TableView (= 0.9.2)
+    - CQDemoKit/BaseVC/TextView (= 0.9.2)
+  - CQDemoKit/BaseVC/Base (0.9.2):
     - CQDemoKit/BaseUIKit
-    - CQDemoKit/Helper
     - Masonry
-  - CQDemoKit/BaseVC/Collection (0.7.6):
+  - CQDemoKit/BaseVC/Collection (0.9.2):
     - CQDemoKit/BaseVC/Base
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/ScrollView (0.7.6):
+  - CQDemoKit/BaseVC/ScrollView (0.9.2):
     - CQDemoKit/BaseVC/Base
+  - CQDemoKit/BaseVC/TabBar (0.9.2):
     - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TabBar (0.7.6):
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TableView (0.7.6):
+  - CQDemoKit/BaseVC/TableView (0.9.2):
     - CQDemoKit/BaseVC/Base
-    - CQDemoKit/Helper
-  - CQDemoKit/BaseVC/TextView (0.7.6):
+  - CQDemoKit/BaseVC/TextView (0.9.2):
     - CQDemoKit/BaseUtil
     - CQDemoKit/BaseVC/Base
-    - CQDemoKit/Helper
-  - CQDemoKit/Demo_DataSourceAndDelegate (0.7.6):
+  - CQDemoKit/Demo_DataSourceAndDelegate (0.9.2):
     - CQDemoKit/BaseVC
-    - CQDemoKit/Demo_Resource
-  - CQDemoKit/Demo_Resource (0.7.6):
+  - CQDemoKit/Demo_Resource (0.9.2):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.7.6):
+  - CQDemoKit/Demo_RipeView (0.9.2):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/BaseUtil
     - CQDemoKit/Demo_DataSourceAndDelegate
     - CQDemoKit/Demo_Resource
-  - CQDemoKit/Helper (0.7.6)
-  - CQDemoKit/Monitor (0.7.6)
+  - CQDemoKit/Helper (0.9.2)
+  - CQDemoKit/Monitor (0.9.2)
+  - CQDemoResource/Core (0.2.3):
+    - CQDemoKit/Demo_Resource
+  - CQDemoResource/Images (0.2.3):
+    - CQDemoResource/Core
   - DZNEmptyDataSet (1.8.1)
   - IjinbuNetwork (0.1.0):
     - CJNetwork/AFNetworkingBaseComponent
@@ -376,11 +387,11 @@ PODS:
   - libwebp/sharpyuv (1.5.0)
   - libwebp/webp (1.5.0):
     - libwebp/sharpyuv
-  - lottie-ios (2.5.3)
+  - lottie-ios (4.6.1)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.1.0)
+  - MBProgressHUD (1.2.0)
   - MJPopupViewController (0.4)
-  - MJRefresh (3.1.15.7)
+  - MJRefresh (3.7.9)
   - NJKWebViewProgress (0.2.3):
     - NJKWebViewProgress/Core (= 0.2.3)
     - NJKWebViewProgress/ProgressView (= 0.2.3)
@@ -402,20 +413,22 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking/Reachability
-  - CJBaseEffectKit (from `../`)
-  - CJBaseHelper (from `../`)
-  - CJBaseOverlayKit (from `../`)
-  - CJBaseUIKit (from `../`)
-  - CJBaseUtil (from `../`)
+  - CJBaseEffectKit
+  - CJBaseHelper
+  - CJBaseUIKit
+  - CJBaseUtil
   - CJComplexUIKit (from `../`)
-  - CJFoundation (from `../`)
+  - CJFoundation
   - CJListDemo-Swift (from `../`)
   - CJListKit-Swift (from `../`)
   - CJMedia/CJUploadImagePickerUtil (~> 0.0.7)
   - CJNetwork
   - CJNetwork/AFNetworkingBaseComponent
-  - CQDemoKit/BaseVC (~> 0.7.6)
-  - CQDemoKit/Demo_DataSourceAndDelegate (~> 0.7.6)
+  - CJOverlayView
+  - CJPopupAction
+  - CQDemoKit/BaseVC (~> 0.9.2)
+  - CQDemoKit/Demo_DataSourceAndDelegate (~> 0.9.2)
+  - CQDemoKit/Demo_Resource (~> 0.9.2)
   - DZNEmptyDataSet
   - IjinbuNetwork (~> 0.1.0)
   - JGActionSheet
@@ -426,14 +439,24 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://gitee.com/dvlproad/dvlproadSpecs:
+    - CJBaseEffectKit
+    - CJContainer
+    - CJOverlayView
+    - CQBridgeSTOLottie
     - IjinbuNetwork
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - CJBaseHelper
+    - CJBaseUIKit
+    - CJBaseUtil
     - CJFile
+    - CJFoundation
     - CJMedia
     - CJNetwork
+    - CJPopupAction
     - CQDemoKit
     - CQDemoKit-Swift
+    - CQDemoResource
     - DZNEmptyDataSet
     - JGActionSheet
     - libwebp
@@ -453,19 +476,7 @@ SPEC REPOS:
     - SVProgressHUD
 
 EXTERNAL SOURCES:
-  CJBaseEffectKit:
-    :path: "../"
-  CJBaseHelper:
-    :path: "../"
-  CJBaseOverlayKit:
-    :path: "../"
-  CJBaseUIKit:
-    :path: "../"
-  CJBaseUtil:
-    :path: "../"
   CJComplexUIKit:
-    :path: "../"
-  CJFoundation:
     :path: "../"
   CJListDemo-Swift:
     :path: "../"
@@ -474,29 +485,33 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
-  CJBaseEffectKit: 88eb6952d02f0e4298d707c5f07828835ce1facf
-  CJBaseHelper: dd715e18591da9df5d06364098300591220f0535
-  CJBaseOverlayKit: 38df690307b4558ececf64b848b5f8c06b741eb9
-  CJBaseUIKit: 2a02588017d5fab41ad5ceb3083e1ce7c73ee154
-  CJBaseUtil: f1616c533ce97b1f37c93c30fd3503f3f2d1476c
+  CJBaseEffectKit: df0d6d989de6363a14be9d5ebbb2a5e6b8b1588c
+  CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
+  CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
+  CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
   CJComplexUIKit: 46d27d61bb87f1a046eca8342b6223da788bd647
+  CJContainer: b7d5d626a05691c9107ce57b5991ab5c066f86a3
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
   CJFoundation: 53b4df7152c6d6fd776f55f387c67f431b8574bd
-  CJListDemo-Swift: f4a0a21d84e1098556abb54531a8b5320c4f4e3d
+  CJListDemo-Swift: ba48a30dc1a4e56ea086e7bdfe7f0d95178d28d6
   CJListKit-Swift: 117d2cede7e5abdbba0e5e3fc4ea15b2d4a3a4cb
   CJMedia: 29b1bd8c127fb80c4993a76420a3bcc31a4657e5
   CJNetwork: a75f849e5c6ec8fc85ca7aa5027f73d6c48a4af1
-  CQDemoKit: fe9351204eeaeba1af1687972aeffaf084b32191
+  CJOverlayView: 35ff284fb9a9b1a21e0a2f4cb24193ed72fb5215
+  CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
+  CQBridgeSTOLottie: 5e9bb0ab3b67570586d2ec5835c62e662e570371
+  CQDemoKit: 2484181eaa06340effb39073d00ed42794679422
   CQDemoKit-Swift: 28d06bf24cbcc84c9651e0ffe607bffdd57863b6
+  CQDemoResource: 03f43bda844a975c8923d175dc07c25019d96548
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IjinbuNetwork: 2380c6c8d37a4122a9b369a3558258ed925eaa3e
   JGActionSheet: 2cfca820b57a11ec4b4a5655d45ee599fbeddc05
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
-  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  lottie-ios: 6467ca7035120c5b0e0acee58bb679cf15875686
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJPopupViewController: e9ad553a3145eb8126ba2748e872ae7fb25cc605
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   PinYin4Objc: 3fa9673610368330e2dfb688b1d19a35c3930a78
@@ -507,6 +522,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 6213ae7e7044a3b5b774eb97fdcccf008bc47e47
+PODFILE CHECKSUM: f9f9b0dcce1aa2c7f9d3ff8865844a964c5af125
 
 COCOAPODS: 1.16.2

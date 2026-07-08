@@ -7,7 +7,6 @@
 //
 
 #import "H5ImgSettingBaseViewController.h"
-#import "TSButtonFactory.h"
 #import <CJMedia/MySingleImagePickerController.h>
 #import <CJBaseUIKit/UIImage+CJTransformSize.h>
 #import <CJBaseUIKit/UIImage+CJBase64.h>
@@ -55,7 +54,7 @@
 }
 
 - (void)dealOriginImage:(UIImage *)originImage {
-    NSData *compressImageData = [originImage cj_compressWithMaxDataLength:40.0f * 1024.0f]; //40k
+    NSData *compressImageData = [originImage cj_compressSizeWithMaxDataLength:40.0f * 1024.0f]; //40k
     NSLog(@"压缩后数据大小:%.4f MB",(double)compressImageData.length/1024.0f/1024.0f);
     [self updateH5Img:compressImageData];
 }

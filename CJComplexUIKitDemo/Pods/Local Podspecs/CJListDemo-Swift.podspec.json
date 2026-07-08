@@ -24,6 +24,7 @@
       "dependencies": {
         "SnapKit": [],
         "CQDemoKit/Demo_DataSourceAndDelegate": [],
+        "CQDemoResource/Images": [],
         "CJListKit-Swift/LinkedMenu": []
       }
     },

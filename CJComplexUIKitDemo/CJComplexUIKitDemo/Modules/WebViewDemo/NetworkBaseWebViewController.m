@@ -7,7 +7,7 @@
 //
 
 #import "NetworkBaseWebViewController.h"
-#import "AppInfoManager.h"
+
 #import "DataEmptyViewFactory.h"
 #import "UIScrollView+CJAddFillView.h"
 

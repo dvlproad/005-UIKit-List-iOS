@@ -48,7 +48,9 @@ import CQDemoKit
         let moduleModel = dataModels[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! GuideMenuTableViewCell
-        let image = UIImage.cqdemokit_xcassetImageNamed(moduleModel.imageName)
+        let imageBundle = Bundle.cqts_framework_resourceBundle("CQDemoResource", ocClassName: "CQTSAssetSourceUtil")
+        let image = UIImage.init(named: moduleModel.imageName, in: imageBundle, with: nil)
+        
         cell.myImageView.image = image
         cell.mainTitleLabel.text = moduleModel.name
         

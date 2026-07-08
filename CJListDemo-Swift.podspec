@@ -44,6 +44,7 @@ Pod::Spec.new do |s|
     ss.resources = "CJListDemo-Swift/LinkedMenu/**/*.{json}"
     ss.dependency "SnapKit"
     ss.dependency "CQDemoKit/Demo_DataSourceAndDelegate"
+    ss.dependency "CQDemoResource/Images"
     ss.dependency "CJListKit-Swift/LinkedMenu"
   end
 

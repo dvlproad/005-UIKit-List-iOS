@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import CJListKit_Swift
 import CQDemoKit
+import CQDemoResource
 
 @objc public class TSLinkedCollectionMenuViewController: UIViewController {
     // cell 的高度
@@ -37,9 +38,12 @@ import CQDemoKit
         self.rightDataSource = CQTSRipeBaseCollectionViewDataSource(sectionDataModels: [], registerHandler: {
 //            self.rightDataSource.registerAllCells(for: rightCollectionView)
 //            collectionView.register(RightMenuCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        }, cellForItemAtIndexPath: { collectionView, indexPath, localImageDataModel in
+        }, cellForItemAtIndexPath: { collectionView, indexPath, bDataModel in
             let cell: RightMenuCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! RightMenuCollectionViewCell
-            cell.imageView.image = UIImage.cqdemokit_xcassetImageNamed(localImageDataModel.imageName)
+            let localImageDataModel = bDataModel as! CQTSLocImageDataModel
+            let imageBundle = Bundle.cqts_framework_resourceBundle("CQDemoResource", ocClassName: "CQTSAssetSourceUtil")
+            let image = UIImage.init(named: localImageDataModel.imageName, in: imageBundle, with: nil)
+            cell.imageView.image = image
             cell.textLabel.text = localImageDataModel.name;
 
             return cell;
@@ -83,7 +87,7 @@ import CQDemoKit
             
             let sectionDataModel = CQDMSectionDataModel()
             sectionDataModel.theme = "section \(section)"
-            sectionDataModel.values = CQTSLocImagesUtil.imageModels(withCount: iRowCount, randomOrder: false, changeImageNameToNetworkUrl: false)
+            sectionDataModel.values = CQTSAssetModelGetter.localFileModels(withCount: iRowCount, randomOrder: false, folderNames: ["jpg"])
             
             for item in 0..<iRowCount {
                 var module: CQTSLocImageDataModel = sectionDataModel.values[item] as! CQTSLocImageDataModel

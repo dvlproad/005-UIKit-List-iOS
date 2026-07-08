@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "AppInfoCJHelper.h"
 #import "AuthorizationCJHelper.h"
 #import "DeviceCJHelper.h"
 #import "HookCJHelper.h"
@@ -18,6 +19,9 @@
 #import "NSDateFormatterCJHelper.h"
 #import "NSObjectCJHelper.h"
 #import "NSOperationQueueCJHelper.h"
+#import "ServerSensitiveCJHelper.h"
+#import "ServerTimeCJHelper.h"
+#import "UIViewCJHelper.h"
 #import "UIViewControllerCJHelper.h"
 #import "WebCJHelper.h"
 

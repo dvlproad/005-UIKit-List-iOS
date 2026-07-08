@@ -172,7 +172,7 @@
 }
 
 - (void)showIKnowAlertViewWithTitle:(NSString *)title {
-    [TSAlertUtil showAlertViewWithFlagImage:nil title:title message:nil okButtonTitle:@"我知道了" okHandle:nil];
+    [CJUIKitAlertUtil showIKnowAlertInViewController:self withTitle:title iKnowBlock:nil];
 }
 
 

@@ -11,8 +11,6 @@
 
 #import "AppInfoManager.h"
 
-#import "YunUncaughtExceptionHandler.h"
-
 @interface AppDelegate ()
 
 @end
@@ -21,7 +19,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    YunInstallUncaughtExceptionHandler();
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         //默认的设置，如网络监听等
