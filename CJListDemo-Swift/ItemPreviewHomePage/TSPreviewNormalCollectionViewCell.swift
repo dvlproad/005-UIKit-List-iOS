@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 import SDWebImage
-import CJListKit_Swift
+import CJFeatureListKit_Swift
 
 class TSPreviewNormalCollectionViewCell: UICollectionViewCell {
     var titleLabel: UILabel!

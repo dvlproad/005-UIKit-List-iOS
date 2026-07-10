@@ -8,7 +8,7 @@
 
 import SwiftUI
 import UIKit
-import CJListKit_Swift
+import CJFeatureListKit_Swift
 
 @available(iOS 14.0, *)
 @objc public class TSSwiftUIGridViewUIView: UIView {

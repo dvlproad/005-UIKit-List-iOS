@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
     ss.dependency "SnapKit"
     ss.dependency "CQDemoKit/Demo_DataSourceAndDelegate"
     ss.dependency "CQDemoResource/Images"
-    ss.dependency "CJListKit-Swift/LinkedMenu"
+    ss.dependency "CJFeatureListKit-Swift/LinkedMenu"
   end
 
   s.subspec 'DouyinUrlAnalyze' do |ss|
@@ -60,14 +60,14 @@ Pod::Spec.new do |s|
     ss.dependency "SDWebImage"
     ss.dependency 'SDWebImageWebPCoder'
     ss.dependency "CQDemoKit/Demo_DataSourceAndDelegate"
-#    ss.dependency "CJListKit-Swift/LinkedMenu"
+#    ss.dependency "CJFeatureListKit-Swift/LinkedMenu"
     ss.dependency "CJCollectionViewLayout-Swift/FlowLayout"
   end
   
   
   s.subspec 'CollectionView_SwiftUI' do |ss|
     ss.source_files = "CJListDemo-Swift/CollectionView_SwiftUI/**/*.{swift}"
-    ss.dependency "CJListKit-Swift/CollectionView_SwiftUI"
+    ss.dependency "CJFeatureListKit-Swift/CollectionView_SwiftUI"
     ss.dependency 'CQDemoKit-Swift'
   end
 

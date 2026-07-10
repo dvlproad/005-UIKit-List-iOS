@@ -9,7 +9,7 @@
 #import "LinkedMenuHomeViewController.h"
 
 #import <CJListDemo_Swift/CJListDemo_Swift-Swift.h>
-#import <CJListKit_Swift/CJListKit_Swift-Swift.h>
+#import <CJFeatureListKit_Swift/CJFeatureListKit_Swift-Swift.h>
 
 
 @interface LinkedMenuHomeViewController ()

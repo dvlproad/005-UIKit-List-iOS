@@ -25,7 +25,7 @@
         "SnapKit": [],
         "CQDemoKit/Demo_DataSourceAndDelegate": [],
         "CQDemoResource/Images": [],
-        "CJListKit-Swift/LinkedMenu": []
+        "CJFeatureListKit-Swift/LinkedMenu": []
       }
     },
     {
@@ -51,7 +51,7 @@
       "name": "CollectionView_SwiftUI",
       "source_files": "CJListDemo-Swift/CollectionView_SwiftUI/**/*.{swift}",
       "dependencies": {
-        "CJListKit-Swift/CollectionView_SwiftUI": [],
+        "CJFeatureListKit-Swift/CollectionView_SwiftUI": [],
         "CQDemoKit-Swift": []
       }
     }

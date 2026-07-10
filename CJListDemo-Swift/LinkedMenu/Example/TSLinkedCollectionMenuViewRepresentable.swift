@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CJListKit_Swift
+import CJFeatureListKit_Swift
 
 @available(iOS 13.0, *)
 public struct TSLinkedCollectionMenuViewRepresentable: UIViewRepresentable {

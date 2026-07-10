@@ -9,7 +9,7 @@
 import SwiftUI
 import CQDemoKit
 import CQDemoKit_Swift
-import CJListKit_Swift
+import CJFeatureListKit_Swift
 
 @available(iOS 14.0, *)
 @objc public class TSTSUIView: CQDemoSwiftUIBaseUIView {

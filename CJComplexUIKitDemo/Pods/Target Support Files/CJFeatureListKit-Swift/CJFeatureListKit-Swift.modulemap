@@ -1,0 +1,6 @@
+framework module CJFeatureListKit_Swift {
+  umbrella header "CJFeatureListKit-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
