@@ -62,16 +62,6 @@
       ]
     },
     {
-      "name": "CJHomeCollectionView",
-      "source_files": "CJComplexUIKit/CJHomeCollectionView/**/*.{h,m}",
-      "dependencies": {
-        "Masonry": [],
-        "SDCycleScrollView": [],
-        "CJBaseUtil/CJDataUtil": [],
-        "CJBaseUIKit/UIView": []
-      }
-    },
-    {
       "name": "CJLinkedMenu",
       "source_files": "CJComplexUIKit/CJLinkedMenu/**/*.{h,m}",
       "dependencies": {

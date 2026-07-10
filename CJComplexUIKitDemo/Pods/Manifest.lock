@@ -39,19 +39,6 @@ PODS:
   - CJBaseUIKit/UIImage (0.8.1)
   - CJBaseUIKit/UINavigationBar (0.8.1)
   - CJBaseUIKit/UITextField (0.8.1)
-  - CJBaseUIKit/UIView (0.8.1):
-    - CJBaseUIKit/UIView/CJAddCorner (= 0.8.1)
-    - CJBaseUIKit/UIView/CJAnimation (= 0.8.1)
-    - CJBaseUIKit/UIView/CJAutoMoveUp (= 0.8.1)
-    - CJBaseUIKit/UIView/CJDragAction (= 0.8.1)
-    - CJBaseUIKit/UIView/CJGestureRecognizer (= 0.8.1)
-    - CJBaseUIKit/UIView/CJShakeAction (= 0.8.1)
-  - CJBaseUIKit/UIView/CJAddCorner (0.8.1)
-  - CJBaseUIKit/UIView/CJAnimation (0.8.1)
-  - CJBaseUIKit/UIView/CJAutoMoveUp (0.8.1)
-  - CJBaseUIKit/UIView/CJDragAction (0.8.1)
-  - CJBaseUIKit/UIView/CJGestureRecognizer (0.8.1)
-  - CJBaseUIKit/UIView/CJShakeAction (0.8.1)
   - CJBaseUtil/CJDataUtil (0.5.1)
   - CJBaseUtil/CJPinyinHelper (0.5.1):
     - PinYin4Objc
@@ -61,7 +48,6 @@ PODS:
   - CJComplexUIKit (0.3.0):
     - CJComplexUIKit/CJCollectionView (= 0.3.0)
     - CJComplexUIKit/CJDataScrollView (= 0.3.0)
-    - CJComplexUIKit/CJHomeCollectionView (= 0.3.0)
     - CJComplexUIKit/CJLinkedMenu (= 0.3.0)
     - CJComplexUIKit/CJScrollView (= 0.3.0)
     - CJComplexUIKit/UIViewController (= 0.3.0)
@@ -94,12 +80,6 @@ PODS:
     - CJBaseUtil/CJDataUtil
     - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView
     - CJListKit-Swift
-  - CJComplexUIKit/CJHomeCollectionView (0.3.0):
-    - CJBaseUIKit/UIView
-    - CJBaseUtil/CJDataUtil
-    - CJListKit-Swift
-    - Masonry
-    - SDCycleScrollView
   - CJComplexUIKit/CJLinkedMenu (0.3.0):
     - CJListKit-Swift
     - Masonry
@@ -408,7 +388,7 @@ SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
   CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
   CJCollectionViewLayout-Swift: e61fdfe3298ca18792a384bea30f155b8593d6e2
-  CJComplexUIKit: 46d27d61bb87f1a046eca8342b6223da788bd647
+  CJComplexUIKit: f8911701d408da4f60dde224ca88a4b94eaab716
   CJContainer: b7d5d626a05691c9107ce57b5991ab5c066f86a3
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
   CJFoundation: 53b4df7152c6d6fd776f55f387c67f431b8574bd

@@ -96,16 +96,6 @@ Pod::Spec.new do |s|
 
   end
 
-  # 可展开的集合视图
-  s.subspec 'CJHomeCollectionView' do |ss|
-    ss.source_files = "CJComplexUIKit/CJHomeCollectionView/**/*.{h,m}"
-
-    ss.dependency 'Masonry'
-    ss.dependency 'SDCycleScrollView'
-    ss.dependency 'CJBaseUtil/CJDataUtil'
-    ss.dependency 'CJBaseUIKit/UIView'  # 使用 [cell cjShakeKeeping];
-  end
-
   # 可联动的菜单视图
   s.subspec 'CJLinkedMenu' do |ss|
     ss.source_files = "CJComplexUIKit/CJLinkedMenu/**/*.{h,m}"

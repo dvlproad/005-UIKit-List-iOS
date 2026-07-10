@@ -15,7 +15,6 @@
 		780E461E1E5DF87B00980127 /* CJComplexUIKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 780E461D1E5DF87B00980127 /* CJComplexUIKitDemoTests.m */; };
 		780E46291E5DF87B00980127 /* CJComplexUIKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 780E46281E5DF87B00980127 /* CJComplexUIKitDemoUITests.m */; };
 		781872BA242BA9B80098B3A9 /* TSOpenCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 781872B9242BA9B80098B3A9 /* TSOpenCollectionView.m */; };
-		781872DA242BBA180098B3A9 /* LEWorkHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 781872C0242BBA170098B3A9 /* LEWorkHomeViewController.m */; };
 		78293F1221FC2D0900F70F43 /* SvDemo_Refresh.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78293F0F21FC2D0800F70F43 /* SvDemo_Refresh.xib */; };
 		78293F1321FC2D0900F70F43 /* SvDemo_Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 78293F1121FC2D0900F70F43 /* SvDemo_Refresh.m */; };
 		783281041F4198BC008267E0 /* CustomTripProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 783281031F4198BC008267E0 /* CustomTripProgressView.m */; };
@@ -194,8 +193,6 @@
 		780E462A1E5DF87B00980127 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		781872B8242BA9B80098B3A9 /* TSOpenCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSOpenCollectionView.h; sourceTree = "<group>"; };
 		781872B9242BA9B80098B3A9 /* TSOpenCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSOpenCollectionView.m; sourceTree = "<group>"; };
-		781872C0242BBA170098B3A9 /* LEWorkHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEWorkHomeViewController.m; sourceTree = "<group>"; };
-		781872C1242BBA170098B3A9 /* LEWorkHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEWorkHomeViewController.h; sourceTree = "<group>"; };
 		78293F0F21FC2D0800F70F43 /* SvDemo_Refresh.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SvDemo_Refresh.xib; sourceTree = "<group>"; };
 		78293F1021FC2D0800F70F43 /* SvDemo_Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SvDemo_Refresh.h; sourceTree = "<group>"; };
 		78293F1121FC2D0900F70F43 /* SvDemo_Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SvDemo_Refresh.m; sourceTree = "<group>"; };
@@ -500,23 +497,6 @@
 			path = CJComplexUIKitDemoUITests;
 			sourceTree = "<group>";
 		};
-		781872BB242BBA170098B3A9 /* Work */ = {
-			isa = PBXGroup;
-			children = (
-				781872BF242BBA170098B3A9 /* Controller */,
-			);
-			path = Work;
-			sourceTree = "<group>";
-		};
-		781872BF242BBA170098B3A9 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				781872C1242BBA170098B3A9 /* LEWorkHomeViewController.h */,
-				781872C0242BBA170098B3A9 /* LEWorkHomeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
 		78293EFA21FC083A00F70F43 /* 2OCJS */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,7 +658,6 @@
 				789A4F0821FAF3A8001528B9 /* CollectionHomeViewController.h */,
 				789A4F0921FAF3A8001528B9 /* CollectionHomeViewController.m */,
 				974C88732D623E3100E92464 /* previewDatas.json */,
-				781872BB242BBA170098B3A9 /* Work */,
 				78293F1721FC640300F70F43 /* ImageChooseCollectionView */,
 				789A4F2121FAF3A8001528B9 /* Base */,
 				789A4F0A21FAF3A8001528B9 /* CustomLayoutCollectionView */,
@@ -1439,7 +1418,6 @@
 				976CB35A2FFE6CF6000505DD /* AppInfoManager.m in Sources */,
 				8014A2801FA2C2E500DDDB5A /* AppDelegate+WindowRootViewController.m in Sources */,
 				789A4FB321FB0A1B001528B9 /* H5ImgSettingDataViewController.m in Sources */,
-				781872DA242BBA180098B3A9 /* LEWorkHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

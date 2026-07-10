@@ -25,8 +25,6 @@
 #import "UploadNoneImagePickerViewController.h"
 #import "UploadDirectlyImagePickerViewController.h"
 
-#import "LEWorkHomeViewController.h"
-
 @interface CollectionHomeViewController ()  {
     
 }
@@ -117,12 +115,6 @@
     {
         CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
         sectionDataModel.theme = @"其他";
-        {
-            CQDMModuleModel *imagePickerCollectionViewModule = [[CQDMModuleModel alloc] init];
-            imagePickerCollectionViewModule.title = @"工作首页";
-            imagePickerCollectionViewModule.classEntry = [LEWorkHomeViewController class];
-            [sectionDataModel.values addObject:imagePickerCollectionViewModule];
-        }
         {
             CQDMModuleModel *previewListModule = [[CQDMModuleModel alloc] init];
             previewListModule.title = @"Item的预览列表(已解决布局)";
