@@ -1,6 +1,0 @@
-framework module CQDemoResource {
-  umbrella header "CQDemoResource-umbrella.h"
-
-  export *
-  module * { export * }
-}

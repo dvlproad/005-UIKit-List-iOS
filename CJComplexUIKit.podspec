@@ -44,25 +44,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  
-  # UIViewController
-  s.subspec 'UIViewController' do |ss|
-    # ss.subspec 'ProgressWebViewController' do |sss|
-    #   sss.source_files = "CJComplexUIKit/UIViewController/ProgressWebViewController/**/*.{h,m}"
-
-    #   sss.dependency 'Masonry'
-    #   sss.dependency 'SVProgressHUD'
-    #   sss.dependency 'NJKWebViewProgress'
-    # end
-
-    ss.subspec 'CJBaseWebViewController' do |sss|
-      sss.source_files = "CJComplexUIKit/UIViewController/CJBaseWebViewController/**/*.{h,m}"
-
-      sss.dependency 'Masonry'
-      sss.dependency 'SVProgressHUD'
-      sss.dependency 'CJBaseHelper/WebCJHelper'
-    end
-  end
 
 
   # 与 UIScrollView 相关的基础类

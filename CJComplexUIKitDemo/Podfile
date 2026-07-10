@@ -36,9 +36,6 @@ target 'CJComplexUIKitDemo' do
   pod 'CJBaseEffectKit'
   pod 'CJPopupAction'
   
-  pod 'TSDemo_Web',       :path => '../'
-  pod 'TSDemo_Web-Swift', :path => '../'
-  
   pod 'CJComplexUIKit',           :path => '../’
   
 #  pod 'CJComplexUIKit/CJScrollView',      :path => '../’

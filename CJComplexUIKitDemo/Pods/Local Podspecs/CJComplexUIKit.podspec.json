@@ -20,20 +20,6 @@
   "requires_arc": true,
   "subspecs": [
     {
-      "name": "UIViewController",
-      "subspecs": [
-        {
-          "name": "CJBaseWebViewController",
-          "source_files": "CJComplexUIKit/UIViewController/CJBaseWebViewController/**/*.{h,m}",
-          "dependencies": {
-            "Masonry": [],
-            "SVProgressHUD": [],
-            "CJBaseHelper/WebCJHelper": []
-          }
-        }
-      ]
-    },
-    {
       "name": "CJScrollView",
       "source_files": "CJComplexUIKit/CJScrollView/**/*.{h,m}"
     },

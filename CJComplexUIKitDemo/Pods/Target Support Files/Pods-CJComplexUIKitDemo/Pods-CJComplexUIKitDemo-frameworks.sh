@@ -179,7 +179,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseEffectKit/CJBaseEffectKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit-Swift/CJBaseUIKit_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit/CJBaseUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUtil/CJBaseUtil.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJComplexUIKit/CJComplexUIKit.framework"
@@ -192,7 +191,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQBridgeSTOLottie/CQBridgeSTOLottie.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IjinbuNetwork/IjinbuNetwork.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JGActionSheet/JGActionSheet.framework"
@@ -207,15 +205,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Web/TSDemo_Web.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Web-Swift/TSDemo_Web_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseEffectKit/CJBaseEffectKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit-Swift/CJBaseUIKit_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUIKit/CJBaseUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJBaseUtil/CJBaseUtil.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CJComplexUIKit/CJComplexUIKit.framework"
@@ -228,7 +223,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQBridgeSTOLottie/CQBridgeSTOLottie.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IjinbuNetwork/IjinbuNetwork.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JGActionSheet/JGActionSheet.framework"
@@ -243,8 +237,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Web/TSDemo_Web.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/TSDemo_Web-Swift/TSDemo_Web_Swift.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

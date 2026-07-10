@@ -32,10 +32,6 @@ PODS:
     - MJRefresh
   - CJBaseEffectKit/CJScaleHeadView (0.3.0)
   - CJBaseHelper/AuthorizationCJHelper (0.1.8)
-  - CJBaseHelper/WebCJHelper (0.1.8)
-  - CJBaseUIKit-Swift/Color (0.0.2):
-    - CJBaseUIKit-Swift/String
-  - CJBaseUIKit-Swift/String (0.0.2)
   - CJBaseUIKit/CJBaseTableViewHeaderFooterView (0.8.1)
   - CJBaseUIKit/UIButton (0.8.1)
   - CJBaseUIKit/UIColor (0.8.1)
@@ -49,7 +45,6 @@ PODS:
     - CJComplexUIKit/CJCollectionView (= 0.3.0)
     - CJComplexUIKit/CJDataScrollView (= 0.3.0)
     - CJComplexUIKit/CJScrollView (= 0.3.0)
-    - CJComplexUIKit/UIViewController (= 0.3.0)
   - CJComplexUIKit/CJCollectionView (0.3.0):
     - CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell (= 0.3.0)
     - CJComplexUIKit/CJCollectionView/CJCollectionViewLayout (= 0.3.0)
@@ -69,12 +64,6 @@ PODS:
     - CJBaseUtil/CJDataUtil
     - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView
   - CJComplexUIKit/CJScrollView (0.3.0)
-  - CJComplexUIKit/UIViewController (0.3.0):
-    - CJComplexUIKit/UIViewController/CJBaseWebViewController (= 0.3.0)
-  - CJComplexUIKit/UIViewController/CJBaseWebViewController (0.3.0):
-    - CJBaseHelper/WebCJHelper
-    - Masonry
-    - SVProgressHUD
   - CJContainer (0.1.0):
     - Masonry
   - CJFile/CJFileManager (0.0.9)
@@ -153,18 +142,6 @@ PODS:
   - CJPopupAction (1.5.0)
   - CQBridgeSTOLottie (0.3.0):
     - lottie-ios
-  - CQDemoKit (0.9.2):
-    - CQDemoKit/Auxiliary (= 0.9.2)
-    - CQDemoKit/BaseUIKit (= 0.9.2)
-    - CQDemoKit/BaseUtil (= 0.9.2)
-    - CQDemoKit/BaseVC (= 0.9.2)
-    - CQDemoKit/Demo_DataSourceAndDelegate (= 0.9.2)
-    - CQDemoKit/Demo_Resource (= 0.9.2)
-    - CQDemoKit/Demo_RipeView (= 0.9.2)
-    - CQDemoKit/Helper (= 0.9.2)
-    - CQDemoKit/Monitor (= 0.9.2)
-  - CQDemoKit/Auxiliary (0.9.2):
-    - Masonry
   - CQDemoKit/BaseUIKit (0.9.2):
     - Masonry
   - CQDemoKit/BaseUtil (0.9.2)
@@ -194,17 +171,7 @@ PODS:
   - CQDemoKit/Demo_Resource (0.9.2):
     - CQDemoKit/BaseUIKit
     - CQDemoKit/Helper
-  - CQDemoKit/Demo_RipeView (0.9.2):
-    - CQDemoKit/BaseUIKit
-    - CQDemoKit/BaseUtil
-    - CQDemoKit/Demo_DataSourceAndDelegate
-    - CQDemoKit/Demo_Resource
   - CQDemoKit/Helper (0.9.2)
-  - CQDemoKit/Monitor (0.9.2)
-  - CQDemoResource/Core (0.2.3):
-    - CQDemoKit/Demo_Resource
-  - CQDemoResource/Images (0.2.3):
-    - CQDemoResource/Core
   - DZNEmptyDataSet (1.8.1)
   - IjinbuNetwork (0.1.0):
     - CJNetwork/AFNetworkingBaseComponent
@@ -231,14 +198,6 @@ PODS:
   - SDWebImage/Core (5.20.0)
   - SnapKit (5.7.1)
   - SVProgressHUD (2.2.5)
-  - TSDemo_Web (0.0.1):
-    - CQDemoKit
-    - CQDemoResource/Images
-    - TSDemo_Web-Swift
-  - TSDemo_Web-Swift (0.0.1):
-    - TSDemo_Web-Swift/DouyinUrlAnalyze (= 0.0.1)
-  - TSDemo_Web-Swift/DouyinUrlAnalyze (0.0.1):
-    - CJBaseUIKit-Swift/Color
 
 DEPENDENCIES:
   - AFNetworking/Reachability
@@ -268,8 +227,6 @@ DEPENDENCIES:
   - NJKWebViewProgress
   - SDCycleScrollView (~> 1.75)
   - SVProgressHUD
-  - TSDemo_Web (from `../`)
-  - TSDemo_Web-Swift (from `../`)
 
 SPEC REPOS:
   https://gitee.com/dvlproad/dvlproadSpecs:
@@ -282,7 +239,6 @@ SPEC REPOS:
     - AFNetworking
     - CJBaseHelper
     - CJBaseUIKit
-    - CJBaseUIKit-Swift
     - CJBaseUtil
     - CJFile
     - CJFoundation
@@ -290,7 +246,6 @@ SPEC REPOS:
     - CJNetwork
     - CJPopupAction
     - CQDemoKit
-    - CQDemoResource
     - DZNEmptyDataSet
     - JGActionSheet
     - lottie-ios
@@ -309,19 +264,14 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   CJComplexUIKit:
     :path: "../"
-  TSDemo_Web:
-    :path: "../"
-  TSDemo_Web-Swift:
-    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: cb604b1c2bded0871f5f61f5d53653739e841d6b
   CJBaseEffectKit: df0d6d989de6363a14be9d5ebbb2a5e6b8b1588c
   CJBaseHelper: 9a903eb83edd4e831e39c5112c6940e2559b79b7
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
-  CJBaseUIKit-Swift: 432f05b09106994c16a4cf582c6a728c3e59316e
   CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CJComplexUIKit: 884adbbf6394cce216d57b3687ea878ca4d330ce
+  CJComplexUIKit: 1f3e7e577f288f342dfa766722e6f7785210de87
   CJContainer: b7d5d626a05691c9107ce57b5991ab5c066f86a3
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
   CJFoundation: 53b4df7152c6d6fd776f55f387c67f431b8574bd
@@ -331,7 +281,6 @@ SPEC CHECKSUMS:
   CJPopupAction: 0f0a424a44b46d3582e0d4a90f14f15e70255436
   CQBridgeSTOLottie: 5e9bb0ab3b67570586d2ec5835c62e662e570371
   CQDemoKit: 2484181eaa06340effb39073d00ed42794679422
-  CQDemoResource: 03f43bda844a975c8923d175dc07c25019d96548
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   IjinbuNetwork: 2380c6c8d37a4122a9b369a3558258ed925eaa3e
   JGActionSheet: 2cfca820b57a11ec4b4a5655d45ee599fbeddc05
@@ -347,9 +296,7 @@ SPEC CHECKSUMS:
   SDWebImage: 73c6079366fea25fa4bb9640d5fb58f0893facd8
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  TSDemo_Web: e295e49c788e687ecd06110a9c8fcc67ec7b840a
-  TSDemo_Web-Swift: cb48e108ef0603c008ffc02508f75c8ca41c5374
 
-PODFILE CHECKSUM: 8cda24a97613d96cb6f50ac116738ddba35a75c4
+PODFILE CHECKSUM: 28bb560829b2ceed4cef58226331768c3363bf2e
 
 COCOAPODS: 1.16.2

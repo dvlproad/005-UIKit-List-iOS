@@ -26,8 +26,6 @@
 #import "MySearchEqualCellSizeCollectionView.h"
 #import "CJSingleTableViewCellDataSource.h"
 #import "CJSingleTableViewCellDataSource2.h"
-#import "CJBaseWebViewController.h"
-#import "CJEmptyViewProtocol.h"
 
 FOUNDATION_EXPORT double CJComplexUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char CJComplexUIKitVersionString[];
