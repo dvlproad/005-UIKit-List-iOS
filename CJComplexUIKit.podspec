@@ -87,22 +87,7 @@ Pod::Spec.new do |s|
       sss.source_files = "CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView/**/*.{h,m}"
     end
 
-    # 可展开的集合视图
-    ss.subspec 'CJOpenCollectionView' do |sss|
-      sss.source_files = "CJComplexUIKit/CJCollectionView/CJOpenCollectionView/**/*.{h,m}"
-    end
-
   end
-
-  # 可联动的菜单视图
-  s.subspec 'CJLinkedMenu' do |ss|
-    ss.source_files = "CJComplexUIKit/CJLinkedMenu/**/*.{h,m}"
-
-    ss.dependency 'Masonry'
-    # ss.dependency 'SDCycleScrollView'
-    # ss.dependency 'CJBaseUtil/CJDataUtil'
-  end
-
 
   # 带数据的列表视图或集合视图(常用于搜索、图片选择)
   s.subspec 'CJDataScrollView' do |ss|

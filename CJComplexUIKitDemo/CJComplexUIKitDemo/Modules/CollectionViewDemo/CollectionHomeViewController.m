@@ -17,7 +17,6 @@
 #import "MyEqualCellSizeViewController.h"
 #import "MyCycleADViewController.h"
 
-#import "OpenCollectionViewController.h"
 #import "CustomLayoutCollectionViewController.h"
 
 //图片选择的集合视图
@@ -71,12 +70,6 @@
             cycleScrollViewModule.classEntry = [MyCycleADViewController class];
             cycleScrollViewModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:cycleScrollViewModule];
-        }
-        {
-            CQDMModuleModel *openCollectionViewModule = [[CQDMModuleModel alloc] init];
-            openCollectionViewModule.title = @"OpenCollectionView(可展开)";
-            openCollectionViewModule.classEntry = [OpenCollectionViewController class];
-            [sectionDataModel.values addObject:openCollectionViewModule];
         }
         {
             CQDMModuleModel *customLayoutModule = [[CQDMModuleModel alloc] init];

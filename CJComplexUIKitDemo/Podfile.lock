@@ -45,23 +45,17 @@ PODS:
   - CJBaseUtil/CJDataUtil (0.5.1)
   - CJBaseUtil/CJPinyinHelper (0.5.1):
     - PinYin4Objc
-  - CJCollectionViewLayout-Swift (0.1.0):
-    - CJCollectionViewLayout-Swift/FlowLayout (= 0.1.0)
-  - CJCollectionViewLayout-Swift/FlowLayout (0.1.0)
   - CJComplexUIKit (0.3.0):
     - CJComplexUIKit/CJCollectionView (= 0.3.0)
     - CJComplexUIKit/CJDataScrollView (= 0.3.0)
-    - CJComplexUIKit/CJLinkedMenu (= 0.3.0)
     - CJComplexUIKit/CJScrollView (= 0.3.0)
     - CJComplexUIKit/UIViewController (= 0.3.0)
   - CJComplexUIKit/CJCollectionView (0.3.0):
     - CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell (= 0.3.0)
     - CJComplexUIKit/CJCollectionView/CJCollectionViewLayout (= 0.3.0)
-    - CJComplexUIKit/CJCollectionView/CJOpenCollectionView (= 0.3.0)
     - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView (= 0.3.0)
   - CJComplexUIKit/CJCollectionView/CJBaseCollectionViewCell (0.3.0)
   - CJComplexUIKit/CJCollectionView/CJCollectionViewLayout (0.3.0)
-  - CJComplexUIKit/CJCollectionView/CJOpenCollectionView (0.3.0)
   - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView (0.3.0)
   - CJComplexUIKit/CJDataScrollView (0.3.0):
     - CJComplexUIKit/CJDataScrollView/ImagePickerCollectionlView (= 0.3.0)
@@ -74,8 +68,6 @@ PODS:
   - CJComplexUIKit/CJDataScrollView/SearchScrollView (0.3.0):
     - CJBaseUtil/CJDataUtil
     - CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView
-  - CJComplexUIKit/CJLinkedMenu (0.3.0):
-    - Masonry
   - CJComplexUIKit/CJScrollView (0.3.0)
   - CJComplexUIKit/UIViewController (0.3.0):
     - CJComplexUIKit/UIViewController/CJBaseWebViewController (= 0.3.0)
@@ -260,7 +252,6 @@ DEPENDENCIES:
   - CJBaseUIKit/UITextField
   - CJBaseUtil/CJDataUtil
   - CJBaseUtil/CJPinyinHelper
-  - CJCollectionViewLayout-Swift (from `../`)
   - CJComplexUIKit (from `../`)
   - CJMedia/CJUploadImagePickerUtil (~> 0.0.7)
   - CJNetwork
@@ -316,8 +307,6 @@ SPEC REPOS:
     - SVProgressHUD
 
 EXTERNAL SOURCES:
-  CJCollectionViewLayout-Swift:
-    :path: "../"
   CJComplexUIKit:
     :path: "../"
   TSDemo_Web:
@@ -332,8 +321,7 @@ SPEC CHECKSUMS:
   CJBaseUIKit: 1445f55a4c9f942351fcd1964694f32196472837
   CJBaseUIKit-Swift: 432f05b09106994c16a4cf582c6a728c3e59316e
   CJBaseUtil: 1bbf8d5f831dc12ae4bb06c8b5326bd39f3522e1
-  CJCollectionViewLayout-Swift: e61fdfe3298ca18792a384bea30f155b8593d6e2
-  CJComplexUIKit: 35c2e03159f436f9309f479a6b8b483d61ce9341
+  CJComplexUIKit: 884adbbf6394cce216d57b3687ea878ca4d330ce
   CJContainer: b7d5d626a05691c9107ce57b5991ab5c066f86a3
   CJFile: 6c1e6d55b3b94e8afbaa9f413f131301d15fdc48
   CJFoundation: 53b4df7152c6d6fd776f55f387c67f431b8574bd
@@ -362,6 +350,6 @@ SPEC CHECKSUMS:
   TSDemo_Web: e295e49c788e687ecd06110a9c8fcc67ec7b840a
   TSDemo_Web-Swift: cb48e108ef0603c008ffc02508f75c8ca41c5374
 
-PODFILE CHECKSUM: d533a1971ef6be994004252b716dc51b9ec42fa3
+PODFILE CHECKSUM: 8cda24a97613d96cb6f50ac116738ddba35a75c4
 
 COCOAPODS: 1.16.2

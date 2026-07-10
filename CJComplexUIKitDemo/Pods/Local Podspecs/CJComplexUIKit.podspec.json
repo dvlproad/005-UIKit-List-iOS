@@ -51,19 +51,8 @@
         {
           "name": "MyEqualCellSizeCollectionView",
           "source_files": "CJComplexUIKit/CJCollectionView/MyEqualCellSizeCollectionView/**/*.{h,m}"
-        },
-        {
-          "name": "CJOpenCollectionView",
-          "source_files": "CJComplexUIKit/CJCollectionView/CJOpenCollectionView/**/*.{h,m}"
         }
       ]
-    },
-    {
-      "name": "CJLinkedMenu",
-      "source_files": "CJComplexUIKit/CJLinkedMenu/**/*.{h,m}",
-      "dependencies": {
-        "Masonry": []
-      }
     },
     {
       "name": "CJDataScrollView",
