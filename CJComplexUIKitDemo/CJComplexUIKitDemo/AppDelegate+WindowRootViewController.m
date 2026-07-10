@@ -12,7 +12,7 @@
 #import "TableHomeViewController.h"
 #import "CollectionHomeViewController.h"
 #import "WebHomeViewController.h"
-#import "LinkedMenuHomeViewController.h"
+#import "DouyinUrlHomeViewController.h"
 
 @implementation AppDelegate (WindowRootViewController)
 
@@ -52,10 +52,10 @@
     UINavigationController *scrollViewHomeNavigationController = [[UINavigationController alloc] initWithRootViewController:scrollViewHomeViewController];
     [tabBarController addChildViewController:scrollViewHomeNavigationController];
     
-    UIViewController *moreHomeViewController = [[LinkedMenuHomeViewController alloc] init];
+    UIViewController *moreHomeViewController = [[DouyinUrlHomeViewController alloc] init];
     moreHomeViewController.view.backgroundColor = [UIColor whiteColor];
-    moreHomeViewController.navigationItem.title = NSLocalizedString(@"更多", nil);
-    moreHomeViewController.tabBarItem.title = NSLocalizedString(@"更多", nil);
+    moreHomeViewController.navigationItem.title = NSLocalizedString(@"抖音", nil);
+    moreHomeViewController.tabBarItem.title = NSLocalizedString(@"抖音", nil);
     moreHomeViewController.tabBarItem.image = [[UIImage imageNamed:@"icons8-settings"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UINavigationController *moreHomeNavigationController = [[UINavigationController alloc] initWithRootViewController:moreHomeViewController];
     [tabBarController addChildViewController:moreHomeNavigationController];

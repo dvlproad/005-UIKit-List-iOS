@@ -1,0 +1,6 @@
+framework module TSDemo_Web_Swift {
+  umbrella header "TSDemo_Web-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

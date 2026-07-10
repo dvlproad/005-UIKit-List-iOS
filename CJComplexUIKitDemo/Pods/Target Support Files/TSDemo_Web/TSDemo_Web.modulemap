@@ -1,0 +1,6 @@
+framework module TSDemo_Web {
+  umbrella header "TSDemo_Web-umbrella.h"
+
+  export *
+  module * { export * }
+}

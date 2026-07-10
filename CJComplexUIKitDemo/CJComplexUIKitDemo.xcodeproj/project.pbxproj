@@ -130,7 +130,6 @@
 		80D49F8B20BE7EE0003F642C /* CJDataUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49F8A20BE7EE0003F642C /* CJDataUtilTest.m */; };
 		80D49F8F20BE8574003F642C /* TestCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D49F8E20BE8574003F642C /* TestCityModel.m */; };
 		80E7E68920AC37CA000F762D /* IjinbuNetworkClient+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E7E68720AC37CA000F762D /* IjinbuNetworkClient+Login.m */; };
-		9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */; };
 		974C88742D623E3100E92464 /* previewDatas.json in Resources */ = {isa = PBXBuildFile; fileRef = 974C88732D623E3100E92464 /* previewDatas.json */; };
 		976CB3242FFE6AA4000505DD /* DataEmptyViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB2FC2FFE6AA4000505DD /* DataEmptyViewFactory.m */; };
 		976CB34F2FFE6C9D000505DD /* DemoCacheUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 976CB3492FFE6C9D000505DD /* DemoCacheUtil.m */; };
@@ -362,8 +361,6 @@
 		80D49F8E20BE8574003F642C /* TestCityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCityModel.m; sourceTree = "<group>"; };
 		80E7E68720AC37CA000F762D /* IjinbuNetworkClient+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IjinbuNetworkClient+Login.m"; sourceTree = "<group>"; };
 		80E7E68820AC37CA000F762D /* IjinbuNetworkClient+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IjinbuNetworkClient+Login.h"; sourceTree = "<group>"; };
-		9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedMenuHomeViewController.h; sourceTree = "<group>"; };
-		9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedMenuHomeViewController.m; sourceTree = "<group>"; };
 		974C88732D623E3100E92464 /* previewDatas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = previewDatas.json; sourceTree = "<group>"; };
 		976CB2EA2FFE6AA4000505DD /* DemoConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoConstant.h; sourceTree = "<group>"; };
 		976CB2FB2FFE6AA4000505DD /* DataEmptyViewFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataEmptyViewFactory.h; sourceTree = "<group>"; };
@@ -863,22 +860,12 @@
 		80FF8F0A1FC5649E00E437CF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				9730F3B02D58F0DB008AF628 /* LinkedMenuDemo */,
 				789A4F6B21FAF3FA001528B9 /* TableViewDemo */,
 				789A4EE621FAF3A8001528B9 /* CollectionViewDemo */,
 				7856F62121F4E706004AF751 /* ScrollViewDemo */,
 				78590C59215C79DC00F45AD5 /* WebViewDemo */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		9730F3B02D58F0DB008AF628 /* LinkedMenuDemo */ = {
-			isa = PBXGroup;
-			children = (
-				9730F3AE2D58F0DB008AF628 /* LinkedMenuHomeViewController.h */,
-				9730F3AF2D58F0DB008AF628 /* LinkedMenuHomeViewController.m */,
-			);
-			path = LinkedMenuDemo;
 			sourceTree = "<group>";
 		};
 		976CB2EB2FFE6AA4000505DD /* Base */ = {
@@ -1266,22 +1253,20 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CJBaseEffectKit/CJBaseEffectKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CJBaseHelper/CJBaseHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/CJBaseUIKit-Swift/CJBaseUIKit_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CJBaseUIKit/CJBaseUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CJBaseUtil/CJBaseUtil.framework",
 				"${BUILT_PRODUCTS_DIR}/CJCollectionViewLayout-Swift/CJCollectionViewLayout_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CJComplexUIKit/CJComplexUIKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CJContainer/CJContainer.framework",
-				"${BUILT_PRODUCTS_DIR}/CJFeatureListKit-Swift/CJFeatureListKit_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CJFile/CJFile.framework",
 				"${BUILT_PRODUCTS_DIR}/CJFoundation/CJFoundation.framework",
-				"${BUILT_PRODUCTS_DIR}/CJListDemo-Swift/CJListDemo_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CJMedia/CJMedia.framework",
 				"${BUILT_PRODUCTS_DIR}/CJNetwork/CJNetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/CJOverlayView/CJOverlayView.framework",
 				"${BUILT_PRODUCTS_DIR}/CJPopupAction/CJPopupAction.framework",
 				"${BUILT_PRODUCTS_DIR}/CQBridgeSTOLottie/CQBridgeSTOLottie.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework",
-				"${BUILT_PRODUCTS_DIR}/CQDemoKit-Swift/CQDemoKit_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CQDemoResource/CQDemoResource.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/IjinbuNetwork/IjinbuNetwork.framework",
@@ -1295,10 +1280,10 @@
 				"${BUILT_PRODUCTS_DIR}/PinYin4Objc/PinYin4Objc.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImageWebPCoder/SDWebImageWebPCoder.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
+				"${BUILT_PRODUCTS_DIR}/TSDemo_Web/TSDemo_Web.framework",
+				"${BUILT_PRODUCTS_DIR}/TSDemo_Web-Swift/TSDemo_Web_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1306,22 +1291,20 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseEffectKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseUIKit_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJBaseUtil.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJCollectionViewLayout_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJComplexUIKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJContainer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJFeatureListKit_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJFile.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJFoundation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJListDemo_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJMedia.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJNetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJOverlayView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CJPopupAction.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQBridgeSTOLottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoKit_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CQDemoResource.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IjinbuNetwork.framework",
@@ -1335,10 +1318,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinYin4Objc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImageWebPCoder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Web.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TSDemo_Web_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1413,7 +1396,6 @@
 				789A4F6721FAF3A8001528B9 /* cvSupplementaryFoot.m in Sources */,
 				789A4F3621FAF3A8001528B9 /* MyCycleADViewController.m in Sources */,
 				789A4F9E21FAF3FB001528B9 /* CustomTableViewCell.m in Sources */,
-				9730F3B12D58F0DB008AF628 /* LinkedMenuHomeViewController.m in Sources */,
 				976CB3592FFE6CF6000505DD /* AppInfo.m in Sources */,
 				976CB35A2FFE6CF6000505DD /* AppInfoManager.m in Sources */,
 				8014A2801FA2C2E500DDDB5A /* AppDelegate+WindowRootViewController.m in Sources */,
