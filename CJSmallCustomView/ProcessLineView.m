@@ -19,7 +19,7 @@
     
     //让整个区域白色
 //    [[UIColor whiteColor] set];
-//    CGContextFillRect(context, rect);
+//    CGContextFillRect(c∫ontext, rect);
     
     
     CGPoint centerOfCirclePoint = CGPointMake(20, CGRectGetMidY(self.bounds)); //圆心
