@@ -10,13 +10,7 @@
 
 //UITableView
 #import "TableViewController.h"
-#import "ReuseDataSourceTableViewController.h"
 #import "TvDemo_Complex.h"
-#import "OpenTableViewController1.h"
-#import "OpenTableViewController2.h"
-
-//Search--DataScrollView
-#import "SearchTableViewController.h"
 
 @interface TableHomeViewController ()  {
     
@@ -46,45 +40,11 @@
             [sectionDataModel.values addObject:TableViewModule];
         }
         {
-            CQDMModuleModel *reuseDataSourceTableModule = [[CQDMModuleModel alloc] init];
-            reuseDataSourceTableModule.title = @"ReuseDataSourceTable";
-            reuseDataSourceTableModule.classEntry = [ReuseDataSourceTableViewController class];
-            [sectionDataModel.values addObject:reuseDataSourceTableModule];
-        }
-        {
             CQDMModuleModel *complexDemoModule = [[CQDMModuleModel alloc] init];
             complexDemoModule.title = @"ComplexDemo";
             complexDemoModule.classEntry = [TvDemo_Complex class];
             complexDemoModule.isCreateByXib = YES;
             [sectionDataModel.values addObject:complexDemoModule];
-        }
-        {
-            CQDMModuleModel *openTableModule = [[CQDMModuleModel alloc] init];
-            openTableModule.title = @"OpenTable(不使用控件)";
-            openTableModule.classEntry = [OpenTableViewController1 class];
-            openTableModule.isCreateByXib = YES;
-            [sectionDataModel.values addObject:openTableModule];
-        }
-        {
-            CQDMModuleModel *openTableModule = [[CQDMModuleModel alloc] init];
-            openTableModule.title = @"OpenTable(使用控件)";
-            openTableModule.classEntry = [OpenTableViewController2 class];
-            openTableModule.isCreateByXib = YES;
-            [sectionDataModel.values addObject:openTableModule];
-        }
-        [sectionDataModels addObject:sectionDataModel];
-    }
-    
-    //DataScrollView
-    {
-        CJSectionDataModel *sectionDataModel = [[CJSectionDataModel alloc] init];
-        sectionDataModel.theme = @"DataScrollView(带数据源的滚动视图)";
-        {
-            CQDMModuleModel *searchTableViewModule = [[CQDMModuleModel alloc] init];
-            searchTableViewModule.title = @"带搜索功能的列表";
-            searchTableViewModule.classEntry = [SearchTableViewController class];
-            searchTableViewModule.isCreateByXib = YES;
-            [sectionDataModel.values addObject:searchTableViewModule];
         }
         [sectionDataModels addObject:sectionDataModel];
     }
