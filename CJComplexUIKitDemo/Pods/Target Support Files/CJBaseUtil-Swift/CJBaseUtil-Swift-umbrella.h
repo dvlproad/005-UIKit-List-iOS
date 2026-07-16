@@ -10,9 +10,7 @@
 #endif
 #endif
 
-#import "UIViewCJHelper.h"
-#import "UIViewControllerCJHelper.h"
 
-FOUNDATION_EXPORT double CJBaseHelperVersionNumber;
-FOUNDATION_EXPORT const unsigned char CJBaseHelperVersionString[];
+FOUNDATION_EXPORT double CJBaseUtil_SwiftVersionNumber;
+FOUNDATION_EXPORT const unsigned char CJBaseUtil_SwiftVersionString[];
 
